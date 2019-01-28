@@ -1,0 +1,1028 @@
+/*!
+Theme Name: SwiFo Theme
+Author: Hákon Bjarnason
+Description: The theme for the website of Swing Foundation, Amsterdam
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+/* Variables */
+
+$dark-blue: #144D73;
+$sea-blue: #69BDA0;
+$orange: #EFB652;
+$red: #F24E4D;
+$black: #323133;
+$white: #FFFFFF;
+
+
+/* Mixin */
+
+@mixin removeBorder($font-size) {
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-bottom: calc(#{$font-size}/6 * -1);
+  }
+}
+
+/* Import style reset */
+
+@import '_reset.scss';
+@import 'grid.scss';
+@import 'not-front.scss';
+@import 'classes.scss';
+@import 'registration.scss';
+@import 'info.scss';
+@import 'front-page.scss';
+
+
+/* Font import */
+
+@font-face {
+  font-family: 'Din Next Pro Condensed';
+  src: url(assets/fonts/DINNextLTPro-MediumCond.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Din Next Pro Condensed';
+  src: url(assets/fonts/DINNextLTPro-LightCondensed.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Din Next Pro Condensed';
+  src: url(assets/fonts/DINNextLTPro-BoldCondensed.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Din Next Pro Regular';
+  src: url(assets/fonts/DINNextLTPro-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Din Next Pro Regular';
+  src: url(assets/fonts/DINNextLTPro-Light.otf);
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Din Next Pro Regular';
+  src: url(assets/fonts/DINNextLTPro-Bold.otf);
+  font-weight: bold;
+}
+
+
+/* Universal */
+
+html {
+  overflow-x: hidden;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  // overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+section {
+  width: 100%;
+  // overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Din Next Pro Condensed', sans-serif;
+  color: $black;
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: left;
+  @include removeBorder(6rem);
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 4rem;
+  position: relative;
+  display: inline-block;
+}
+
+h3.orange-line::after {
+  content: "";
+  height: 0.5rem;
+  background-color: $orange;
+  position: absolute;
+  bottom: 15px;
+  left: 100%; //103%
+  right: -960px;
+  z-index: -1;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: 'Din Next Pro Regular', sans-serif;
+  font-size: 1.25rem;
+  color: $black;
+}
+
+p.big {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+p.medium {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+li a {
+  font-family: 'Din Next Pro Condensed', sans-serif;
+}
+
+.page-header {
+  margin-top: 1rem;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container-fluid {
+  // padding: 0 1.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.show-overflow-y {
+  // overflow-y: visible;
+}
+
+.hide-overflow-x {
+  overflow-x: hidden;
+  // max-width: 100vw;
+  // padding-bottom: 250px;
+  // margin-bottom: -250px;
+}
+
+.padding-rl-1col {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  align-items: center;
+}
+
+.single-page {
+  padding: 1rem 0;
+  p {
+    margin: 0.5rem 0;
+    line-height: 1.4;
+  }
+  h5, h6 {
+    margin-top: 1rem;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  width: 18rem;
+  height: 62px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: background-color 400ms;
+  a {
+    text-decoration: none;
+    transition: color 400ms;
+    padding: 16px 0;
+  }
+
+}
+
+.btn-white {
+  color: $dark-blue;
+  background-color: $white;
+  &:hover {
+    background-color: $sea-blue;
+  }
+}
+
+.btn-blue {
+  color: $white;
+  background-color: $dark-blue;
+  &:hover {
+    // background-color: $sea-blue;
+    a {
+      color: $sea-blue;
+    }
+  }
+
+
+}
+
+.btn-blue a {
+  font-weight: normal;
+  color: $white;
+}
+
+.btn-border-blue,
+.btn-border-white {
+  box-sizing: border-box;
+  a {
+    padding: 9px 0;
+  }
+}
+
+.btn-border-white {
+  border: $white solid 7px;
+}
+
+.btn-border-blue {
+  border: $dark-blue solid 7px;
+}
+
+.btn a {
+  width: 100%;
+  display: inline-block;
+  font-family: 'Din Next Pro Regular';
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  @include removeBorder(2rem);
+}
+
+/* Navbars */
+
+.navbar a {
+  color: $white;
+}
+
+.navbar .current-menu-item a {
+  color: $sea-blue;
+}
+
+.navbar :not(.current-menu-item) a:hover {
+  color: $orange;
+}
+
+
+
+/* Classes page */
+
+
+
+footer {
+  height: 250px;
+  background-color: $dark-blue;
+  position: relative;
+}
+
+.footer__content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: auto auto;
+  // grid-row-gap: 16px;
+  box-sizing: border-box;
+}
+
+.footer__logo {
+  background-image: url(assets/img/short_logo_white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+  background-origin: content-box;
+  padding: 0.75rem 0;
+  box-sizing: border-box;
+  height: 100%;
+  grid-row: 1 / span 2;
+}
+
+.footer__social {
+  align-self: end;
+  justify-self: center;
+  img {
+    height: 30px;
+    margin: 0 1.5rem;
+  }
+}
+
+.footer__sitenav {
+  text-align: right;
+  align-self: end;
+  a {
+      display: inline-block;
+      padding: 0.5rem 0;
+      font-size: 1.25rem;
+      color: $white;
+    }
+  li:last-child a {
+    padding-bottom: 0;
+  }
+}
+
+.footer__copyright {
+  align-self: center;
+  p {
+    font-size: 0.75rem;
+    color: $black;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 820px;
+  }
+  .location .bar p span {
+    display: none;
+  }
+  .sax {
+    bottom: -50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 755px;
+  }
+  .box-white {
+    padding: 2rem 1rem;
+  }
+  .sax {
+    bottom: -35px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 685px;
+  }
+
+  p.big {
+    font-size: 1.75rem;
+  }
+
+  .col-left,
+  .col-right {
+    padding: 20px;
+  }
+
+  .box-blue {
+    padding: 3.5rem 0;
+  }
+
+  .sax {
+    bottom: -60px;
+    right: -10px;
+    width: 50%;
+  }
+
+  li.class {
+    height: 250px;
+    width: 250px;
+  }
+
+  .quick-links ul {
+    margin: 0 4rem;
+  }
+
+
+
+
+
+  .schedule-grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 1rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 615px;
+  }
+  .btn {
+    width: 16rem;
+  }
+  li.class {
+    height: 225px;
+    width: 225px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 547px;
+  }
+
+  .introduction {
+    padding: 0 20px;
+  }
+
+  .btn {
+    width: 14rem;
+    font-size: 1.75rem !important;
+    a {
+      font-size: 1.75rem;
+    }
+  }
+  h3.next-course {
+    font-size: 2.75rem;
+  }
+  .sax {
+    bottom: -58px;
+    right: -32px;
+    width: 60%;
+  }
+
+  li.class {
+    height: 200px;
+    width: 200px;
+    p {
+      font-size: 1.75rem;
+    }
+  }
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 480px;
+  }
+
+  p.big {
+    font-size: 1.5rem;
+  }
+
+  .box-blue {
+    padding: 0.5rem 0;
+  }
+
+  .btn {
+    width: 12rem;
+    font-size: 1.5rem !important;
+    a {
+      font-size: 1.5rem;
+    }
+  }
+  h3.next-course {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  h3.date {
+    font-size: 3.5rem;
+  }
+  .sax {
+    bottom: -32px;
+    width: 70%;
+  }
+  .extend-right-col:after {
+    right: -40px;
+  }
+  .extend-left-col:before {
+    left: -40px;
+  }
+
+  img.bounce {
+    right: -38px;
+    width: 300px;
+    bottom: -60px;
+  }
+
+  .classes-all a {
+    margin: 1.5rem;
+  }
+
+  li.class {
+    height: 185px;
+    width: 185px;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+  .quick-links ul {
+    margin: 0 2rem;
+  }
+
+  .schedule-grid {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  .prices__classes__grid {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  .prices__privates__grid {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 450px;
+  }
+
+  .extend-right-col:after {
+    right: -25px;
+  }
+  .extend-left-col:before {
+    left: -25px;
+  }
+
+  .introduction h4 {
+    font-size: 2.5rem;
+  }
+
+  .box-blue {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    &::after {
+      content: none;
+    }
+  }
+  .col-left,
+  .col-right {
+    padding: 6%;
+  }
+  p.big {
+    font-size: 1.4rem;
+  }
+  .btn {
+    width: 11rem;
+    font-size: 1.35rem !important;
+    a {
+      font-size: 1.35rem;
+    }
+  }
+  h3.next-course {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  h3.date {
+    font-size: 3rem;
+  }
+  .sax {
+    bottom: -27px;
+    width: 57%;
+    right: -23px;
+  }
+
+  li.class {
+    height: 165px;
+    width: 165px;
+    p {
+      font-size: 1.35rem;
+    }
+  }
+
+  img.bounce {
+    right: -23px;
+    // width: 300px;
+    bottom: -61px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+
+  .extend-right-col:after {
+    right: 0;
+  }
+  .extend-left-col:before {
+    left: 0;
+  }
+
+  .page-header,
+  .fp-section-header {
+    margin-left: 0.5rem;
+  }
+
+
+  ul.navbar {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .front-page__navbar {
+    clip-path: circle(38px at 40px 40px);
+    width: fit-content;
+    left: 0;
+    top: 0;
+    &.open {
+      clip-path: circle(200% at 40px 40px);
+    }
+    .menu-icon {
+      left: 0;
+    }
+    .bar {
+      height: auto;
+      width: auto;
+    }
+    .container-fluid {
+      width: auto;
+    }
+    ul {
+      flex-direction: column;
+      padding: 0 1rem 1rem 1rem;
+      margin-top: 4rem;
+      align-items: flex-start;
+    }
+    li {
+      margin: 0.5rem 0rem;
+    }
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+    a {
+      padding: 0.5rem;
+    }
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    @include removeBorder(5.5rem);
+    &.minibar::before {
+      bottom: 7px;
+      height: 15px;
+    }
+  }
+
+  p.subheading {
+    padding: 0 1rem;
+  }
+
+  .introduction h4 {
+    font-size: 2rem;
+  }
+
+  .box-blue {
+    flex-direction: column;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .box-white {
+    height: auto;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    height: auto;
+    padding: 1.75rem;
+  }
+
+  // .col-left {
+  //   height: auto;
+  // }
+
+  .front-page>section {
+    margin-bottom: 10rem;
+  }
+
+  .front-page__navbar a {
+    // font-size: 1.5rem;
+  }
+
+  .front-page__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+
+    .btn:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3.next-course {
+    font-size: 2.5rem;
+  }
+
+  h3.date {
+    font-size: 3.5rem;
+  }
+
+  .sax {
+    bottom: -22px;
+    width: 43%;
+    right: -14px;
+  }
+
+  img.bounce {
+    right: 0;
+    width: 250px;
+    bottom: -50px;
+  }
+
+  #mc_embed_signup {
+    input {
+      margin: 2rem auto 0 auto;
+    }
+    .email {
+      width: 250px;
+    }
+  }
+
+  .map {
+    height: 400px;
+  }
+
+  #schedule,
+  #levels,
+  #prices,
+  .reg-process,
+  .faq,
+  .about__swing-foundation {
+    box-sizing: border-box;
+  }
+
+  .classes-page,
+  .registration-page,
+  .info-page,
+  .about-us-page {
+  .container {
+      padding: 0 1rem;
+    }
+  }
+
+  .schedule-grid {
+    // padding: 0 0.5rem;
+    p {
+      font-size: 0.75rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  .prices__classes__grid {
+    padding: 0;
+    p {
+      font-size: 1rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .prices__privates__grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 1rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .registration__buttons {
+    justify-content: space-around;
+    .btn:first-of-type {
+      margin-right: 0;
+    }
+  }
+
+
+  .footer__content {
+    padding: 0 1rem;
+    grid-template-columns: 25% 50% 25%;
+  }
+  .footer__logo {
+    grid-row: 1;
+    grid-column: 2;
+    background-position: center;
+    padding-bottom: 0;
+  }
+  .footer__social {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    justify-self: start;
+    img {
+      margin: 0 0 1.25rem 0;
+      display: block;
+      height: 30px;
+    }
+    a:last-of-type img {
+      margin-bottom: 0;
+    }
+  }
+  .footer__copyright {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    p {
+      padding: 0.25rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .reg-process h3.orange-line::after {
+    left: 160px;
+  }
+}
+
+
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 4.5rem;
+    @include removeBorder(4.5rem);
+    &.minibar::before {
+      bottom: 5px;
+      height: 13px;
+    }
+  }
+
+  .front-page__buttons {
+    flex-direction: column;
+    align-items: center;
+    .btn:first-child {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  .sax {
+    bottom: -11px;
+    right: -23px;
+  }
+
+  .schedule-grid {
+    // padding: 0 0.5rem;
+    p {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  .prices__classes__grid {
+    padding: 0;
+    p {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .prices__privates__grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  .page-header {
+    font-size: 4rem;
+  }
+
+  .classes-all a {
+    margin: 0.5rem;
+  }
+  li.class {
+    height: 140px;
+    width: 140px;
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .schedule-grid {
+    // padding: 0 0.5rem;
+    p {
+      font-size: 0.5rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  .prices__classes__grid {
+    padding: 0;
+    p {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .prices__privates__grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 0.65rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .registration__buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .btn:first-of-type {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 398px) {
+  .about__swing-foundation h3.orange-line::after {
+    left: 228px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  ul.navbar a {
+    font-size: 1.25rem;
+  }
+
+  .schedule-grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  .prices__classes__grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  .prices__privates__grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+}

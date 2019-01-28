@@ -1,0 +1,62 @@
+
+ul.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  :last-child {
+    margin-right: 0rem;
+  }
+  li {
+    display: inline;
+    color: $white;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+.classes-page,
+.registration-page,
+.info-page,
+.about-us-page {
+  position: relative;
+  section:last-of-type {
+    margin-bottom: 6rem;
+  }
+
+  .container {
+    overflow-x: hidden;
+  }
+
+  h3 {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h5 {
+    color: $sea-blue;
+  }
+
+  p {
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  p.subheading {
+    margin-bottom: 0;
+    color: $white;
+  }
+
+  li {
+    font-family: 'Din Next Pro Regular', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+  a {
+    text-decoration: underline;
+    color: $dark-blue;
+  }
+}

@@ -1,0 +1,13 @@
+
+.faq__single__question {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.faq__single__answer {
+  margin-bottom: 1rem;
+  a {
+    text-decoration: underline;
+    color: $dark-blue;
+  }
+}
