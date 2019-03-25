@@ -1,0 +1,628 @@
+/* Responsive */
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 820px;
+  }
+  .location .bar p span {
+    display: none;
+  }
+  .sax {
+    bottom: -50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 755px;
+  }
+  .box-white {
+    padding: 2rem 1rem;
+  }
+  .sax {
+    bottom: -35px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 685px;
+  }
+
+  p.big {
+    font-size: 1.75rem;
+  }
+
+  .col-left,
+  .col-right {
+    padding: 20px;
+  }
+
+  .box-blue {
+    padding: 3.5rem 0;
+  }
+
+  .sax {
+    bottom: -60px;
+    right: -10px;
+    width: 50%;
+  }
+
+  li.class {
+    // height: 250px;
+    // width: 250px;
+  }
+
+  .quick-links ul {
+    margin: 0 4rem;
+  }
+
+
+
+
+
+  .schedule-grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 1rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+
+
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    width: 615px;
+  }
+  .btn {
+    width: 16rem;
+  }
+  li.class {
+    height: 250px;
+    width: 250px;
+
+    .class__name {
+      font-size: 1.75rem;
+    }
+
+    .class__button {
+      font-size: 1.25rem;
+      bottom: 13.5%;
+    }
+  }
+  .schedule__wrapper {
+    flex-direction: column;
+    width: min-content;
+    margin: 0 auto;
+  }
+  .schedule__grid {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 547px;
+  }
+
+  .introduction {
+    padding: 0 20px;
+  }
+
+  .btn {
+    width: 14rem;
+    font-size: 1.75rem !important;
+    a {
+      font-size: 1.75rem;
+    }
+  }
+  h3.next-course {
+    font-size: 2.75rem;
+  }
+  .sax {
+    bottom: -58px;
+    right: -32px;
+    width: 60%;
+  }
+
+  li.class {
+    height: 225px;
+    width: 225px;
+
+    .class__name {
+      font-size: 1.5rem;
+    }
+
+    .class__time,
+    .class__button {
+      font-size: 1rem;
+      opacity: 1;
+    }
+
+    .class__button {
+      border-width: 2px;
+    }
+
+    img {
+      opacity: 0.15;
+    }
+  }
+
+  li.class:hover {
+    transform: scale(1);
+  }
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    width: 480px;
+  }
+
+  p.big {
+    font-size: 1.5rem;
+  }
+
+  .box-blue {
+    padding: 0.5rem 0;
+  }
+
+  .btn {
+    width: 12rem;
+    font-size: 1.5rem !important;
+    a {
+      font-size: 1.5rem;
+    }
+  }
+  h3.next-course {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  h3.date {
+    font-size: 3.5rem;
+  }
+  .sax {
+    bottom: -32px;
+    width: 70%;
+  }
+  .extend-right-col:after {
+    right: -40px;
+  }
+  .extend-left-col:before {
+    left: -40px;
+  }
+
+  img.bounce {
+    right: -38px;
+    width: 300px;
+    bottom: -60px;
+  }
+
+
+  li.class {
+    height: 200px;
+    width: 200px;
+    .class__time {
+      font-size: 0.75rem;
+    }
+  }
+
+  .quick-links ul {
+    margin: 0 2rem;
+  }
+
+  // .schedule-grid {
+  //   p {
+  //     font-size: 0.75rem;
+  //   }
+  // }
+
+  .prices__classes__grid {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  .prices__privates__grid {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 450px;
+  }
+
+  .extend-right-col:after {
+    right: -25px;
+  }
+  .extend-left-col:before {
+    left: -25px;
+  }
+
+  .introduction h4 {
+    font-size: 2.5rem;
+  }
+
+  .box-blue {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    &::after {
+      content: none;
+    }
+  }
+  .col-left,
+  .col-right {
+    padding: 6%;
+  }
+  p.big {
+    font-size: 1.4rem;
+  }
+  .btn {
+    width: 11rem;
+    font-size: 1.35rem !important;
+    a {
+      font-size: 1.35rem;
+    }
+  }
+  h3.next-course {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  h3.date {
+    font-size: 3rem;
+  }
+  .sax {
+    bottom: -27px;
+    width: 57%;
+    right: -23px;
+  }
+
+  li.class {
+    height: 165px;
+    width: 165px;
+    .class__name {
+      font-size: 1.25rem;
+    }
+    .class__button {
+      bottom: 10.5%;
+    }
+  }
+
+  img.bounce {
+    right: -23px;
+    // width: 300px;
+    bottom: -61px;
+  }
+
+  .schedule__grid p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .extend-right-col:after {
+    right: 0;
+  }
+  .extend-left-col:before {
+    left: 0;
+  }
+
+  .page-header,
+  .fp-section-header {
+    margin-left: 0.5rem;
+  }
+
+  .anchor {
+    // top: -149px;
+  }
+
+  p.subheading {
+    padding: 0 1rem;
+  }
+
+  .introduction h4 {
+    font-size: 2rem;
+  }
+
+  .box-blue {
+    flex-direction: column;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  .box-white {
+    height: auto;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    height: auto;
+    padding: 1.75rem;
+  }
+
+
+  .front-page>section {
+    margin-bottom: 10rem;
+  }
+
+
+  .front-page__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 0 0;
+
+    .btn:first-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .single-page {
+    padding: 1rem;
+  }
+
+  h3.next-course {
+    font-size: 2.5rem;
+  }
+
+  h3.date {
+    font-size: 3.5rem;
+  }
+
+  .sax {
+    bottom: -22px;
+    width: 43%;
+    right: -14px;
+  }
+
+  img.bounce {
+    right: 0;
+    width: 250px;
+    bottom: -50px;
+  }
+
+  #mc_embed_signup {
+    input {
+      margin: 2rem auto 0 auto;
+    }
+    .email {
+      width: 250px;
+    }
+  }
+
+  .map {
+    height: 400px;
+  }
+
+  #schedule,
+  #levels,
+  #prices,
+  .reg-process,
+  .faq,
+  .about__swing-foundation {
+    box-sizing: border-box;
+  }
+
+  .classes-page,
+  .registration-page,
+  .info-page,
+  .about-us-page,
+  .information-page {
+  .container {
+      padding: 0 1rem;
+    }
+  }
+
+  .schedule__grid p {
+    font-size: 1rem;
+  }
+
+  .prices__classes__grid {
+    grid-template-columns: max-content min-content max-content;
+
+    .header {
+      align-self: end;
+    }
+  }
+
+  .registration__buttons {
+    justify-content: space-around;
+    .btn:first-of-type {
+      margin-right: 0;
+    }
+  }
+
+
+  .footer__content {
+    padding: 0 1rem;
+    grid-template-columns: 25% 50% 25%;
+  }
+  .footer__logo {
+    grid-row: 1;
+    grid-column: 2;
+    background-position: center;
+    padding-bottom: 0;
+  }
+  .footer__social {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: end;
+    justify-self: start;
+    img {
+      margin: 0 0 1.25rem 0;
+      display: block;
+      height: 30px;
+    }
+    a:last-of-type img {
+      margin-bottom: 0;
+    }
+  }
+  .footer__copyright {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    p {
+      padding: 0.25rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .reg-process h3.orange-line::after {
+    left: 160px;
+  }
+}
+
+
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 4.5rem;
+    @include removeBorder(4.5rem);
+    &.minibar::before {
+      bottom: 5px;
+      height: 13px;
+    }
+  }
+
+  .front-page__buttons {
+    flex-direction: column;
+    align-items: center;
+    .btn:first-child {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+  .sax {
+    bottom: -11px;
+    right: -23px;
+  }
+
+  .class__button {
+    padding: .2rem .5rem;
+  }
+
+  .schedule-grid {
+    // padding: 0 0.5rem;
+    p {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  .prices__classes__grid {
+    padding: 0;
+    p {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+  .prices__privates__grid {
+    padding: 0 0.5rem;
+    p {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.1rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+
+  .page-header {
+    font-size: 4rem;
+  }
+
+  .classes-all ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li.class {
+    height: 225px;
+    width: 225px;
+    .class__time {
+      font-size: 1.1rem;
+    }
+    .class__name {
+      font-size: 1.75rem;
+    }
+    .class__button {
+      font-size: 1.25rem;
+      bottom: 12.5%;
+    }
+  }
+
+  .schedule__grid p {
+    font-size: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .schedule-grid {
+    // padding: 0 0.5rem;
+    p {
+      font-size: 0.5rem;
+      padding: 0.1rem 0.1rem;
+    }
+  }
+
+  .prices .grid p {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+  }
+
+  .registration__buttons {
+    flex-direction: column;
+    align-items: center;
+
+    .btn:first-of-type {
+      margin-bottom: 1.75rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 398px) {
+  .about__swing-foundation h3.orange-line::after {
+    left: 228px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  .schedule-grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  .prices__classes__grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  .prices__privates__grid {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+}

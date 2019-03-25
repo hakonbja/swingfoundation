@@ -1,5 +1,5 @@
 
-<body>
+
 <?php get_header();?>
 
 <div class="content front-page">
@@ -8,16 +8,7 @@
     <img class="jumbotron__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-big.svg" alt="Swing Foundation Logo">
   </div>
 
-  <div class="front-page__navbar" id="js-fp-navbar">
-    <div class="menu-icon" id="js-hamburger">
-      <span></span>
-    </div>
-    <div class="bar bar-darkblue">
-      <div class="container-fluid">
-        <?php wp_nav_menu( array( 'theme_location' => 'header-navbar', 'container_class' => 'navbar') ); ?>
-      </div>
-    </div>
-  </div>
+
 
   <div class="container">
     <div class="introduction padding-rl-1col">
@@ -61,37 +52,65 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="classes-all">
         <ul>
-          <a href="<?php echo get_site_url(); ?>/classes/#lh-beginners">
-            <li class="class">
-              <p>Lindy Hop Beginners</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-            </li>
-          </a>
-          <a href="<?php echo get_site_url(); ?>/classes/#lh-adv+">
-            <li class="class">
-              <p>Lindy Hop Advanced+</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-            </li>
-          </a>
-          <a href="<?php echo get_site_url(); ?>/classes/#solo-beg-int">
-            <li class="class">
-              <p>Solo Jazz & Charleston Beg/Int</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet1.jpg" alt="legs of a dancer">
-            </li>
-          </a>
-          <a href="<?php echo get_site_url(); ?>/classes/#solo-int-adv">
-            <li class="class">
-              <p>Solo Jazz & Charleston Int/Adv</p>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet2.jpg" alt="legs of a dancer">
-            </li>
-          </a>
-
+          <li class="class">
+            <!-- <p class="class__time">Tuesdays at 18:30-19:45</p> -->
+            <p class="class__name">Lindy Hop Beginners</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-beginners">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
+          </li>
+          <li class="class">
+            <!-- <p class="class__time">Tuesdays at 19:45-21:00</p> -->
+            <p class="class__name">Lindy Hop Beginners+</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-beginners+">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet3.jpg" alt="legs of dancers">
+          </li>
+          <li class="class">
+            <!-- <p class="class__time">Tuesdays at 21:00-22:15</p> -->
+            <p class="class__name">Lindy Hop Advanced+</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-adv+">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
+          </li>
         </ul>
       </div>
     </div>
+
+  <!--
+    <div id="slider" class="slider">
+      <div class="wrapper">
+        <div id="items" class="items">
+          <span class="slide">
+            <li class="class">
+              <p>Lindy Hop Beginners</p>
+              <a href="<?php echo get_site_url(); ?>/classes/#lh-beginners">Level description</a>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
+            </li>
+          </span>
+          <span class="slide">
+            <li class="class">
+              <p>Lindy Hop Beginners+</p>
+              <a href="<?php echo get_site_url(); ?>/classes/#lh-beginners-cont">Level description</a>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
+            </li>
+          </span>
+          <span class="slide">
+            <li class="class">
+              <p>Lindy Hop Advanced+</p>
+              <a href="<?php echo get_site_url(); ?>/classes/#lh-adv+">Level description</a>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
+            </li>
+          </span>
+
+        </div>
+      </div>
+      <a id="prev" class="control prev"><</a>
+      <a id="next" class="control next">></a>
+
+    </div>
+  -->
     <div class="container">
       <div class="bar bar-seablue extend-left-full extend-right-col">
         <?php wp_nav_menu( array( 'theme_location' => 'quicklinks', 'container_class' => 'quick-links') ); ?>
@@ -106,7 +125,7 @@
     <div class="container">
       <h1 class="minibar mb-seablue fp-section-header">Location</h1>
     </div>
-    <?php get_template_part( 'partials/location'); ?>
+    <?php get_template_part( 'partials/_location'); ?>
   </section>
 
   <section class="newsletter-signup">
@@ -127,7 +146,7 @@
       <form action="https://swingfoundation.us19.list-manage.com/subscribe/post?u=10ad7729e889b6568ffe433ab&amp;id=643c6466d5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
-            	<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
+            	<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" aria-label="Email Address">
             </div>
           	<div id="mce-responses" class="clear">
           		<div class="response" id="mce-error-response" style="display:none"></div>

@@ -1,7 +1,7 @@
 /* Front page */
 
 .jumbotron {
-  max-height: 100vh;
+  max-height: 90vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   background-color: #144D73;
@@ -11,111 +11,11 @@
 }
 
 .jumbotron__logo {
-  max-height: 75vh;
+  max-height: 65vh;
   width: 100%;
 }
 
-.front-page__navbar {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 10px;
-  right: 0;
-  z-index: 5;
-  opacity: 0.65;
-  clip-path: circle(38px at 50px 40px);
-  transition: all 500ms ease-in-out;
-  box-shadow: 0px 1px 2px $black;
 
-  a {
-    opacity:  0;
-    transition: opacity 500ms ease-in-out, color 200ms;
-  }
-
-  &.open {
-    clip-path: circle(100% at 50% 40px);
-    opacity: 0.95;
-
-    a {
-      opacity: 1;
-    }
-  }
-
-  .menu-icon {
-    position: absolute;
-    height: 40px;
-    z-index: 3;
-    top: 0px;
-    left: 10px;
-    padding: 0 0.5rem;
-    margin: 20px 16px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  span,
-  span::before,
-  span::after {
-    display: block;
-    background-color: $sea-blue;
-    // mix-blend-mode: difference;
-    height: 3px;
-    width: 2rem;
-    border-radius: 2px;
-    position: relative;
-    transition: all 450ms;
-  }
-
-  span::before,
-    span::after {
-      content: "";
-      position: absolute;
-    }
-    span::before {
-      bottom: 9px;
-    }
-    span::after {
-      bottom: -9px;
-    }
-
-    .menu-icon.open {
-      span,
-      span::after {
-        background-color: $red;
-      }
-      span {
-        transform: rotate(45deg);
-      }
-      span::before {
-        opacity: 0;
-      }
-      span::after {
-        transform: rotate(90deg);
-        bottom: 0px;
-      }
-    }
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 0 4rem;
-
-    .menu-item-home {
-      display: none;
-    }
-  }
-
-  li {
-    margin: 0;
-  }
-
-  a {
-    font-size: 2rem;
-  }
-
-}
 
 .introduction {
   text-align: center;
@@ -130,30 +30,7 @@
   // width: 100%;
 }
 
-.minibar {
-  position: relative;
-}
 
-.minibar::before {
-  content: "";
-  height: 1rem;
-  width: 7.5rem;
-  bottom: 0.5rem;
-  position: absolute;
-  z-index: 2;
-}
-
-.minibar.mb-seablue::before {
-  background-color: $sea-blue;
-}
-
-.minibar.mb-orange::before {
-  background-color: $orange;
-}
-
-.minibar.mb-darkblue::before {
-  background-color: $dark-blue;
-}
 
 .box-blue {
   background-color: $dark-blue;
@@ -292,14 +169,52 @@ span.month {
   height: 2.5rem;
 }
 
+.classes #slider {
+  .slider {
+  width: 300px;
+  height: 300px;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  //background: #222;
+  z-index: 1;
+  padding: 2rem 0;
+}
+
+#items {
+  //width: 10000px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: -300px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+#items.shifting {
+  transition: left .2s ease-out;
+}
+
+.slide {
+  width: 300px;
+  height: 300px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  background: #FFCF47;
+  margin: 0 1rem;
+}
+}
+
 .classes-all {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  a {
-    margin: 2rem;
-  }
 }
 
 .classes-all ul {
@@ -307,14 +222,14 @@ span.month {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 2rem 0;
+  padding: 0.5rem 0;
 }
 
 li.class {
   height: 300px;
   width: 300px;
   background-color: $dark-blue;
-  // margin: 2rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,9 +247,22 @@ li.class:hover img {
 
 li.class:hover {
   transform: scale(1.1);
+  .class__time,
+  .class__button {
+    opacity: 100;
+  }
 }
 
-li.class p {
+p.class__time {
+  position: absolute;
+  color: $white;
+  top: 18.5%;
+  font-weight: 100;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+p.class__name {
   z-index: 2;
   font-family: 'Din Next Pro Regular', sans-serif;
   font-weight: 400;
@@ -342,6 +270,22 @@ li.class p {
   text-align: center;
   color: $white;
 }
+
+.class__button {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.25rem 0.75rem;
+  bottom: 15.5%;
+  color: $orange;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 800ms ease;
+  border: 4px white solid;
+  box-sizing: border-box;
+}
+
 
 li.class img {
   position: absolute;
@@ -351,6 +295,8 @@ li.class img {
   height: 100%;
   width: 100%;
 }
+
+
 
 img.bounce {
   position: absolute;

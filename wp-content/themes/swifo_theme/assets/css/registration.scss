@@ -12,6 +12,7 @@
     }
   }
 }
+
 .registration__buttons {
   display: flex;
   width: 100%;
@@ -21,4 +22,174 @@
   .btn:first-of-type {
     margin-right: 4rem;
   }
+
+  .btn a {
+    text-decoration: none;
+  }
+
+  .btn-blue a {
+    color: $white;
+  }
+
+  .btn-blue:hover a {
+    color: $sea-blue;
+  }
+}
+
+/* Prices */
+
+
+.prices__classes {
+  // margin: 0rem 0 2rem 0;
+}
+
+.prices .grid {
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+  }
+}
+
+.prices__classes__grid {
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "full-header student-header second-header"
+    "full-price student-price second-price"
+    "disclaimer disclaimer disclaimer";
+
+
+  .header {
+    border-bottom: 2px solid $black;
+  }
+
+  .student.header,
+  .student.price {
+    border-right: 2px solid $black;
+    border-left: 2px solid $black;
+  }
+
+  .header p {
+    font-weight: bold;
+  }
+
+  .full.header {
+    grid-area: full-header;
+  }
+
+  .student.header {
+    grid-area: student-header;
+  }
+
+  .second.header {
+    grid-area: second-header;
+  }
+
+  .full.price {
+    grid-area: full-price;
+  }
+
+  .student.price {
+    grid-area: student-price;
+  }
+
+  .second.price {
+    grid-area: second-price;
+  }
+
+  .disclaimer {
+    grid-area: disclaimer;
+
+    p {
+      text-align: right;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.prices__privates__grid {
+  width: max-content;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "   .....     thirty-min        one-hour"
+    "one-teacher  price-one-thirty  price-one-one"
+    "two-teachers price-two-thirty  price-two-one";
+
+
+
+
+  .header {
+    border-bottom: 2px solid $black;
+  }
+
+  .header p {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .one-teacher p,
+  .two-teachers p {
+    text-align: right;
+  }
+
+  .thirty-min,
+  .price-one-thirty,
+  .price-two-thirty {
+    border-right: 2px solid $black;
+  }
+
+  .thirty-min {
+    grid-area: thirty-min;
+  }
+
+  .one-hour {
+    grid-area: one-hour;
+  }
+
+  .one-teacher {
+    grid-area: one-teacher;
+  }
+
+  .two-teachers {
+    grid-area: two-teachers;
+  }
+
+  .price-one-thirty {
+    grid-area: price-one-thirty;
+  }
+
+  .price-two-thirty {
+    grid-area: price-two-thirty;
+  }
+
+  .price-one-one {
+    grid-area: price-one-one;
+  }
+
+  .price-two-one {
+    grid-area: price-two-one;
+  }
+}
+
+.disclaimer {
+  grid-column: 1 / 7;
+  margin-top: 0.25rem;
+  p {
+   text-align: right;
+   font-size: 0.85rem;
+ }
 }

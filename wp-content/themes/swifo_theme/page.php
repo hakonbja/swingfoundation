@@ -1,5 +1,7 @@
-<body>
+
 <?php get_header();?>
+<div class="content">
+
 
   <section>
     <div class="container"> <!-- Add page slug in class -->
@@ -14,6 +16,6 @@
       </div>
     </div>
   </section>
-
+</div>
   <?php get_footer();?>
 </body>

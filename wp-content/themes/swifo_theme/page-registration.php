@@ -1,9 +1,11 @@
-<body>
+
 <?php get_header();?>
 
   <div class="content registration-page" id="registration">
 
     <section>
+      <div class="anchor" id="reg-process">
+      </div>
       <div class="container reg-process">
         <div class="hide-overflow-x">
           <h3 class="orange-line">Registration process</h3>
@@ -16,7 +18,7 @@
         </ol>
         <div class="registration__buttons">
           <div class="btn btn-blue">
-            <a href="https://goo.gl/forms/hD4aqxi2MQz3OuxL2" target="_blank">Register</a>
+            <a href="https://goo.gl/forms/RTX25hl7SktjKJxl2" target="_blank">Register</a>
           </div>
           <div class="btn btn-white btn-border-blue">
             <a href="<?php echo get_site_url(); ?>/classes/#levels">Classes</a>
@@ -27,11 +29,7 @@
     </section>
 
     <section>
-      <?php get_template_part( 'partials/schedule'); ?>
-    </section>
-
-    <section>
-      <?php get_template_part( 'partials/prices'); ?>
+      <?php get_template_part( 'partials/_prices'); ?>
     </section>
 
   </div>

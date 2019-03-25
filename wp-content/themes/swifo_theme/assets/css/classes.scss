@@ -6,127 +6,134 @@
 
 /* Schedule */
 
-.schedule-grid {
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-  grid-template-rows: repeat(7, max-content);
-  align-items: end;
-  text-align: center;
-  margin: 0 auto 2rem auto;
-  box-sizing: border-box;
-  width: 100%;
+// Block 2
 
-  p {
-    padding: 0.25rem 0.5rem;
-    margin-bottom: 0;
-  }
+.schedule__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-rows: repeat(5, max-content);
+  grid-template-areas:
+    "day room teachers-header"
+    "hours2 class2 teachers2"
+    "hours2 class2 teachers2"
+    "hours3 class3 teachers3"
+    "hours3 class3 teachers3";
+  margin-right: 2rem;
+    p {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+      margin: 0;
+      padding: 0.25rem 0.5rem;
+      text-align: center;
+    }
+
+    .header p {
+      padding: 0.5rem;
+    }
 
   .weekday {
-    align-self: start;
+    grid-area: day;
+  }
+  .room {
+    grid-area: room;
+  }
+  .teachers-header {
+    grid-area: teachers-header;
   }
 
-  .row1 {
-    // font-weight: bold;
-    align-self: end;
+  .weekday,
+  .room,
+  .teachers-header {
     background-color: $dark-blue;
     p {
       color: $white;
-      font-weight: normal;
     }
   }
 
-  .col1 {
-    text-align: left;
-  }
-
-
-
-  .empty-left-vertical-top,
-  .empty-left-vertical-bottom,
-  .empty-middle-vertical-top,
-  .empty-middle-vertical-bottom,
-  .empty-right-vertical-top,
-  .empty-right-vertical-bottom {
+  .hours {
+    border-right: dashed 2px $dark-blue;
     border-left: dashed 2px $dark-blue;
-    height: 100%;
-    width: 0px;
+    border-bottom: solid 2px $dark-blue;
+    p {
+      text-align: left;
+    }
+  }
+  .hours1 {
+    grid-area: hours1;
+  }
+  .hours2 {
+    grid-area: hours2;
+  }
+  .hours3 {
+    grid-area: hours3;
+  }
+  .class {
+    border-right: dashed 2px $dark-blue;
+  }
+  .class1 {
+    grid-area: class1;
+  }
+  .class2 {
+    grid-area: class2;
+  }
+  .class3 {
+    grid-area: class3;
+  }
+  .teachers {
+    border-right: dashed 2px $dark-blue;
+  }
+  .teachers1 {
+    grid-area: teachers1;
+  }
+  .teachers2 {
+    grid-area: teachers2;
+  }
+  .teachers3 {
+    grid-area: teachers3;
   }
 
-  .empty-left-vertical-top,
-  .empty-middle-vertical-top,
-  .empty-right-vertical-top {
-    grid-row: 2 / 4;
+  .two-rows {
+    display: flex;
+    align-items: center;
   }
 
-
-  .empty-left-vertical-bottom,
-  .empty-middle-vertical-bottom,
-  .empty-right-vertical-bottom {
-    grid-row: 6 / 8;
-  }
-
-  .empty-background-left,
-  .empty-background-middle,
-  .empty-background-right {
-    background-color: $dark-blue;
-    height: 100%;
+  .line-bottom {
+    border-bottom: solid 2px $dark-blue;
   }
 }
 
-.class-one-a {
-  grid-row: 2 / 4;
-}
-
-.class-two-a {
-  grid-row: 6 / 8;
-}
-
-.teachers-one-a {
-  grid-row: 2 / 4;
-}
-
-.teachers-two-a {
-  grid-row: 6 / 8;
-}
-
-.class-one-b {
-  grid-row: 2 / 4;
-}
-
-.class-two-b {
-  grid-row: 6 / 8;
-}
-
-.teachers-one-b {
-  grid-row: 2 / 4;
-}
-
-.teachers-two-b {
-  grid-row: 6 / 8;
-}
-
-.social-dance-one,
-.social-dance-two {
-  grid-column: 1 / 9;
-  background-color: $dark-blue;
+.dates__grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas:
+      "header header"
+      "months days"
+      "months days"
+      "months days";
 
   p {
-    color: $white;
+    margin: 0;
+    padding: 0.25rem 0;
   }
 }
 
+.dates__header {
+  grid-area: header;
+}
 
+.dates__months {
+  grid-area: months;
+}
 
-
-.class-one-a,
-.class-two-a,
-.teachers-one-a,
-.teachers-two-a,
-.class-one-b,
-.class-two-b,
-.teachers-one-b,
-.teachers-two-b {
-  align-self: center;
+.dates__days {
+  grid-area: days;
 }
 
 .dates-flex {
@@ -149,7 +156,7 @@
 
 /* Levels */
 
-#levels {
+.level-descriptions {
 
   p {
     margin: 0.5rem 0;
@@ -207,70 +214,4 @@
   }
 
 
-}
-
-/* Prices */
-
-
-.prices__classes {
-  margin: 0rem 0 2rem 0;
-}
-
-.prices__classes__grid,
-.prices__privates__grid {
-  display: grid;
-  align-items: center;
-  margin: 1rem auto;
-  width: max-content;
-
-  .row1 {
-    font-weight: bold;
-    align-self: end;
-    border-bottom: solid 2px $black;
-    padding: 0 1rem;
-  }
-
-  p {
-    text-align: center;
-    padding: 0.25rem 0.5rem;
-    margin-bottom: 0;
-  }
-
-  .col1 p,
-  .disclaimer p {
-      text-align: right;
-  }
-
-}
-
-.prices__classes__grid {
-  grid-template-columns: repeat(6, max-content); //220px
-  grid-template-rows: repeat(3, auto);
-}
-
-.prices__privates__grid {
-  grid-template-columns: repeat(4, max-content);
-  grid-template-rows: repeat(3, auto);
-}
-
-.disclaimer {
-  grid-column: 1 / 7;
-  margin-top: 0.25rem;
-  p {
-   text-align: right;
-   font-size: 0.85rem;
- }
-}
-
-.prices__classes__empty-vertical-border-1,
-.prices__classes__empty-vertical-border-2 {
-  grid-row: 1 / 3;
-  border-right: 2px solid $black;
-  height: 100%;
-}
-
-.prices__privates__empty-vertical-border {
-  grid-row: 1 / 4;
-  border-right: 2px solid $black;
-  height: 100%;
 }
