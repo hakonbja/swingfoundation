@@ -46,7 +46,7 @@
 
           </div>
         <?php } ?>
-        <div class="navbar">
+        <nav class="navbar">
 
           <div class="hamburger-menu" id="js-hamburger">
             <span></span>
@@ -63,5 +63,5 @@
 
           </div>
 
-        </div>
+        </nav>
       </header>

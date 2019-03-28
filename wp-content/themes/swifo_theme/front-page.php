@@ -28,14 +28,14 @@
             <a href="<?php echo get_site_url(); ?>/registration">Registration</a>
           </div>
           <div class="btn btn-blue btn-border-white">
-            <a href="<?php echo get_site_url(); ?>/classes">More info</a>
+            <a href="<?php echo get_site_url(); ?>/classes">Classes</a>
           </div>
         </div>
       </div>
       <div class="col-right">
         <div class="box-white">
           <h3 class="next-course">Next&nbsp;course starts&nbsp;on</h3>
-          <h3 class="date">19th&nbsp;of </br><span class="month">March</span></br>2019</h3>
+          <h3 class="date">4th&nbsp;of </br><span class="month">June</span></br>2019</h3>
           <img class="sax" src="<?php echo get_template_directory_uri(); ?>/assets/img/sax_with_soundlines.svg" alt="saxophone">
         </div>
       </div>

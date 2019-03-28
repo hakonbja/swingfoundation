@@ -1,20 +1,148 @@
 
 /* Classes page */
 
-
-
-
 /* Schedule */
 
-// Block 2
+// tabs
+
+.tabs {
+  position: relative;
+}
+
+.tabs ul {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 2px $orange solid;
+  width: 100%;
+}
+
+.tabs li {
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+  border-top: 2px $orange solid;
+  border-left: 2px $orange solid;
+  border-radius: 5px 5px 0 0;
+  max-width: 90px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tabs li::after {
+  content: "";
+  position: absolute;
+  background-color: $orange;
+  height: 2.5px;
+  width: 20%;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 700ms;
+}
+
+.tabs li:hover::after {
+  width: 30%;
+}
+
+.tabs li:not(.disabled) + li.disabled {
+  border-left: 2px $orange solid;
+}
+
+li.selected + li.disabled {
+  border-left: 0 !important;
+}
+
+.tabs li:last-child {
+  border-right: 2px $orange solid;
+}
+
+.tabs li.selected {
+  border: 2px $orange solid;
+  border-bottom: 2px white solid;
+  margin-bottom: -2px;
+  font-weight: bold;
+  // transform: scale(1, 1.05);
+  transform-origin: bottom;
+
+  &::after,
+  &:hover::after {
+    width: 55%;
+  }
+}
+
+.tabs {
+  li.selected + li {
+    border-left: 0px transparent solid;
+  }
+}
+
+.tabs li.disabled {
+  color: lightgrey;
+  cursor: default;
+  border-color: lightgrey;
+
+  &::after {
+    content: none;
+  }
+}
+
+
+
+// The schedule(s)
 
 .schedule__wrapper {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  // justify-content: center;
+  align-items: center;
+  transition: opacity 700ms ease;
+
+  &>div {
+    margin-bottom: 1.5rem;
+  }
+  &>div:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.schedule__grid {
+.schedule__wrapper.selected {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  height: min-content;
+  padding: 1.5rem 0;
+  border-bottom: 2px $orange solid;
+}
+
+
+.grid {
+  p {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .header {
+    background-color: $dark-blue;
+  }
+
+  .header p {
+    color: $white;
+    padding: 0.5rem;
+  }
+
+  .line-bottom {
+    border-bottom: solid 2px $dark-blue;
+  }
+}
+
+// Block 2
+
+.content-2 .schedule__grid {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(5, max-content);
@@ -24,17 +152,10 @@
     "hours2 class2 teachers2"
     "hours3 class3 teachers3"
     "hours3 class3 teachers3";
-  margin-right: 2rem;
-    p {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-      margin: 0;
-      padding: 0.25rem 0.5rem;
-      text-align: center;
-    }
+  // margin-right: 2rem;
 
-    .header p {
-      padding: 0.5rem;
+    p {
+      text-align: center;
     }
 
   .weekday {
@@ -45,15 +166,6 @@
   }
   .teachers-header {
     grid-area: teachers-header;
-  }
-
-  .weekday,
-  .room,
-  .teachers-header {
-    background-color: $dark-blue;
-    p {
-      color: $white;
-    }
   }
 
   .hours {
@@ -102,11 +214,9 @@
     display: flex;
     align-items: center;
   }
-
-  .line-bottom {
-    border-bottom: solid 2px $dark-blue;
-  }
 }
+
+// All blocks
 
 .dates__grid {
   display: grid;
@@ -117,41 +227,74 @@
       "months days"
       "months days"
       "months days";
-
-  p {
-    margin: 0;
-    padding: 0.25rem 0;
-  }
 }
 
 .dates__header {
   grid-area: header;
+  text-align: center;
 }
 
 .dates__months {
   grid-area: months;
+  border-left: 2px solid $dark-blue;
+  // border-right:  2px dashed $dark-blue;
 }
 
 .dates__days {
   grid-area: days;
+  text-align: right;
+  border-right:  2px solid $dark-blue;
 }
 
-.dates-flex {
-  display: flex;
-  margin-top: 0.5rem;
-  .days span {
-    font-size: 1rem;
-    color: $orange;
-  }
+.dates__months,
+.dates__days {
+  // border-bottom:  2px solid $dark-blue;
   p {
-    padding: 0;
-  }
-
-  .months {
-    padding-right: 0.75rem;
+    border-bottom:  2px solid $dark-blue;
   }
 }
 
+// Responsive
+
+@media only screen and (max-width: 600px) {
+  .grid p {
+    font-size: 1.2rem;
+  }
+
+  .tabs-n-content.container {
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .tabs ul {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+}
+
+@media only screen and (max-width: 450px) {
+  .grid p,
+  .grid .header p {
+    font-size: 1rem;
+    padding: 0.25rem;
+  }
+
+}
+
+@media only screen and (max-width: 370px) {
+  .grid p,
+  .grid .header p {
+    font-size: 0.85rem;
+    padding: 0 0.25rem;
+  }
+
+  .tabs li {
+    padding: 0.25rem 0.5rem;
+  }
+}
 
 
 /* Levels */
