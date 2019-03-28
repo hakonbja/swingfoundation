@@ -114,7 +114,6 @@ li.selected + li.disabled {
   visibility: visible;
   height: min-content;
   padding: 1.5rem 0;
-  border-bottom: 2px $orange solid;
 }
 
 
@@ -292,7 +291,7 @@ li.selected + li.disabled {
   }
 
   .tabs li {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem;
   }
 }
 
