@@ -1,10 +1,14 @@
 
 
 
-.content {
+.classes-page,
+.registration-page,
+.info-page,
+.information-page,
+.news-page {
   position: relative;
   section:last-of-type {
-  margin-bottom: 6rem;
+    margin-bottom: 6rem;
   }
 
   .container {
@@ -129,11 +133,6 @@
   }
 }
 
-// .wpforms-container .wpforms-description {
-//   font-family: 'Din Next Pro Regular', sans-serif;
-//   font-size: 1.25rem;
-// }
-
 .contact-form {
   margin-bottom: 2rem;
 }
@@ -204,8 +203,108 @@
     color: $orange;
   }
 
-
   .wpforms-submit-container {
     padding: 0.5rem 0 0 0;
+  }
+}
+
+// News
+
+.cards.grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  // grid-template-rows: repeat(2, max-content);
+  grid-column-gap: 5%;
+  grid-row-gap: 3rem;
+}
+
+.cards {
+  width: 100%;
+  padding: 2rem 0 4rem 0;
+
+  a {
+    text-decoration: none;
+    height: min-content;
+  }
+
+  .card {
+
+  }
+
+  .card:hover {
+
+    img {
+      transform: scale(1);
+    }
+
+    h4.title::after {
+      width: 100%;
+    }
+
+  }
+
+
+  .card__figure {
+    position: relative;
+  }
+
+  figure {
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    transition: transform 500ms ease 100ms;
+    transform: scale(1.05);
+  }
+
+  .card__meta {
+    display: flex;
+    background-color: $white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 80%;
+    padding: 1rem 1rem 1rem 0.25rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .card__meta p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  p.type {
+    font-weight: bold;
+  }
+
+  p.type::after {
+    content: "|";
+    margin: 0 0.5rem;
+  }
+
+  h4.title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      height: 0.25rem;
+      width: 0;
+      bottom: 0.25rem;
+      left: 0;
+      background-color: $orange;
+      transition: all 500ms ease;
+    }
+  }
+
+  p.excerpt {
+    font-size: 1rem;
   }
 }

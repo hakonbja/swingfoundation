@@ -114,11 +114,10 @@ li.selected + li.disabled {
   visibility: visible;
   height: min-content;
   padding: 1.5rem 0;
-  border-bottom: 2px $orange solid;
 }
 
 
-.grid {
+.schedule__wrapper .grid {
   p {
     font-size: 1.25rem;
     line-height: 1.25rem;
