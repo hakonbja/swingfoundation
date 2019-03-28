@@ -18,7 +18,7 @@
         </ol>
         <div class="registration__buttons">
           <div class="btn btn-blue">
-            <a href="https://goo.gl/forms/RTX25hl7SktjKJxl2" target="_blank">Register</a>
+            <a href="https://forms.gle/8wGR7a1nkDAv8U2SA" target="_blank">Register</a>
           </div>
           <div class="btn btn-white btn-border-blue">
             <a href="<?php echo get_site_url(); ?>/classes/#levels">Classes</a>

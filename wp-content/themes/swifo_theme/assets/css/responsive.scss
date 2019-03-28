@@ -57,20 +57,6 @@
     margin: 0 4rem;
   }
 
-
-
-
-
-  .schedule-grid {
-    padding: 0 0.5rem;
-    p {
-      font-size: 1rem;
-      padding: 0.15rem 0.1rem;
-    }
-  }
-
-
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -92,15 +78,6 @@
       font-size: 1.25rem;
       bottom: 13.5%;
     }
-  }
-  .schedule__wrapper {
-    flex-direction: column;
-    width: min-content;
-    margin: 0 auto;
-  }
-  .schedule__grid {
-    margin-right: 0;
-    margin-bottom: 2rem;
   }
 }
 
@@ -217,11 +194,6 @@
     margin: 0 2rem;
   }
 
-  // .schedule-grid {
-  //   p {
-  //     font-size: 0.75rem;
-  //   }
-  // }
 
   .prices__classes__grid {
     p {
@@ -305,9 +277,6 @@
     bottom: -61px;
   }
 
-  .schedule__grid p {
-    font-size: 1.2rem;
-  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -430,9 +399,6 @@
     }
   }
 
-  .schedule__grid p {
-    font-size: 1rem;
-  }
 
   .prices__classes__grid {
     grid-template-columns: max-content min-content max-content;
@@ -518,13 +484,6 @@
     padding: .2rem .5rem;
   }
 
-  .schedule-grid {
-    // padding: 0 0.5rem;
-    p {
-      font-size: 0.65rem;
-      padding: 0.1rem 0.1rem;
-    }
-  }
 
   .prices__classes__grid {
     padding: 0;
@@ -571,18 +530,6 @@
     }
   }
 
-  .schedule__grid p {
-    font-size: 0.75rem;
-    padding: 0 0.5rem;
-  }
-
-  .schedule-grid {
-    // padding: 0 0.5rem;
-    p {
-      font-size: 0.5rem;
-      padding: 0.1rem 0.1rem;
-    }
-  }
 
   .prices .grid p {
     font-size: 1rem;
@@ -608,11 +555,6 @@
 
 @media only screen and (max-width: 320px) {
 
-  .schedule-grid {
-    p {
-      font-size: 0.5rem;
-    }
-  }
 
   .prices__classes__grid {
     p {
