@@ -570,52 +570,61 @@ footer {
 .classes-page,
 .registration-page,
 .info-page,
-.information-page {
+.information-page,
+.news-page {
   position: relative; }
   .classes-page section:last-of-type,
   .registration-page section:last-of-type,
   .info-page section:last-of-type,
-  .information-page section:last-of-type {
+  .information-page section:last-of-type,
+  .news-page section:last-of-type {
     margin-bottom: 6rem; }
   .classes-page .container,
   .registration-page .container,
   .info-page .container,
-  .information-page .container {
+  .information-page .container,
+  .news-page .container {
     overflow-x: hidden; }
   .classes-page h3,
   .registration-page h3,
   .info-page h3,
-  .information-page h3 {
+  .information-page h3,
+  .news-page h3 {
     margin-top: 5rem;
     margin-bottom: 1.5rem; }
   .classes-page h5,
   .registration-page h5,
   .info-page h5,
-  .information-page h5 {
+  .information-page h5,
+  .news-page h5 {
     color: #69BDA0; }
   .classes-page p,
   .registration-page p,
   .info-page p,
-  .information-page p {
+  .information-page p,
+  .news-page p {
     line-height: 1.2;
     margin-bottom: 0.5rem; }
   .classes-page p.subheading,
   .registration-page p.subheading,
   .info-page p.subheading,
-  .information-page p.subheading {
+  .information-page p.subheading,
+  .news-page p.subheading {
     margin-bottom: 0;
     color: #FFFFFF; }
   .classes-page li,
   .registration-page li,
   .info-page li,
-  .information-page li {
+  .information-page li,
+  .news-page li {
     font-family: 'Din Next Pro Regular', sans-serif;
     font-size: 1.25rem;
     line-height: 1.2; }
   .classes-page a,
   .registration-page a,
   .info-page a,
-  .information-page a {
+  .information-page a,
+  .news-page a {
     text-decoration: underline;
     color: #144D73; }
 
@@ -744,6 +753,65 @@ footer {
 .wpforms-container .wpforms-submit-container {
   padding: 0.5rem 0 0 0; }
 
+
+.cards.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 5%;
+  grid-row-gap: 3rem; }
+
+.cards {
+  width: 100%;
+  padding: 2rem 0 4rem 0; }
+  .cards a {
+    text-decoration: none;
+    height: min-content; }
+  .cards .card:hover img {
+    transform: scale(1); }
+  .cards .card:hover h4.title::after {
+    width: 100%; }
+  .cards .card__figure {
+    position: relative; }
+  .cards figure {
+    overflow: hidden; }
+  .cards img {
+    width: 100%;
+    transition: transform 500ms ease 100ms;
+    transform: scale(1.05); }
+  .cards .card__meta {
+    display: flex;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 80%;
+    padding: 1rem 1rem 1rem 0.25rem; }
+  .cards p {
+    margin: 0; }
+  .cards .card__meta p {
+    font-size: 1rem;
+    margin: 0; }
+  .cards p.type {
+    font-weight: bold; }
+  .cards p.type::after {
+    content: "|";
+    margin: 0 0.5rem; }
+  .cards h4.title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem; }
+    .cards h4.title::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      height: 0.25rem;
+      width: 0;
+      bottom: 0.25rem;
+      left: 0;
+      background-color: #EFB652;
+      transition: all 500ms ease; }
+  .cards p.excerpt {
+    font-size: 1rem; }
 /* Classes page */
 /* Schedule */
 .tabs {
@@ -774,7 +842,6 @@ footer {
   bottom: 5px;
   left: 0.65rem;
   transition: width 700ms; }
-
 .tabs li:hover::after {
   width: 20%; }
 
@@ -827,27 +894,31 @@ li.selected + li.disabled {
   height: min-content;
   padding: 1.5rem 0; }
 
-.grid p {
+.schedule__wrapper .grid p {
   font-size: 1.25rem;
   line-height: 1.25rem;
   margin: 0;
   padding: 0.25rem 0.5rem; }
 
-.grid .header {
+.schedule__wrapper .grid .header {
   background-color: #144D73; }
 
-.grid .header p {
+.schedule__wrapper .grid .header p {
   color: #FFFFFF;
   padding: 0.5rem; }
 
-.grid .line-bottom {
+.schedule__wrapper .grid .line-bottom {
   border-bottom: solid 2px #144D73; }
 
 .content-2 .schedule__grid {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(5, max-content);
-  grid-template-areas: "day room teachers-header" "hours2 class2 teachers2" "hours2 class2 teachers2" "hours3 class3 teachers3" "hours3 class3 teachers3"; }
+  grid-template-areas: "day room teachers-header"
+ "hours2 class2 teachers2"
+ "hours2 class2 teachers2"
+ "hours3 class3 teachers3"
+ "hours3 class3 teachers3"; }
   .content-2 .schedule__grid p {
     text-align: center; }
   .content-2 .schedule__grid .weekday {
@@ -892,7 +963,10 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: repeat(4, max-content);
-  grid-template-areas: "header header" "months days" "months days" "months days"; }
+  grid-template-areas: "header header"
+ "months days"
+ "months days"
+ "months days"; }
 
 .dates__header {
   grid-area: header;
@@ -1014,7 +1088,9 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "full-header student-header second-header" "full-price student-price second-price" "disclaimer disclaimer disclaimer"; }
+  grid-template-areas: "full-header student-header second-header"
+ "full-price student-price second-price"
+ "disclaimer disclaimer disclaimer"; }
   .prices__classes__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__classes__grid .student.header,
@@ -1047,7 +1123,9 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "   .....     thirty-min        one-hour" "one-teacher  price-one-thirty  price-one-one" "two-teachers price-two-thirty  price-two-one"; }
+  grid-template-areas: "   .....     thirty-min        one-hour"
+ "one-teacher  price-one-thirty  price-one-one"
+ "two-teachers price-two-thirty  price-two-one"; }
   .prices__privates__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__privates__grid .header p {

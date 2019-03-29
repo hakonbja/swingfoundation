@@ -4,8 +4,7 @@
   <div class="content registration-page" id="registration">
 
     <section>
-      <div class="anchor" id="reg-process">
-      </div>
+      <div class="anchor" id="reg-process"></div>
       <div class="container reg-process">
         <div class="hide-overflow-x">
           <h3 class="orange-line">Registration process</h3>
