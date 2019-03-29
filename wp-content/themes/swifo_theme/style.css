@@ -753,6 +753,7 @@ footer {
 .wpforms-container .wpforms-submit-container {
   padding: 0.5rem 0 0 0; }
 
+
 .cards.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -811,7 +812,6 @@ footer {
       transition: all 500ms ease; }
   .cards p.excerpt {
     font-size: 1rem; }
-
 /* Classes page */
 /* Schedule */
 .tabs {
@@ -837,15 +837,13 @@ footer {
   content: "";
   position: absolute;
   background-color: #EFB652;
-  height: 2.5px;
-  width: 20%;
+  height: 3.5px;
+  width: 0%;
   bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0.65rem;
   transition: width 700ms; }
-
 .tabs li:hover::after {
-  width: 30%; }
+  width: 20%; }
 
 .tabs li:not(.disabled) + li.disabled {
   border-left: 2px #EFB652 solid; }
@@ -863,7 +861,7 @@ li.selected + li.disabled {
   font-weight: bold;
   transform-origin: bottom; }
   .tabs li.selected::after, .tabs li.selected:hover::after {
-    width: 55%; }
+    width: calc(100% - 0.65rem * 2); }
 
 .tabs li.selected + li {
   border-left: 0px transparent solid; }
@@ -916,7 +914,11 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(5, max-content);
-  grid-template-areas: "day room teachers-header" "hours2 class2 teachers2" "hours2 class2 teachers2" "hours3 class3 teachers3" "hours3 class3 teachers3"; }
+  grid-template-areas: "day room teachers-header"
+ "hours2 class2 teachers2"
+ "hours2 class2 teachers2"
+ "hours3 class3 teachers3"
+ "hours3 class3 teachers3"; }
   .content-2 .schedule__grid p {
     text-align: center; }
   .content-2 .schedule__grid .weekday {
@@ -961,7 +963,10 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: repeat(4, max-content);
-  grid-template-areas: "header header" "months days" "months days" "months days"; }
+  grid-template-areas: "header header"
+ "months days"
+ "months days"
+ "months days"; }
 
 .dates__header {
   grid-area: header;
@@ -1001,7 +1006,7 @@ li.selected + li.disabled {
     font-size: 0.85rem;
     padding: 0 0.25rem; }
   .tabs li {
-    padding: 0.25rem 0.5rem; } }
+    padding: 0.25rem; } }
 
 /* Levels */
 .level-descriptions p {
@@ -1083,7 +1088,9 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "full-header student-header second-header" "full-price student-price second-price" "disclaimer disclaimer disclaimer"; }
+  grid-template-areas: "full-header student-header second-header"
+ "full-price student-price second-price"
+ "disclaimer disclaimer disclaimer"; }
   .prices__classes__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__classes__grid .student.header,
@@ -1116,7 +1123,9 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "   .....     thirty-min        one-hour" "one-teacher  price-one-thirty  price-one-one" "two-teachers price-two-thirty  price-two-one"; }
+  grid-template-areas: "   .....     thirty-min        one-hour"
+ "one-teacher  price-one-thirty  price-one-one"
+ "two-teachers price-two-thirty  price-two-one"; }
   .prices__privates__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__privates__grid .header p {

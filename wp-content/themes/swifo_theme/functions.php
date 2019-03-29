@@ -2,7 +2,7 @@
 
 
 function swifo_scripts() {
-	$ver = '1.6';
+	$ver = '1.8';
   // Theme stylesheet
 	wp_enqueue_style( 'swifo-style', get_stylesheet_uri(), '', $ver );
 

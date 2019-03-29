@@ -31,16 +31,15 @@
   content: "";
   position: absolute;
   background-color: $orange;
-  height: 2.5px;
-  width: 20%;
+  height: 3.5px;
+  width: 0%;
   bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0.65rem;
   transition: width 700ms;
 }
 
 .tabs li:hover::after {
-  width: 30%;
+  width: 20%;
 }
 
 .tabs li:not(.disabled) + li.disabled {
@@ -60,12 +59,11 @@ li.selected + li.disabled {
   border-bottom: 2px white solid;
   margin-bottom: -2px;
   font-weight: bold;
-  // transform: scale(1, 1.05);
   transform-origin: bottom;
 
   &::after,
   &:hover::after {
-    width: 55%;
+    width: calc(100% - 0.65rem * 2);
   }
 }
 
@@ -291,7 +289,7 @@ li.selected + li.disabled {
   }
 
   .tabs li {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem;
   }
 }
 
