@@ -23,9 +23,9 @@ gulp.task('hello', function() {
 gulp.task('sass', function() {
   gulp.src('assets/css/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(cssnano({
-      autoprefixer: {browsers: supported, add: true}
-    }))
+    // .pipe(cssnano({
+    //   autoprefixer: {browsers: supported, add: true}
+    // }))
     .pipe(gulp.dest(""))
     .pipe(browserSync.stream());
 });
