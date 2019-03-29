@@ -251,10 +251,10 @@ li.selected + li.disabled {
   }
 }
 
-// Responsive
+// Responsive schedules
 
 @media only screen and (max-width: 600px) {
-  .grid p {
+  .schedule__wrapper .grid p {
     font-size: 1.2rem;
   }
 
@@ -273,8 +273,8 @@ li.selected + li.disabled {
 }
 
 @media only screen and (max-width: 450px) {
-  .grid p,
-  .grid .header p {
+  .schedule__wrapper .grid p,
+  .schedule__wrapper .grid .header p {
     font-size: 1rem;
     padding: 0.25rem;
   }
@@ -282,8 +282,8 @@ li.selected + li.disabled {
 }
 
 @media only screen and (max-width: 370px) {
-  .grid p,
-  .grid .header p {
+  .schedule__wrapper .grid p,
+  .schedule__wrapper .grid .header p {
     font-size: 0.85rem;
     padding: 0 0.25rem;
   }

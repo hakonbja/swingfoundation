@@ -753,7 +753,6 @@ footer {
 .wpforms-container .wpforms-submit-container {
   padding: 0.5rem 0 0 0; }
 
-
 .cards.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -812,6 +811,7 @@ footer {
       transition: all 500ms ease; }
   .cards p.excerpt {
     font-size: 1rem; }
+
 /* Classes page */
 /* Schedule */
 .tabs {
@@ -842,6 +842,7 @@ footer {
   bottom: 5px;
   left: 0.65rem;
   transition: width 700ms; }
+
 .tabs li:hover::after {
   width: 20%; }
 
@@ -914,11 +915,7 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(5, max-content);
-  grid-template-areas: "day room teachers-header"
- "hours2 class2 teachers2"
- "hours2 class2 teachers2"
- "hours3 class3 teachers3"
- "hours3 class3 teachers3"; }
+  grid-template-areas: "day room teachers-header" "hours2 class2 teachers2" "hours2 class2 teachers2" "hours3 class3 teachers3" "hours3 class3 teachers3"; }
   .content-2 .schedule__grid p {
     text-align: center; }
   .content-2 .schedule__grid .weekday {
@@ -963,10 +960,7 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: repeat(4, max-content);
-  grid-template-areas: "header header"
- "months days"
- "months days"
- "months days"; }
+  grid-template-areas: "header header" "months days" "months days" "months days"; }
 
 .dates__header {
   grid-area: header;
@@ -986,7 +980,7 @@ li.selected + li.disabled {
   border-bottom: 2px solid #144D73; }
 
 @media only screen and (max-width: 600px) {
-  .grid p {
+  .schedule__wrapper .grid p {
     font-size: 1.2rem; }
   .tabs-n-content.container {
     padding: 0 !important;
@@ -995,14 +989,14 @@ li.selected + li.disabled {
     justify-content: center; } }
 
 @media only screen and (max-width: 450px) {
-  .grid p,
-  .grid .header p {
+  .schedule__wrapper .grid p,
+  .schedule__wrapper .grid .header p {
     font-size: 1rem;
     padding: 0.25rem; } }
 
 @media only screen and (max-width: 370px) {
-  .grid p,
-  .grid .header p {
+  .schedule__wrapper .grid p,
+  .schedule__wrapper .grid .header p {
     font-size: 0.85rem;
     padding: 0 0.25rem; }
   .tabs li {
@@ -1088,9 +1082,7 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "full-header student-header second-header"
- "full-price student-price second-price"
- "disclaimer disclaimer disclaimer"; }
+  grid-template-areas: "full-header student-header second-header" "full-price student-price second-price" "disclaimer disclaimer disclaimer"; }
   .prices__classes__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__classes__grid .student.header,
@@ -1123,9 +1115,7 @@ li.selected + li.disabled {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: repeat(3, max-content);
-  grid-template-areas: "   .....     thirty-min        one-hour"
- "one-teacher  price-one-thirty  price-one-one"
- "two-teachers price-two-thirty  price-two-one"; }
+  grid-template-areas: "   .....     thirty-min        one-hour" "one-teacher  price-one-thirty  price-one-one" "two-teachers price-two-thirty  price-two-one"; }
   .prices__privates__grid .header {
     border-bottom: 2px solid #323133; }
   .prices__privates__grid .header p {
