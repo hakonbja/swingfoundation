@@ -393,10 +393,11 @@
   .registration-page,
   .info-page,
   .about-us-page,
-  .information-page {
-  .container {
-      padding: 0 1rem;
-    }
+  .information-page,
+  .single-post-custom {
+    .container {
+        padding: 0 1rem;
+      }
   }
 
 

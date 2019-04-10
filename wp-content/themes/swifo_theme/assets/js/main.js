@@ -98,9 +98,9 @@ function setTopMargin() {
   const navMobileHeight = navMobile.offsetHeight;
 
   if (!isFrontpage()) {
-    const pageHeader = document.getElementsByClassName('page-header')[0];
+    const pageHeader = document.querySelector('.page-header');
     const pageHeaderHeight = pageHeader.offsetHeight;
-    const content = document.getElementsByClassName('content')[0];
+    const content = document.querySelector('.content');
     const offset = -8;
     const newMargin = offset + pageHeaderHeight + navDeskHeight + navMobileHeight;
     content.style.marginTop = newMargin + 'px';
@@ -117,8 +117,8 @@ function setTopMargin() {
 }
 
 function setHeaderBackgroundHeight() {
-  const pageHeader = document.getElementsByClassName('page-header')[0];
-  const headerBackground = document.getElementsByClassName('header-background')[0];
+  const pageHeader = document.querySelector('.page-header');
+  const headerBackground = document.querySelector('.header-background');
 
   if (pageHeader && pageHeader.offsetWidth >= 450 && pageHeader.offsetHeight > 88) {
     headerBackground.style.height = pageHeader.offsetHeight - 16 + 'px';
@@ -128,7 +128,7 @@ function setHeaderBackgroundHeight() {
 }
 
 function isFrontpage() {
-  const frontPage = document.getElementsByClassName('front-page')[0];
+  const frontPage = document.querySelector('.front-page');
   if (frontPage) {
     return true;
   } else {

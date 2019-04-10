@@ -4,69 +4,37 @@
 
 <div class="cards grid">
 
-  <a class="card" href="#">
-    <div class="card__figure">
-      <figure>
-        <img src="https://picsum.photos/350/400?random" alt="">
-      </figure>
-      <div class="card__meta">
-        <p class="type">Story</p>
-        <p class="date">28.03.2019</p>
-      </div>
-    </div>
-    <div class="card__info">
-      <h4 class="title">Savoy Cup</h4>
-      <p class="excerpt">We went to compete in one of the biggest Lindy Hop competitions in Europe!</p>
-    </div>
-  </a>
+  <?php
+  $news = new WP_Query( array( 'category_name' => 'story,event' ) );
+  while ( $news -> have_posts() ) : $news -> the_post();
+  $category = get_the_category();
+  $date = get_post_meta(get_the_id(), "date", true);
+  $author = get_post_meta(get_the_id(), "author", true);
+  ?>
 
-  <a class="card" href="#">
+  <a class="card" href="<?php echo the_permalink() ?>">
     <div class="card__figure">
       <figure>
-        <img src="https://picsum.photos/350/300?random" alt="">
+        <?php the_post_thumbnail(); ?>
       </figure>
       <div class="card__meta">
-        <p class="type">Event</p>
-        <p class="date">11.04.2019</p>
-      </div>
-    </div>
-    <div class="card__info">
-      <h4 class="title">Solo workshop</h4>
-      <p class="excerpt">On the 14th of May you can...</p>
-    </div>
-  </a>
+        <p class="type"><?php echo $category[0]->name; ?></p>
+        <?php if ($date): ?>
+          <p class="date"><?php echo $date ?></p>
+        <?php elseif ($author): ?>
+          <p class="author">by <?php echo $author ?></p>
+      <?php endif ?>
 
-  <a class="card" href="#">
-    <div class="card__figure">
-      <figure>
-        <img src="https://picsum.photos/350/?random" alt="">
-      </figure>
-      <div class="card__meta">
-        <p class="type">Story</p>
-        <p class="date">8.05.2019</p>
       </div>
     </div>
     <div class="card__info">
-      <h4 class="title">Lindy Hop in the Netherlands</h4>
-      <p class="excerpt">How it all began...</p>
+      <h4 class="title"><?php echo the_title() ?></h4>
+      <p class="excerpt"><?php echo get_the_excerpt() ?></p>
     </div>
   </a>
+  <?php endwhile; ?>
 
-  <a class="card" href="#">
-    <div class="card__figure">
-      <figure>
-        <img src="https://picsum.photos/400/?random" alt="">
-      </figure>
-      <div class="card__meta">
-        <p class="type">Event</p>
-        <p class="date">18.06.2019</p>
-      </div>
-    </div>
-    <div class="card__info">
-      <h4 class="title">Summer class</h4>
-      <p class="excerpt">Learn how to do the Didlibum!</p>
-    </div>
-  </a>
+
 
 </div>
 

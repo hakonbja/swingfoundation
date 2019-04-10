@@ -220,29 +220,25 @@
 
 .cards {
   width: 100%;
+  // max-width: 500px;
   padding: 2rem 0 4rem 0;
+  box-sizing: border-box;
 
   a {
     text-decoration: none;
     height: min-content;
   }
 
-  .card {
-
-  }
-
   .card:hover {
 
     img {
-      transform: scale(1);
+      // transform: scale(1.02);
     }
 
     h4.title::after {
       width: 100%;
     }
-
   }
-
 
   .card__figure {
     position: relative;
@@ -254,8 +250,9 @@
 
   img {
     width: 100%;
+    height: auto;
     transition: transform 500ms ease 100ms;
-    transform: scale(1.05);
+    // transform: scale(1.05);
   }
 
   .card__meta {
@@ -286,6 +283,10 @@
     margin: 0 0.5rem;
   }
 
+  .card__info {
+    margin-top: 0.5rem;
+  }
+
   h4.title {
     position: relative;
     display: inline-block;
@@ -306,5 +307,48 @@
 
   p.excerpt {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cards {
+    padding: 2rem 1rem 4rem 1rem;
+
+    .card__meta {
+      padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+    }
+  }
+}
+
+/* Single posts */
+
+.single-post-custom {
+  margin-bottom: 2rem;
+  p {
+    margin-bottom: 1rem;
+  }
+
+   a {
+    text-decoration: underline;
+  }
+
+  h5 {
+    margin-bottom: 0.5rem;
+  }
+
+  figure {
+    float: right;
+    width: 30%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .excerpt {
+    font-size: 1.5rem;
+    margin: 2rem 0;
   }
 }
