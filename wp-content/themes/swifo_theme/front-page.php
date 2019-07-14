@@ -12,7 +12,7 @@
 
   <div class="container">
     <div class="introduction padding-rl-1col">
-      <h4>Swing Foundation is an Amsterdam based movement that promotes the history and culture of Swing dancing through workshops, lectures and weekly classes.</h4>
+      <h4>Swing Foundation is an Amsterdam based Lindy Hop school that promotes the history and culture of Swing dancing through workshops, lectures and weekly classes.</h4>
     </div>
   </div>
 
@@ -35,7 +35,10 @@
       <div class="col-right">
         <div class="box-white">
           <h3 class="next-course">Next&nbsp;course starts&nbsp;on</h3>
-          <h3 class="date">4th&nbsp;of </br><span class="month">June</span></br>2019</h3>
+          <?php while ( have_posts() ) : the_post();
+            $date = get_post_meta(get_the_id(), "next_course_date", true);?>
+            <h3 class="date"><?php echo $date ?></h3>
+          <?php endwhile ?>
           <img class="sax" src="<?php echo get_template_directory_uri(); ?>/assets/img/sax_with_soundlines.svg" alt="saxophone">
         </div>
       </div>
@@ -57,22 +60,40 @@
       <div class="classes-all">
         <ul>
           <li class="class">
-            <!-- <p class="class__time">Tuesdays at 18:30-19:45</p> -->
-            <p class="class__name">Lindy Hop Beginners</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-beginners">Level description</a>
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 18:30-19:45</a></p>
+            <p class="class__name">Lindy 1</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-1">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
+          </li>
+          <!-- <li class="class">
+            <p class="class__time">Tuesdays at 19:45-21:00</p>
+            <p class="class__name">Lindy 2</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-2">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
+          </li> -->
+          <li class="class">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
+            <p class="class__name">Lindy 3</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-3">Level description</a>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
           </li>
           <li class="class">
-            <!-- <p class="class__time">Tuesdays at 19:45-21:00</p> -->
-            <p class="class__name">Lindy Hop Beginners+</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-beginners+">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet3.jpg" alt="legs of dancers">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
+            <p class="class__name">Lindy Advanced+</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-adv+">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
           </li>
           <li class="class">
-            <!-- <p class="class__time">Tuesdays at 21:00-22:15</p> -->
-            <p class="class__name">Lindy Hop Advanced+</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lh-adv+">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
+            <p class="class__name">Solo Beg/Int</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#solo-beg-int">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet1.jpg" alt="legs of dancers">
+          </li>
+          <li class="class">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
+            <p class="class__name">Solo Int/Adv</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#solo-int-adv">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet2.jpg" alt="legs of dancers">
           </li>
         </ul>
       </div>

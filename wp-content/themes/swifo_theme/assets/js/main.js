@@ -92,24 +92,19 @@ function addSubmenusClickEvent() {
 
 
 function setTopMargin() {
-  const navDesktop = document.getElementById('js-navbar__desktop__wrapper');
-  const navDeskHeight = navDesktop.offsetHeight;
-  const navMobile = document.getElementById('js-navbar__mobile__wrapper');
-  const navMobileHeight = navMobile.offsetHeight;
-
   if (!isFrontpage()) {
-    const pageHeader = document.querySelector('.page-header');
+    const pageHeader = document.querySelector('header');
     const pageHeaderHeight = pageHeader.offsetHeight;
     const content = document.querySelector('.content');
-    const offset = -8;
-    const newMargin = offset + pageHeaderHeight + navDeskHeight + navMobileHeight;
-    content.style.marginTop = newMargin + 'px';
+    content.style.marginTop = pageHeaderHeight +'px';
   }
 
   // also set top of anchors
   const anchors = document.getElementsByClassName('anchor');
-  const navHeight = (navbarIsMobile()) ? navMobile : navDesktop;
   if (anchors.length > 0) {
+    const navDesktop = document.getElementById('js-navbar__desktop__wrapper');
+    const navMobile = document.getElementById('js-navbar__mobile__wrapper');
+    const navHeight = (navbarIsMobile()) ? navMobile.offsetHeight : navDesktop.offsetHeight;
     for (const anchor of anchors) {
       anchor.style.top = '-' + navHeight + 'px';
     }

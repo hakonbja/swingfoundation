@@ -1,33 +1,31 @@
 /* Front page */
 
 .jumbotron {
-  max-height: 90vh;
+  // height: 90vh;
+  // max-height: 700px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   background-color: #144D73;
-  padding: 5% 10% 13% 10%;
-  // height: 100vh;
-  // box-sizing: border-box;
+  // padding: 5% 10% 13% 10%;
 }
 
 .jumbotron__logo {
-  max-height: 65vh;
-  width: 100%;
+  height: auto;
+  max-height: 500px;
+  width: 85vw;
+  margin: 3rem auto 5rem;
+  display: block;
 }
-
-
 
 .introduction {
   text-align: center;
   line-height: 1.2;
-  // letter-spacing: 1.05px;
   font-weight: 400;
-  margin: 25% 0;
+  margin: 15% 0;
 }
 
 .front-page > section {
   margin-bottom: 14rem;
-  // width: 100%;
 }
 
 
@@ -256,10 +254,17 @@ li.class:hover {
 p.class__time {
   position: absolute;
   color: $white;
-  top: 18.5%;
+  top: 19.5%;
   font-weight: 100;
   opacity: 0;
   transition: opacity 800ms ease;
+  z-index: 2;
+  text-align: center;
+
+  a {
+    font-family: 'Din Next Pro Regular', sans-serif;
+
+  }
 }
 
 p.class__name {
@@ -269,6 +274,7 @@ p.class__name {
   font-size: 2rem;
   text-align: center;
   color: $white;
+  cursor: default;
 }
 
 .class__button {

@@ -116,8 +116,12 @@
 
     .class__time,
     .class__button {
-      font-size: 1rem;
       opacity: 1;
+    }
+
+    .class__time a,
+    .class__button {
+      font-size: 1rem;
     }
 
     .class__button {
@@ -193,20 +197,6 @@
   .quick-links ul {
     margin: 0 2rem;
   }
-
-
-  .prices__classes__grid {
-    p {
-      font-size: 0.75rem;
-    }
-  }
-
-  .prices__privates__grid {
-    p {
-      font-size: 0.75rem;
-    }
-  }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -263,6 +253,9 @@
   li.class {
     height: 165px;
     width: 165px;
+    .class__time a {
+      font-size: 0.75rem;
+    }
     .class__name {
       font-size: 1.25rem;
     }
@@ -276,6 +269,7 @@
     // width: 300px;
     bottom: -61px;
   }
+
 
 }
 
@@ -295,10 +289,6 @@
   .page-header,
   .fp-section-header {
     margin-left: 0.5rem;
-  }
-
-  .anchor {
-    // top: -149px;
   }
 
   p.subheading {
@@ -341,10 +331,6 @@
     .btn:first-child {
       margin-bottom: 0;
     }
-  }
-
-  .single-page {
-    padding: 1rem;
   }
 
   h3.next-course {
@@ -394,6 +380,7 @@
   .info-page,
   .about-us-page,
   .information-page,
+  .single-page,
   .single-post-custom {
     .container {
         padding: 0 1rem;
@@ -401,13 +388,13 @@
   }
 
 
-  .prices__classes__grid {
-    grid-template-columns: max-content min-content max-content;
-
-    .header {
-      align-self: end;
-    }
-  }
+  // .prices__classes__grid {
+  //   grid-template-columns: max-content min-content max-content;
+  //
+  //   .header {
+  //     align-self: end;
+  //   }
+  // }
 
   .registration__buttons {
     justify-content: space-around;
@@ -519,7 +506,7 @@
   li.class {
     height: 225px;
     width: 225px;
-    .class__time {
+    .class__time a {
       font-size: 1.1rem;
     }
     .class__name {
@@ -532,10 +519,7 @@
   }
 
 
-  .prices .grid p {
-    font-size: 1rem;
-    padding: 0 0.25rem;
-  }
+
 
   .registration__buttons {
     flex-direction: column;

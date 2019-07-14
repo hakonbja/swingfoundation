@@ -1,7 +1,5 @@
 
-<div class="container anchor" id="schedule">
-
-</div>
+<div class="container anchor" id="schedule"></div>
 <div class="container">
   <div class="hide-overflow-x">
     <h3 class="orange-line">Schedule</h3>
@@ -12,16 +10,16 @@
     <div class="tabs">
       <ul>
         <li class="tab-1 disabled">Block 1</li>
-        <li class="tab-2 selected">Block 2</li>
+        <li class="tab-2">Block 2</li>
         <li class="tab-3">Block 3</li>
-        <li class="tab-4 disabled">Block 4</li>
+        <li class="tab-4 selected">Block 4</li>
         <li class="tab-5 disabled">Block 5</li>
       </ul>
     </div>
     <div class="schedule__wrapper content-1"></div>
 
 
-    <div class="schedule__wrapper content-2 selected">
+    <div class="schedule__wrapper content-2">
       <div class="schedule__grid grid">
         <div class="weekday header">
           <p>Tuesdays</p>
@@ -76,25 +74,12 @@
     </div>
 
     <div class="schedule__wrapper content-3">
-      <div class="dates">
-
-        <div class="dates__grid grid">
-          <div class="dates__header header">
-            <p>Dates</p>
-          </div>
-          <div class="dates__months">
-            <p>June:</p>
-            <p>July:</p>
-          </div>
-          <div class="dates__days">
-            <p>4, 11, 18, 25</p>
-            <p>2, 9</p>
-          </div>
-        </div>
-      </div>
+      <?php get_template_part( 'partials/_schedule__block-3'); ?>
     </div>
 
-    <div class="schedule__wrapper content-4"></div>
+    <div class="schedule__wrapper content-4 selected">
+      <?php get_template_part( 'partials/_schedule__block-4'); ?>
+    </div>
     <div class="schedule__wrapper content-5"></div>
 
 </div>

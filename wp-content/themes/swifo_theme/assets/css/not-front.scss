@@ -184,7 +184,7 @@
   button[type=submit] {
     font-family: 'Din Next Pro Regular', sans-serif;
     font-size: 1.5rem;
-    @include removeBorder(1.5rem)
+    @include removeBorder(1.5rem);
     font-weight: bold;
     text-transform: uppercase;
     color: $dark-blue;
@@ -208,6 +208,12 @@
   }
 }
 
+  .wpforms-confirmation-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+
 // News
 
 .cards.grid {
@@ -230,11 +236,6 @@
   }
 
   .card:hover {
-
-    img {
-      // transform: scale(1.02);
-    }
-
     h4.title::after {
       width: 100%;
     }
@@ -262,7 +263,7 @@
     bottom: 0;
     left: 0;
     max-width: 80%;
-    padding: 1rem 1rem 1rem 0.25rem;
+    padding: 0.75rem 0.75rem 0.75rem 0.25rem;
   }
 
   p {
@@ -323,7 +324,7 @@
 /* Single posts */
 
 .single-post-custom {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   p {
     margin-bottom: 1rem;
   }
@@ -334,6 +335,56 @@
 
   h5 {
     margin-bottom: 0.5rem;
+  }
+
+  .meta-data {
+    border: 3px solid $sea-blue;
+    width: max-content;
+    padding: 5px 8px 2px 8px;
+    margin-bottom: 1rem;
+
+    p {
+      margin: 0;
+    }
+  } 
+  
+
+  p.first-letter::first-letter {
+    font-size: 500%;
+    float: left;
+    margin-top: -21px;
+    margin-bottom: -48px;
+    color: $sea-blue;
+  }
+
+  blockquote {
+    display: block;
+    margin: 3.5rem auto 3rem;
+    width: max-content;
+    max-width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+
+    p {
+      position: relative;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: $sea-blue;
+      font-family: 'Din Next Pro Condensed';
+    }
+
+    p::before {
+      content: "";
+      background-image: url('../swifo_theme/assets/img/quotation_marks.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      left: -50px;
+      top: -28px;
+      z-index: -1;
+    }
   }
 
   figure {
@@ -347,8 +398,80 @@
     }
   }
 
-  .excerpt {
-    font-size: 1.5rem;
-    margin: 2rem 0;
+  iframe {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
   }
+
+  // .excerpt {
+  //   // font-size: 1.5rem;
+  //   margin: 2rem 0;
+  // }
+
+  img.fb {
+    height: 2rem;
+    width: auto;
+  }
+
+  .link-back {
+    margin-top: 2rem;
+    text-align: center;
+
+    a {
+      position: relative;
+      font-size: 1.5rem;
+      text-decoration: none;
+      font-family: 'Din Next Pro Condensed', sans-serif;
+    }
+
+    a::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      height: 0.15rem;
+      // width: 0;
+      bottom: 0.25rem;
+      right: 0;
+      left: 100%;
+      background-color: $orange;
+      transition: all 500ms ease;
+    }
+
+    
+
+    img {
+      position: absolute;
+      top: 3px;
+      left: -19px;
+      height: 1.2rem;
+      width: auto;
+      transition: left 300ms;
+    }
+
+    svg {
+      position: absolute;
+      top: 3px;
+      left: -19px;
+      height: 1.2rem;
+      width: auto;
+      path {
+        fill: #323133;
+      }
+    }
+
+  }
+
+  .link-back a:hover {
+    &::after {
+      // width: 118%;
+      left: -18px;
+    }
+
+    svg path {
+      fill: #EFB652;
+      transition: all 300ms 300ms;
+    }
+  }
+
 }

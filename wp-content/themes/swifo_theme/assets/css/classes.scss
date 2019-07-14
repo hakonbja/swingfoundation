@@ -109,6 +109,7 @@ li.selected + li.disabled {
 .schedule__wrapper.selected {
   display: flex;
   opacity: 1;
+  overflow: visible;
   visibility: visible;
   height: min-content;
   padding: 1.5rem 0;
@@ -213,10 +214,178 @@ li.selected + li.disabled {
   }
 }
 
+// Block 3 + 4
+
+.content-3 .schedule__grid,
+.content-4 .schedule__grid {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas:
+    "weekday room-a-1 room-a-1 teachers-header-a-1 teachers-header-a-1"
+    "hours1 class-a-1 class-a-1 teachers-a-1 teachers-a-1"
+    "hours1 class-a-1 class-a-1 teachers-a-1 teachers-a-1"
+    "empty-blue room-a-2 teachers-header-a-2 room-b teachers-header-b "
+    "hours2 class-a-2 teachers-a-2 class-b-2 teachers-b-2"
+    "hours2 class-a-2 teachers-a-2 class-b-2 teachers-b-2"
+    "hours3 class-a-3 teachers-a-3 class-b-3 teachers-b-3"
+    "hours3 class-a-3 teachers-a-3 class-b-3 teachers-b-3";
+
+
+    p {
+      text-align: center;
+      // display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+  .weekday {
+    grid-area: weekday;
+  }
+
+  .hours {
+    border-right: dashed 2px $dark-blue;
+    border-left: dashed 2px $dark-blue;
+    border-bottom: solid 2px $dark-blue;
+    p {
+      text-align: left;
+    }
+  }
+  .hours1 {
+    grid-area: hours1;
+  }
+  .hours2 {
+    grid-area: hours2;
+  }
+  .hours3 {
+    grid-area: hours3;
+  }
+
+  .room-a-1 {
+    grid-area: room-a-1;
+  }
+  .teachers-header-a-1 {
+    grid-area: teachers-header-a-1;
+  }
+
+  .empty-blue {
+    grid-area: empty-blue;
+    background-color: $dark-blue;
+  }
+
+  .room-a-2 {
+    grid-area: room-a-2;
+  }
+  .room-b {
+    grid-area: room-b;
+  }
+  .teachers-header-a-2 {
+    grid-area: teachers-header-a-2;
+  }
+  .teachers-header-b {
+    grid-area: teachers-header-b;
+  }
+
+
+
+  .class {
+    border-right: dashed 2px $dark-blue;
+  }
+  .teachers {
+    border-right: dashed 2px $dark-blue;
+  }
+
+  .class-a-1 {
+    grid-area: class-a-1;
+  }
+  .teachers-a-1 {
+    grid-area: teachers-a-1;
+  }
+
+  .class-b-1 {
+    grid-area: class-b-1;
+  }
+  .teachers-b-1 {
+    grid-area: teachers-b-1;
+  }
+
+  .class-a-2 {
+    grid-area: class-a-2;
+  }
+  .teachers-a-2 {
+    grid-area: teachers-a-2;
+  }
+
+  .class-b-2 {
+    grid-area: class-b-2;
+  }
+  .teachers-b-2 {
+    grid-area: teachers-b-2;
+  }
+
+  .class-a-3 {
+    grid-area: class-a-3;
+  }
+  .teachers-a-3 {
+    grid-area: teachers-a-3;
+  }
+
+  .class-b-3 {
+    grid-area: class-b-3;
+  }
+  .teachers-b-3 {
+    grid-area: teachers-b-3;
+  }
+
+  .two-rows {
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Only Block 4
+
+.content-4 .schedule__grid {
+  grid-template-columns: repeat(4, max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas:
+    "weekday room-a room-b room-c"
+    "hours1 class-a-1 class-b-1 class-c-1"
+    "hours1 class-a-1 class-b-1 class-c-1"
+    "hours2 class-a-2 class-b-2 class-c-2"
+    "hours2 class-a-2 class-b-2 class-c-2"
+    "hours3 class-a-3 class-b-3 class-c-3"
+    "hours3 class-a-3 class-b-3 class-c-3";
+}
+
+.class-c-1 {
+  grid-area: class-c-1;
+}
+
+.class-c-2 {
+  grid-area: class-c-2;
+}
+
+.class-c-3 {
+  grid-area: class-c-3;
+}
+
+.two-cols {
+  grid-column-end: span 2 !important;
+}
+
+
 // All blocks
 
+.dates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .dates__grid {
-  display: grid;
+  margin: 0.5rem;
+  display: inline-grid;
   grid-template-columns: repeat(2, max-content);
   grid-template-rows: repeat(4, max-content);
   grid-template-areas:
@@ -253,9 +422,15 @@ li.selected + li.disabled {
 
 // Responsive schedules
 
+@media only screen and (max-width: 800px) {
+  .schedule__wrapper.content-3 .schedule__grid {
+    grid-template-columns: repeat(7, min-content);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .schedule__wrapper .grid p {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
   }
 
   .tabs-n-content.container {
@@ -272,7 +447,7 @@ li.selected + li.disabled {
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 482px) {
   .schedule__wrapper .grid p,
   .schedule__wrapper .grid .header p {
     font-size: 1rem;
@@ -281,7 +456,7 @@ li.selected + li.disabled {
 
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 372px) {
   .schedule__wrapper .grid p,
   .schedule__wrapper .grid .header p {
     font-size: 0.85rem;
@@ -336,21 +511,6 @@ li.selected + li.disabled {
 
   .level:first-of-type {
     margin-top: 1rem;
-  }
-
-  a.semi-btn {
-    text-decoration: underline;
-    font-family: 'Din Next Pro Condensed', sans-serif;
-    font-size: 1.5rem;
-    color: $dark-blue;
-    margin-top: 0.5rem;
-    display: inline-block;
-    // padding: 0 0.5rem;
-    transition: background-color 300ms, color 200ms;
-    &:hover {
-      // color: $red;
-      background-color: $orange;
-    }
   }
 
 
