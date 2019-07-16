@@ -9,8 +9,8 @@
     <p>19:45</p>
   </div>
   <div class="hours hours2">
-    <p>19:45-</p>
-    <p>21:00</p>
+    <p>19:50-</p>
+    <p>21:05</p>
   </div>
   <div class="hours hours3">
     <p>21:05-</p>
