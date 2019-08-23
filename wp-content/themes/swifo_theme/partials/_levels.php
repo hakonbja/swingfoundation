@@ -88,8 +88,8 @@
         <?php get_template_part( 'partials/_reg-link'); ?>
       </div>
 
-      <div class="anchor" id="lindy-adv+"></div>
-      <div class="lindy-adv+ level">
+      <div class="anchor" id="lindy-8"></div>
+      <div class="lindy-8 level">
         <h5>Lindy 8 (Adv+)</h5>
         <p>Based on the amount of applications we might have an audition for this level.</p>
         <p>If you don’t know where to take classes anymore or are looking to add another high intensity class to your week then this might be something for you!</p>

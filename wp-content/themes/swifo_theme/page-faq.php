@@ -22,10 +22,10 @@
           <p class="faq__single__question">Do I need a partner?</p>
           <p class="faq__single__answer">For partner dancing classes we aim for a nice balance between followers and leaders. If you register without a partner you’ll end up on the waiting list until we can match your registration to someone with the other dancing role. In class we rotate dance partners so you will really learn to lead/follow. It also creates a similar situation as a social dance floor at swing dance parties :)</p>
         </div>
-        <div class="faq__single">
+        <!-- <div class="faq__single">
           <p class="faq__single__question">Can I join a class as a try-out?</p>
           <p class="faq__single__answer">When your registration is confirmed you can join the first class of the block as a try-out. We expect your payment for the full block of classes before class 2.</p>
-        </div>
+        </div> -->
         <div class="faq__single">
           <p class="faq__single__question">How do I pay?</p>
           <p class="faq__single__answer">You can pay by bank transfer, card or cash. Please read the instructions in our confirmation email carefully.</p>

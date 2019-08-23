@@ -88,351 +88,114 @@ li.selected + li.disabled {
 // The schedule(s)
 
 .schedule__wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 0px;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  // justify-content: center;
-  align-items: center;
-  transition: opacity 700ms ease;
-
-  &>div {
-    margin-bottom: 1.5rem;
-  }
-  &>div:last-child {
-    margin-bottom: 0;
-  }
+  display: none;
 }
 
 .schedule__wrapper.selected {
   display: flex;
-  opacity: 1;
-  overflow: visible;
-  visibility: visible;
-  height: min-content;
-  padding: 1.5rem 0;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
 }
 
 
-.schedule__wrapper .grid {
-  p {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    margin: 0;
-    padding: 0.25rem 0.5rem;
-  }
+/* Table schedules */
 
-  .header {
+table.schedule,
+table.dates {
+  font-family: 'Din Next Pro Regular', sans-serif;
+  font-size: 1.25rem;
+  border: solid 2px $dark-blue;
+  white-space: nowrap;
+  
+  th {
     background-color: $dark-blue;
-  }
-
-  .header p {
-    color: $white;
+    color: white;
     padding: 0.5rem;
   }
 
-  .line-bottom {
+  td {
+    padding: 0.25rem;
+  }
+}
+
+table.schedule {
+  margin-bottom: 1rem;
+
+  tr > td:first-child {
+    text-align: left;
+  }
+
+  tbody > tr:nth-child(odd) > td:first-child {
+    border-bottom: none;
+  }
+
+  td, th {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  td {
+    border-right: dashed 2px $dark-blue;
     border-bottom: solid 2px $dark-blue;
   }
 }
 
-// Block 2
-
-.content-2 .schedule__grid {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  grid-template-rows: repeat(5, max-content);
-  grid-template-areas:
-    "day room teachers-header"
-    "hours2 class2 teachers2"
-    "hours2 class2 teachers2"
-    "hours3 class3 teachers3"
-    "hours3 class3 teachers3";
-  // margin-right: 2rem;
-
-    p {
-      text-align: center;
-    }
-
-  .weekday {
-    grid-area: day;
-  }
-  .room {
-    grid-area: room;
-  }
-  .teachers-header {
-    grid-area: teachers-header;
-  }
-
-  .hours {
-    border-right: dashed 2px $dark-blue;
-    border-left: dashed 2px $dark-blue;
-    border-bottom: solid 2px $dark-blue;
-    p {
-      text-align: left;
-    }
-  }
-  .hours1 {
-    grid-area: hours1;
-  }
-  .hours2 {
-    grid-area: hours2;
-  }
-  .hours3 {
-    grid-area: hours3;
-  }
-  .class {
-    border-right: dashed 2px $dark-blue;
-  }
-  .class1 {
-    grid-area: class1;
-  }
-  .class2 {
-    grid-area: class2;
-  }
-  .class3 {
-    grid-area: class3;
-  }
-  .teachers {
-    border-right: dashed 2px $dark-blue;
-  }
-  .teachers1 {
-    grid-area: teachers1;
-  }
-  .teachers2 {
-    grid-area: teachers2;
-  }
-  .teachers3 {
-    grid-area: teachers3;
-  }
-
-  .two-rows {
-    display: flex;
-    align-items: center;
+table.dates {
+  tbody > tr > td:last-child {
+    text-align: right;
   }
 }
 
-// Block 3 + 4
+/* Schedule Block 4 */
 
-.content-3 .schedule__grid,
-.content-4 .schedule__grid {
-  display: grid;
-  grid-template-columns: repeat(7, max-content);
-  grid-template-rows: repeat(4, max-content);
-  grid-template-areas:
-    "weekday room-a-1 room-a-1 teachers-header-a-1 teachers-header-a-1"
-    "hours1 class-a-1 class-a-1 teachers-a-1 teachers-a-1"
-    "hours1 class-a-1 class-a-1 teachers-a-1 teachers-a-1"
-    "empty-blue room-a-2 teachers-header-a-2 room-b teachers-header-b "
-    "hours2 class-a-2 teachers-a-2 class-b-2 teachers-b-2"
-    "hours2 class-a-2 teachers-a-2 class-b-2 teachers-b-2"
-    "hours3 class-a-3 teachers-a-3 class-b-3 teachers-b-3"
-    "hours3 class-a-3 teachers-a-3 class-b-3 teachers-b-3";
-
-
-    p {
-      text-align: center;
-      // display: block;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-  .weekday {
-    grid-area: weekday;
-  }
-
-  .hours {
-    border-right: dashed 2px $dark-blue;
-    border-left: dashed 2px $dark-blue;
-    border-bottom: solid 2px $dark-blue;
-    p {
-      text-align: left;
-    }
-  }
-  .hours1 {
-    grid-area: hours1;
-  }
-  .hours2 {
-    grid-area: hours2;
-  }
-  .hours3 {
-    grid-area: hours3;
-  }
-
-  .room-a-1 {
-    grid-area: room-a-1;
-  }
-  .teachers-header-a-1 {
-    grid-area: teachers-header-a-1;
-  }
-
-  .empty-blue {
-    grid-area: empty-blue;
-    background-color: $dark-blue;
-  }
-
-  .room-a-2 {
-    grid-area: room-a-2;
-  }
-  .room-b {
-    grid-area: room-b;
-  }
-  .teachers-header-a-2 {
-    grid-area: teachers-header-a-2;
-  }
-  .teachers-header-b {
-    grid-area: teachers-header-b;
-  }
-
-
-
-  .class {
-    border-right: dashed 2px $dark-blue;
-  }
-  .teachers {
-    border-right: dashed 2px $dark-blue;
-  }
-
-  .class-a-1 {
-    grid-area: class-a-1;
-  }
-  .teachers-a-1 {
-    grid-area: teachers-a-1;
-  }
-
-  .class-b-1 {
-    grid-area: class-b-1;
-  }
-  .teachers-b-1 {
-    grid-area: teachers-b-1;
-  }
-
-  .class-a-2 {
-    grid-area: class-a-2;
-  }
-  .teachers-a-2 {
-    grid-area: teachers-a-2;
-  }
-
-  .class-b-2 {
-    grid-area: class-b-2;
-  }
-  .teachers-b-2 {
-    grid-area: teachers-b-2;
-  }
-
-  .class-a-3 {
-    grid-area: class-a-3;
-  }
-  .teachers-a-3 {
-    grid-area: teachers-a-3;
-  }
-
-  .class-b-3 {
-    grid-area: class-b-3;
-  }
-  .teachers-b-3 {
-    grid-area: teachers-b-3;
-  }
-
-  .two-rows {
-    display: flex;
-    align-items: center;
-  }
-}
-
-// Only Block 4
-
-.content-4 .schedule__grid {
-  grid-template-columns: repeat(4, max-content);
-  grid-template-rows: repeat(4, max-content);
-  grid-template-areas:
-    "weekday room-a room-b room-c"
-    "hours1 class-a-1 class-b-1 class-c-1"
-    "hours1 class-a-1 class-b-1 class-c-1"
-    "hours2 class-a-2 class-b-2 class-c-2"
-    "hours2 class-a-2 class-b-2 class-c-2"
-    "hours3 class-a-3 class-b-3 class-c-3"
-    "hours3 class-a-3 class-b-3 class-c-3";
-}
-
-.class-c-1 {
-  grid-area: class-c-1;
-}
-
-.class-c-2 {
-  grid-area: class-c-2;
-}
-
-.class-c-3 {
-  grid-area: class-c-3;
-}
-
-.two-cols {
-  grid-column-end: span 2 !important;
-}
-
-
-// All blocks
-
-.dates {
+.dates-wrapper-block-4 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
-.dates__grid {
-  margin: 0.5rem;
-  display: inline-grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-template-rows: repeat(4, max-content);
-  grid-template-areas:
-      "header header"
-      "months days"
-      "months days"
-      "months days";
-}
-
-.dates__header {
-  grid-area: header;
-  text-align: center;
-}
-
-.dates__months {
-  grid-area: months;
-  border-left: 2px solid $dark-blue;
-  // border-right:  2px dashed $dark-blue;
-}
-
-.dates__days {
-  grid-area: days;
-  text-align: right;
-  border-right:  2px solid $dark-blue;
-}
-
-.dates__months,
-.dates__days {
-  // border-bottom:  2px solid $dark-blue;
-  p {
-    border-bottom:  2px solid $dark-blue;
+  table:first-of-type {
+    margin-right: 1rem;
   }
 }
 
 // Responsive schedules
 
+@media only screen and (max-width: 1100px) {
+  table.schedule,
+  table.dates {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  table.schedule,
+  table.dates {
+    td, th {
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 800px) {
-  .schedule__wrapper.content-3 .schedule__grid {
-    grid-template-columns: repeat(7, min-content);
+  table.schedule,
+  table.dates {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  table.schedule,
+  table.dates {
+    font-size: 0.75rem;
+    td, th {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+    }
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .schedule__wrapper .grid p {
-    // font-size: 1.2rem;
-  }
-
+  
   .tabs-n-content.container {
     padding: 0 !important;
     width: 100%;
@@ -441,6 +204,24 @@ li.selected + li.disabled {
   .tabs ul {
     justify-content: center;
   }
+
+  .schedule__wrapper {
+    overflow-x: scroll;
+    & > * {
+      align-self: flex-start;
+      margin-left: 0.75rem;
+    }
+  }
+
+
+  table.schedule,
+  table.dates {
+    font-size: 1rem;
+    td, th {
+      padding-left: 0.15rem;
+      padding-right: 0.15rem;
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -448,21 +229,11 @@ li.selected + li.disabled {
 }
 
 @media only screen and (max-width: 482px) {
-  .schedule__wrapper .grid p,
-  .schedule__wrapper .grid .header p {
-    font-size: 1rem;
-    padding: 0.25rem;
-  }
-
+  
 }
 
 @media only screen and (max-width: 372px) {
-  .schedule__wrapper .grid p,
-  .schedule__wrapper .grid .header p {
-    font-size: 0.85rem;
-    padding: 0 0.25rem;
-  }
-
+  
   .tabs li {
     padding: 0.25rem;
   }

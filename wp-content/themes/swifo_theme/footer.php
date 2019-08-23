@@ -4,7 +4,7 @@
   <!-- with css grid -->
   <div class="footer__content container">
     <div class="footer__logo">
-      <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/short_logo_white.svg" alt=""> -->
+      <!-- <img src="<?php //echo get_template_directory_uri(); ?>/assets/img/short_logo_white.svg" alt=""> -->
     </div>
     <div class="footer__social">
       <a href="mailto:info@swingfoundation.nl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/envelope-regular.svg" alt="Swing Foundation email address"></a>

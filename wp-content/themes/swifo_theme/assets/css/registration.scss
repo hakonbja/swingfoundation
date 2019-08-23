@@ -38,204 +38,61 @@
 
 /* Prices */
 
-
 .prices__classes {
-  // margin: 0rem 0 2rem 0;
-}
-
-.prices .grid {
-  // margin-bottom: 2rem;
-  p {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    margin: 0;
-    padding: 0.25rem 0.5rem;
-    text-align: center;
-  }
-}
-
-.prices__classes__grid-wrapper {
   margin-bottom: 2rem;
-
-  .disclaimers {
-    margin-top: 0.5rem;
-    p {
-      text-align: right;
-      font-size: 0.85rem;
-      padding: 0;
-      margin: 0;
-    }
-    p:first-of-type {
-      margin-bottom: 0.1rem;
-    }
-  }
 }
 
-.prices__classes__grid {
-  width: max-content;
-  margin: 0 auto;
-  display: grid;
-  white-space: nowrap;
-
-  /* Vertical grid */
-    grid-template-columns: repeat(3, max-content);
-    grid-template-rows: repeat(4, max-content);
-    grid-template-areas:
-      "    ...              eight-classes             six-classes"
-      "full-header          full-price-eight          full-price-six"
-      "student-header       student-price-eight       student-price-six"
-      "second-course-header second-course-price-eight second-course-price-six";
-
-
-    .header p {
-      text-align: right;
-    }
-
-    .header p::after {
-      content: ":";
-    }
-
-    .eight-classes,
-    .six-classes {
-      font-weight: bold;
-      border-bottom: solid 2px $black;
-    }
-
-    .eight-classes,
-    .full-price-eight,
-    .student-price-eight,
-    .second-course-price-eight {
-      border-right: solid 2px $black;
-    }
-
-
-  // grid-template-columns: repeat(4, max-content);
-  // grid-template-rows: repeat(5, max-content);
-  // grid-template-areas:
-  //   "     ...      full-header      student-header      second-course-header"
-  //   "eight-classes full-price-eight student-price-eight second-course-price-eight"
-  //   "six-classes   full-price-six   student-price-six   second-course-price-six"
-  //   "disclaimer-1  disclaimer-1     disclaimer-1        disclaimer-1"
-  //   "disclaimer-2  disclaimer-2     disclaimer-2        disclaimer-2";
-
-
-
-  .eight-classes {
-    grid-area: eight-classes;
-  }
-
-  .six-classes {
-    grid-area: six-classes;
-  }
-
-  .full.header {
-    grid-area: full-header;
-  }
-
-  .student.header {
-    grid-area: student-header;
-  }
-
-  .second-course.header {
-    grid-area: second-course-header;
-  }
-
-  .full-price-eight {
-    grid-area: full-price-eight;
-  }
-
-  .student-price-eight {
-    grid-area: student-price-eight;
-  }
-
-  .second-course-price-eight {
-    grid-area: second-course-price-eight;
-  }
-
-  .full-price-six {
-    grid-area: full-price-six;
-  }
-
-  .student-price-six {
-    grid-area: student-price-six;
-  }
-
-  .second-course-price-six {
-    grid-area: second-course-price-six;
-  }
-
-
+.prices__privates table {
+  margin-bottom: 1rem;
 }
 
-.prices__privates__grid {
-  width: max-content;
-  margin: 0 auto 2rem auto;
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  grid-template-rows: repeat(3, max-content);
-  grid-template-areas:
-    "   .....     thirty-min        one-hour"
-    "one-teacher  price-one-thirty  price-one-one"
-    "two-teachers price-two-thirty  price-two-one";
+/* Tables */
 
+.table-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
+table.prices {
+  font-family: 'Din Next Pro Regular', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
 
-
-  .header {
-    border-bottom: 2px solid $black;
-  }
-
-  .header p {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    margin: 0;
-    text-align: center;
+  thead {
     font-weight: bold;
   }
 
-  .one-teacher p,
-  .two-teachers p {
+  thead > tr > th:not(:first-of-type) {
+    border-bottom: 2px solid black;
+  }
+
+  tbody > tr > td:first-of-type {
     text-align: right;
   }
 
-  .thirty-min,
-  .price-one-thirty,
-  .price-two-thirty {
-    border-right: 2px solid $black;
+  tr > td:nth-child(2),
+  tr > th:nth-child(2) {
+    border-right: 2px solid black;
   }
 
-  .thirty-min {
-    grid-area: thirty-min;
-  }
-
-  .one-hour {
-    grid-area: one-hour;
-  }
-
-  .one-teacher {
-    grid-area: one-teacher;
-  }
-
-  .two-teachers {
-    grid-area: two-teachers;
-  }
-
-  .price-one-thirty {
-    grid-area: price-one-thirty;
-  }
-
-  .price-two-thirty {
-    grid-area: price-two-thirty;
-  }
-
-  .price-one-one {
-    grid-area: price-one-one;
-  }
-
-  .price-two-one {
-    grid-area: price-two-one;
+  th, td {
+    padding: 0.25rem 0.5rem;
   }
 }
+
+.disclaimers {
+  margin-top: 0.5rem;
+  p {
+    text-align: right;
+    font-size: 0.85rem;
+    padding: 0;
+    margin: 0;
+  }
+  p:first-of-type {
+    margin-bottom: 0.1rem;
+  }
+}
+
 
 @media only screen and (max-width: 400px) {
   .prices .grid p {

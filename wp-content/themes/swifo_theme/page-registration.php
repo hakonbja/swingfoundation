@@ -1,7 +1,8 @@
 
 <?php get_header();
   while ( have_posts() ) : the_post();
-    $link = get_post_meta(get_the_id(), "registration_form_url", true);?>
+    $linkMain = get_post_meta(get_the_id(), "registration_form_url", true);
+    $linkSecondary = get_post_meta(get_the_id(), "2nd_button", true);?>
   <?php endwhile; ?>
 
   <div class="content registration-page" id="registration">
@@ -20,10 +21,10 @@
         </ol>
         <div class="registration__buttons">
           <div class="btn btn-blue">
-            <a href=<?php echo $link ?> target="_blank">Register</a> <!--Interested form: https://forms.gle/8wGR7a1nkDAv8U2SA -->
+            <a href=<?php echo $linkMain ?> target="_blank">Weekly Classes</a> <!--Interested form: https://forms.gle/8wGR7a1nkDAv8U2SA -->
           </div>
           <div class="btn btn-white btn-border-blue">
-            <a href="<?php echo get_site_url(); ?>/classes/#levels">Classes</a>
+            <a href="<?php echo $linkSecondary ?>" target="_blank">Crash Course</a>
           </div>
         </div>
 

@@ -16,61 +16,11 @@
         <li class="tab-5 disabled">Block 5</li>
       </ul>
     </div>
+    
     <div class="schedule__wrapper content-1"></div>
 
-
     <div class="schedule__wrapper content-2">
-      <div class="schedule__grid grid">
-        <div class="weekday header">
-          <p>Tuesdays</p>
-        </div>
-        <div class="room header">
-          <p>Grote ruimte</p>
-        </div>
-
-        <div class="teachers-header header">
-          <p>Teachers</p>
-        </div>
-
-        <div class="hours hours2">
-          <p>19:15-</p>
-          <p>20:30</p>
-        </div>
-        <div class="hours hours3">
-          <p>20:45-</p>
-          <p>22:00</p>
-        </div>
-
-        <div class="class class2 two-rows line-bottom">
-          <p>Lindy Hop Beginners+</p>
-        </div>
-        <div class="class class3 two-rows line-bottom">
-          <p>Lindy Hop Advanced+</p>
-        </div>
-
-        <div class="teachers teachers2 two-rows line-bottom">
-          <p>Yara & Hákon</p>
-        </div>
-        <div class="teachers teachers3 two-rows line-bottom">
-          <p>Sanne & Hákon</p>
-        </div>
-      </div>
-
-      <div class="dates__grid grid">
-        <div class="dates__header header">
-          <p>Dates</p>
-        </div>
-        <div class="dates__months">
-          <p>March:</p>
-          <p>April:</p>
-          <p>May:</p>
-        </div>
-        <div class="dates__days">
-          <p>19, 26</p>
-          <p>2, 9, 16, 23</p>
-          <p>7, 14</p>
-        </div>
-      </div>
+      <?php get_template_part( 'partials/_schedule__block-2'); ?>
     </div>
 
     <div class="schedule__wrapper content-3">
@@ -80,6 +30,7 @@
     <div class="schedule__wrapper content-4 selected">
       <?php get_template_part( 'partials/_schedule__block-4'); ?>
     </div>
-    <div class="schedule__wrapper content-5"></div>
+    
+  <div class="schedule__wrapper content-5"></div>
 
 </div>
