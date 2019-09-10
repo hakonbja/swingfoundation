@@ -214,7 +214,7 @@
   }
 
 
-// News
+// Events and stories
 
 .cards.grid {
   display: grid;
@@ -226,13 +226,16 @@
 
 .cards {
   width: 100%;
-  // max-width: 500px;
   padding: 2rem 0 4rem 0;
   box-sizing: border-box;
 
   a {
     text-decoration: none;
     height: min-content;
+  }
+
+  .card {
+  max-width: 350px;
   }
 
   .card:hover {

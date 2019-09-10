@@ -1,6 +1,6 @@
 
 <?php get_header();?>
-<div class="content news-page container">
+<div class="content stories-page container">
 
 <div class="cards grid">
 
@@ -12,12 +12,9 @@
     'order' => 'DESC',
   );
 
-  $news = new WP_Query( $args );
+  $stories = new WP_Query( $args );
 
-  while ( $news -> have_posts() ) : $news -> the_post();
-    $type = get_post_meta(get_the_id(), 'news_type', true);
-    $date_text = get_post_meta(get_the_id(), 'date', true);
-    $date = date('F j, Y', strtotime($date_text));
+  while ( $stories -> have_posts() ) : $stories -> the_post();
     $author = get_the_author();
     ?>
 
@@ -27,14 +24,7 @@
           <?php the_post_thumbnail(); ?>
         </figure>
         <div class="card__meta">
-          <p class="type"><?php echo $type; ?></p>
-
-          <?php if ($type === 'Event'): ?>
-            <p class="date"><?php echo $date?></p>
-          <?php elseif ($author): ?>
-            <p class="author">by <?php echo $author ?></p>
-          <?php endif ?>
-
+          <p class="author">By <?php echo $author ?></p>
         </div>
       </div>
       <div class="card__info">
@@ -42,12 +32,10 @@
         <p class="excerpt"><?php echo get_the_excerpt() ?></p>
       </div>
     </a>
+
   <?php endwhile; ?>
 
-
 </div>
-
-
 
 </div>
   <?php get_footer();?>

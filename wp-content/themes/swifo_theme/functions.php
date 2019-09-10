@@ -38,14 +38,14 @@ function event_get_meta_box( $meta_boxes ) {
 		'autosave' => 'false',
 		'fields' => array(
 			array(
-				'id' => $prefix . 'date',
+				'id' => $prefix . 'start_date',
 				'type' => 'date',
 				'name' => esc_html__( 'Date' ),
 			),
 			array(
 				'id' => $prefix . 'end_date',
 				'type' => 'date',
-				'name' => esc_html__( 'End Date (optional)'),
+				'name' => esc_html__( 'End Date'),
 			),
 			array(
 				'id' => $prefix . 'start_time',

@@ -9,13 +9,19 @@
     'post_type' => 'events',
     'meta_key' => 'date',
     'orderby' => 'meta_value',
-    'order' => 'DESC',
+    'order' => 'ASC',
+    'meta_query' => array (
+      'key' => 'end_date',
+      'value' => date('Y-m-d', strtotime('today')),
+      'compare' => '>=',
+      'type' => 'DATE'
+    )
   );
 
   $events = new WP_Query( $args );
 
   while ( $events -> have_posts() ) : $events -> the_post();
-    $date_text = get_post_meta(get_the_id(), 'date', true);
+    $date_text = get_post_meta(get_the_id(), 'start_date', true);
     $date = date('F j, Y', strtotime($date_text));
     ?>
 
@@ -34,11 +40,7 @@
       </div>
     </a>
   <?php endwhile; ?>
-
-
 </div>
-
-
 
 </div>
   <?php get_footer();?>

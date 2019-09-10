@@ -795,6 +795,8 @@ footer {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content; }
+  .cards .card {
+    max-width: 350px; }
   .cards .card:hover h4.title::after {
     width: 100%; }
   .cards .card__figure {
