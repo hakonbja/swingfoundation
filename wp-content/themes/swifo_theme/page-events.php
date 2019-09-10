@@ -7,7 +7,7 @@
   <?php
   $args = array(
     'post_type' => 'events',
-    'meta_key' => 'date',
+    'meta_key' => 'start_date',
     'orderby' => 'meta_value',
     'order' => 'ASC',
     'meta_query' => array (

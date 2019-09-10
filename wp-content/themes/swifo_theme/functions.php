@@ -40,7 +40,7 @@ function event_get_meta_box( $meta_boxes ) {
 			array(
 				'id' => $prefix . 'start_date',
 				'type' => 'date',
-				'name' => esc_html__( 'Date' ),
+				'name' => esc_html__( 'Start Date' ),
 			),
 			array(
 				'id' => $prefix . 'end_date',
@@ -110,7 +110,7 @@ $args = array(
 	'description'         => __( 'Events organized by Swing Foundation'),
 	'labels'              => $labels,
 	// Features this CPT supports in Post Editor
-	'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions',),
+	'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
 	/* A hierarchical CPT is like Pages and can have
 	* Parent and child items. A non-hierarchical CPT
 	* is like Posts.
