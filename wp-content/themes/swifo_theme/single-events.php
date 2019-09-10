@@ -11,7 +11,6 @@ get_header(); ?>
       // Start the loop.
       while ( have_posts() ) : the_post();
       $fb = get_post_meta(get_the_id(), "fb_event", true);
-      $type = get_post_meta(get_the_id(), 'news_type', true);
       $date_text = get_post_meta(get_the_id(), 'start_date', true);
       $date = date('F j, Y', strtotime($date_text));
       $start_time = get_post_meta(get_the_id(), 'start_time', true);
