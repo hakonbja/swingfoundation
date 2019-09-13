@@ -45,18 +45,18 @@
   }
 }
 
-/* About us */
+/* Information page */
 
-.about-us {
+.information-page {
   .img-container {
     display: flex;
     flex-direction: column;
     float: right;
-    margin-left: 0.5rem;
+    margin-left: 2rem;
     width: min-content;
   }
   img {
-    border: 7px solid $dark-blue;
+    border: 8px solid $dark-blue;
     border-bottom: none;
     height: 300px;
     width: auto;
@@ -75,20 +75,35 @@
   }
 }
 
+.teacher {
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.teacher:nth-of-type(odd) > .img-container {
+  float: left;
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
 .location {
   width: 100%;
 }
 
 @media only screen and (max-width: 900px) {
-  .about-us {
+  .information-page {
     img {
-      height: 250px;
+      height: 249px;
     }
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .about-us {
+  .information-page {
     img {
       height: 200px;
     }
@@ -99,7 +114,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .about-us {
+  .information-page {
     .img-container {
       float: none;
       width: 100%;

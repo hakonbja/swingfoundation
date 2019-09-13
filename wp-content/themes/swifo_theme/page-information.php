@@ -8,7 +8,7 @@
       <div class="hide-overflow-x">
         <h3 class="orange-line">About us</h3>
       </div>
-      <?php $about_us = new WP_Query( 'page_id=11' ) // online id is 11, local id is 33 //can also use the slug! ?>
+      <?php $about_us = new WP_Query( 'pagename=information' ) // online id is 11, local id is 33 //can also use the slug! ?>
       <div class="img-container">
         <?php while ( $about_us -> have_posts() ) : $about_us -> the_post(); ?>
         <?php the_post_thumbnail(); ?>
@@ -17,27 +17,20 @@
         <?php endwhile; ?>
       </div>
 
-      <!-- <div class="text-container">
-        <p>We are Hákon, Sanne and Yara and Swing Foundation is our Amsterdam (east) based Swing Dance Movement that offers high intensity dance classes, lectures and workshops.</p>
-        <p>We have been in the Amsterdam Swing Dancing scene since 2011/2012 and after years of organising local and international events, as well as teaching for multiple schools it was time to start our own initiative.</p>
-        <p>We are known for our structured and precise way of working, strong technical foundation, high quality teaching, performances, and goofiness.</p>
-      </div> -->
-
       <div class="text-container">
-        <?php
-        // $id=33;
-        // $post = get_post($id);
-        // $content = apply_filters('the_content', $post->post_content);
-        // echo $content;
-        ?>
         <?php while ( $about_us -> have_posts() ) : $about_us -> the_post(); ?>
         <?php the_content(); ?>
         <?php endwhile; ?>
       </div>
-      <div class="img-container">
 
-      </div>
+    </div>
 
+    <div class="anchor" id="teachers"></div>
+    <div class="teachers container">
+        <div class="hide-overflow-x">
+          <h3 class="orange-line">Teachers</h3>
+        </div>
+      <?php get_template_part( 'partials/_teachers'); ?>
     </div>
 
 

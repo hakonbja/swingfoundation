@@ -649,23 +649,23 @@ footer {
     text-decoration: underline;
     color: #144D73; }
 
-/* About us */
-.about-us .img-container {
+/* Information page */
+.information-page .img-container {
   display: flex;
   flex-direction: column;
   float: right;
-  margin-left: 0.5rem;
+  margin-left: 2rem;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content; }
 
-.about-us img {
-  border: 7px solid #144D73;
+.information-page img {
+  border: 8px solid #144D73;
   border-bottom: none;
   height: 300px;
   width: auto; }
 
-.about-us p.subtext {
+.information-page p.subtext {
   font-size: 1rem;
   text-align: center;
   font-weight: 100;
@@ -673,28 +673,39 @@ footer {
   color: #FFFFFF;
   padding: 0.25rem 7px; }
 
-.about-us p {
+.information-page p {
   line-height: 1.4; }
+
+.teacher {
+  overflow: hidden;
+  margin-bottom: 2rem; }
+  .teacher h4 {
+    margin-bottom: 0.5rem; }
+
+.teacher:nth-of-type(odd) > .img-container {
+  float: left;
+  margin-left: 0;
+  margin-right: 2rem; }
 
 .location {
   width: 100%; }
 
 @media only screen and (max-width: 900px) {
-  .about-us img {
-    height: 250px; } }
+  .information-page img {
+    height: 249px; } }
 
 @media only screen and (max-width: 700px) {
-  .about-us img {
+  .information-page img {
     height: 200px; }
-  .about-us p.subtext {
+  .information-page p.subtext {
     font-size: 0.75rem; } }
 
 @media only screen and (max-width: 500px) {
-  .about-us .img-container {
+  .information-page .img-container {
     float: none;
     width: 100%;
     margin: 0; }
-  .about-us img {
+  .information-page img {
     height: auto;
     width: 100%;
     box-sizing: border-box; } }

@@ -35,7 +35,7 @@
         </div>
       </div>
       <div class="card__info">
-        <h4 class="title"><?php echo the_title() ?></h4>
+        <h4 class="title"><?php the_title() ?></h4>
         <p class="excerpt"><?php echo get_the_excerpt() ?></p>
       </div>
     </a>

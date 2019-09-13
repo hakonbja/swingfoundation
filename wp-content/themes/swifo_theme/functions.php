@@ -12,7 +12,7 @@ function swifo_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'swifo_scripts' );
 
-add_theme_support(  'post-thumbnails', array( 'post', 'page', 'events' )  );
+add_theme_support(  'post-thumbnails', array( 'post', 'page', 'events', 'teachers' )  );
 
 function register_my_menus() {
   register_nav_menus(
@@ -31,7 +31,7 @@ function event_get_meta_box( $meta_boxes ) {
 
 	$meta_boxes[] = array(
 		'id' => 'event_meta_boxes',
-		'title' => esc_html__( 'News' ),
+		'title' => esc_html__( 'Event details' ),
 		'post_types' => array( 'events' ),
 		'context' => 'side',
 		'priority' => 'high',
@@ -73,7 +73,6 @@ function event_get_meta_box( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'event_get_meta_box' );
-
 
 
 /* Small helper functions */
@@ -184,5 +183,55 @@ $args = array(
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_faq_posttype' );
+
+
+// add custom post type Teachers
+function create_teachers_posttype() {
+
+	$labels = array(
+		'name'                => _x( 'Teachers', 'Post Type General Name'),
+		'singular_name'       => _x( 'Teacher', 'Post Type Singular Name'),
+		'menu_name'           => __( 'Teachers'),
+		'parent_item_colon'   => __( 'Parent Teacher'),
+		'all_items'           => __( 'All Teachers'),
+		'view_item'           => __( 'View Teacher'),
+		'add_new_item'        => __( 'Add New Teacher'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit Teacher'),
+		'update_item'         => __( 'Update Teacher'),
+		'search_items'        => __( 'Search Teachers'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash'),
+);
+
+$args = array(
+	'label'               => __( 'Teachers'),
+	'description'         => __( 'The teachers of Swing Foundation'),
+	'labels'              => $labels,
+	// Features this CPT supports in Post Editor
+	'supports'            => array( 'title', 'editor', 'thumbnail'),
+	/* A hierarchical CPT is like Pages and can have
+	* Parent and child items. A non-hierarchical CPT
+	* is like Posts.
+	*/ 
+	'hierarchical'        => false,
+	'public'              => true,
+	'show_ui'             => true,
+	'show_in_menu'        => true,
+	'show_in_nav_menus'   => true,
+	'show_in_admin_bar'   => true,
+	'menu_position'       => 6,
+	'can_export'          => true,
+	'has_archive'         => true,
+	'exclude_from_search' => false,
+	'publicly_queryable'  => true,
+	'capability_type'     => 'page',
+	'menu_icon'						=> 'dashicons-groups'
+);
+ 
+	register_post_type( 'teachers', $args );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_teachers_posttype' );
 
 ?>
