@@ -87,7 +87,7 @@ function debug_to_console( $data ) {
 }
 
 // add custom post type Event
-function create_posttype() {
+function create_events_posttype() {
 
 	$labels = array(
 		'name'                => _x( 'Events', 'Post Type General Name'),
@@ -106,11 +106,61 @@ function create_posttype() {
 );
 
 $args = array(
-	'label'               => __( 'events'),
+	'label'               => __( 'Events'),
 	'description'         => __( 'Events organized by Swing Foundation'),
 	'labels'              => $labels,
 	// Features this CPT supports in Post Editor
 	'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+	/* A hierarchical CPT is like Pages and can have
+	* Parent and child items. A non-hierarchical CPT
+	* is like Posts.
+	*/ 
+	'hierarchical'        => false,
+	'public'              => true,
+	'show_ui'             => true,
+	'show_in_menu'        => true,
+	'show_in_nav_menus'   => true,
+	'show_in_admin_bar'   => true,
+	'menu_position'       => 4,
+	'can_export'          => true,
+	'has_archive'         => true,
+	'exclude_from_search' => false,
+	'publicly_queryable'  => true,
+	'capability_type'     => 'page',
+	'menu_icon'						=> 'dashicons-calendar-alt'
+);
+ 
+	register_post_type( 'events', $args );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_events_posttype' );
+
+
+// add custom post type FAQ
+function create_faq_posttype() {
+
+	$labels = array(
+		'name'                => _x( 'FAQ', 'Post Type General Name'),
+		'singular_name'       => _x( 'FAQ', 'Post Type Singular Name'),
+		'menu_name'           => __( 'FAQs'),
+		'parent_item_colon'   => __( 'Parent FAQ'),
+		'all_items'           => __( 'All FAQs'),
+		'view_item'           => __( 'View FAQ'),
+		'add_new_item'        => __( 'Add New FAQ'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit FAQ'),
+		'update_item'         => __( 'Update FAQ'),
+		'search_items'        => __( 'Search FAQs'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash'),
+);
+
+$args = array(
+	'label'               => __( 'FAQ'),
+	'description'         => __( 'Frequently asked questions'),
+	'labels'              => $labels,
+	// Features this CPT supports in Post Editor
+	'supports'            => array( 'title', 'editor'),
 	/* A hierarchical CPT is like Pages and can have
 	* Parent and child items. A non-hierarchical CPT
 	* is like Posts.
@@ -127,12 +177,12 @@ $args = array(
 	'exclude_from_search' => false,
 	'publicly_queryable'  => true,
 	'capability_type'     => 'page',
-	'menu_icon'						=> 'dashicons-calendar-alt'
+	'menu_icon'						=> 'dashicons-editor-help'
 );
  
-	register_post_type( 'events', $args );
+	register_post_type( 'faq', $args );
 }
 // Hooking up our function to theme setup
-add_action( 'init', 'create_posttype' );
+add_action( 'init', 'create_faq_posttype' );
 
 ?>

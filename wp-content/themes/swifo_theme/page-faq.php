@@ -6,10 +6,23 @@
 
     <div class="container faq">
       <div class="faq__all">
+
+      <?php
+        $faqs = new WP_Query( array('post_type' => 'faq') );
+        while ( $faqs -> have_posts() ) : $faqs -> the_post();
+        $content = get_the_content();
+        $content = strip_tags($content);
+      ?>
+
         <div class="faq__single">
-          <p class="faq__single__question">When can I start?</p>
-          <p class="faq__single__answer">Swing Foundation has 5 blocks of classes in one year. The first class of each block is a good place to start. There are 8 classes in one block.</p>
+          <p class="faq__single__question"><?php the_title() ?></p>
+          <p class="faq__single__answer"><?php echo $content ?></p>
         </div>
+
+      <?php
+        endwhile;
+      ?>
+
         <div class="faq__single">
           <p class="faq__single__question">What should I wear?</p>
           <p class="faq__single__answer">Something that’s comfortable to move in :) Expect to sweat a bit so it might be nice to bring a towel and/or an extra shirt. Shoes that are specially made for swing dancing usually have a leather or suede sole. Most dancers prefer to dance in shoes without heel or with a low heel.</p>
