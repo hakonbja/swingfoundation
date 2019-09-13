@@ -703,6 +703,9 @@ footer {
 .faq__all {
   padding: 1rem 0 2rem 0; }
 
+.faq__single {
+  margin-bottom: 1rem; }
+
 .faq__single__question {
   font-weight: bold;
   margin-bottom: 0.5rem; }
