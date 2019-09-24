@@ -213,6 +213,10 @@ span.month {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .classes-all ul {
@@ -324,7 +328,7 @@ img.bounce {
 .quick-links a {
   color: $dark-blue;
   font-size: 2rem;
-  // transition: color 200ms;
+  text-decoration: none;
 
   &:hover {
     color: $orange;

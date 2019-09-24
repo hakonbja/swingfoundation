@@ -19,13 +19,12 @@
           <li>Fill in the registration form (your partner as well!)</li>
           <li>Wait for an e-mail from us</li>
         </ol>
-        <div class="registration__buttons">
-          <div class="btn btn-blue">
-            <a href=<?php echo $linkMain ?> target="_blank">Weekly Classes</a> <!--Interested form: https://forms.gle/8wGR7a1nkDAv8U2SA -->
-          </div>
-          <div class="btn btn-white btn-border-blue">
-            <a href="<?php echo $linkSecondary ?>" target="_blank">Crash Course</a>
-          </div>
+
+        <div class="open-registrations">
+          <h4>Open registrations</h4>
+          <ul>
+            <li><h5>Weekly classes - Block 5</h5><div class="reg-buttons"><div class="btn btn-blue btn-small"><a>Register</a></div><div class="btn btn-border-blue btn-small"><a>More info</a></div></div></li>
+          </ul>
         </div>
 
       </div>

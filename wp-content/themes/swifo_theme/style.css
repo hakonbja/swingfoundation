@@ -139,8 +139,7 @@ p.italic {
   font-style: italic; }
 
 a {
-  text-decoration: none;
-  color: inherit; }
+  color: #144D73; }
 
 a.type-a {
   text-decoration: underline;
@@ -250,16 +249,41 @@ a.img-link {
 
 .btn {
   width: 18rem;
-  height: 62px;
-  height: auto;
+  height: 60px;
   display: flex;
   align-items: center;
   text-align: center;
-  transition: all 400ms; }
+  transition: all 400ms;
+  cursor: pointer; }
   .btn a {
     text-decoration: none;
     transition: color 400ms;
-    padding: 16px 0; }
+    width: 100%;
+    display: inline-block;
+    font-family: 'Din Next Pro Regular';
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase; }
+    .btn a::after {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      margin-bottom: calc(2rem/6 * -1); }
+
+.btn-small {
+  width: 11rem;
+  height: 2.5rem;
+  display: flex; }
+  .btn-small a {
+    font-size: 1.25rem;
+    padding: 10px 0; }
+    .btn-small a::after {
+      content: "";
+      display: block;
+      height: 0;
+      width: 0;
+      margin-bottom: calc(1.25rem/6 * -1); }
 
 .btn-white {
   color: #144D73;
@@ -280,9 +304,6 @@ a.img-link {
 .btn-border-blue,
 .btn-border-white {
   box-sizing: border-box; }
-  .btn-border-blue a,
-  .btn-border-white a {
-    padding: 9px 0; }
 
 .btn-border-white {
   border: #FFFFFF solid 7px; }
@@ -292,26 +313,13 @@ a.img-link {
 .btn-border-blue {
   border: #144D73 solid 7px; }
 
-.btn a {
-  width: 100%;
-  display: inline-block;
-  font-family: 'Din Next Pro Regular';
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: uppercase; }
-  .btn a::after {
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    margin-bottom: calc(2rem/6 * -1); }
-
 /* Navbars */
 .navbar {
   width: 100%;
   position: relative; }
   .navbar a {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    text-decoration: none; }
   .navbar .current-menu-parent > a {
     color: #69BDA0; }
 
@@ -533,6 +541,8 @@ header {
 footer {
   background-color: #144D73;
   position: relative; }
+  footer a {
+    text-decoration: none; }
 
 .footer__content {
   height: 100%;
@@ -588,66 +598,27 @@ footer {
     text-align: center;
     line-height: 1.2; }
 
-.classes-page,
-.registration-page,
-.info-page,
-.information-page,
-.news-page {
+.content:not(.front-page) {
   position: relative; }
-  .classes-page section:last-of-type,
-  .registration-page section:last-of-type,
-  .info-page section:last-of-type,
-  .information-page section:last-of-type,
-  .news-page section:last-of-type {
+  .content:not(.front-page) section:last-of-type {
     margin-bottom: 6rem; }
-  .classes-page .container,
-  .registration-page .container,
-  .info-page .container,
-  .information-page .container,
-  .news-page .container {
+  .content:not(.front-page) .container {
     overflow-x: hidden; }
-  .classes-page h3,
-  .registration-page h3,
-  .info-page h3,
-  .information-page h3,
-  .news-page h3 {
+  .content:not(.front-page) h3 {
     margin-top: 5rem;
     margin-bottom: 1.5rem; }
-  .classes-page h5,
-  .registration-page h5,
-  .info-page h5,
-  .information-page h5,
-  .news-page h5 {
+  .content:not(.front-page) h5 {
     color: #69BDA0; }
-  .classes-page p,
-  .registration-page p,
-  .info-page p,
-  .information-page p,
-  .news-page p {
+  .content:not(.front-page) p {
     line-height: 1.2;
     margin-bottom: 0.5rem; }
-  .classes-page p.subheading,
-  .registration-page p.subheading,
-  .info-page p.subheading,
-  .information-page p.subheading,
-  .news-page p.subheading {
+  .content:not(.front-page) p.subheading {
     margin-bottom: 0;
     color: #FFFFFF; }
-  .classes-page li,
-  .registration-page li,
-  .info-page li,
-  .information-page li,
-  .news-page li {
+  .content:not(.front-page) li {
     font-family: 'Din Next Pro Regular', sans-serif;
     font-size: 1.25rem;
     line-height: 1.2; }
-  .classes-page a,
-  .registration-page a,
-  .info-page a,
-  .information-page a,
-  .news-page a {
-    text-decoration: underline;
-    color: #144D73; }
 
 /* Information page */
 .information-page .img-container {
@@ -1166,6 +1137,19 @@ table.dates tbody > tr > td:last-child {
     font-size: 1.25rem;
     line-height: 1.5; }
 
+.open-registrations {
+  margin-top: 2rem; }
+  .open-registrations li {
+    display: flex;
+    align-items: center; }
+    .open-registrations li > * {
+      flex-basis: 50%; }
+    .open-registrations li .reg-buttons {
+      display: flex;
+      justify-content: center; }
+      .open-registrations li .reg-buttons > :nth-child(1) {
+        margin-right: 2rem; }
+
 .registration__buttons {
   display: flex;
   width: 100%;
@@ -1173,8 +1157,6 @@ table.dates tbody > tr > td:last-child {
   margin-top: 2rem; }
   .registration__buttons .btn:first-of-type {
     margin-right: 4rem; }
-  .registration__buttons .btn a {
-    text-decoration: none; }
   .registration__buttons .btn-blue a {
     color: #FFFFFF; }
   .registration__buttons .btn-blue:hover a {
@@ -1396,6 +1378,8 @@ span.month {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .classes-all a {
+    text-decoration: none; }
 
 .classes-all ul {
   width: 100%;
@@ -1487,7 +1471,8 @@ img.bounce {
 
 .quick-links a {
   color: #144D73;
-  font-size: 2rem; }
+  font-size: 2rem;
+  text-decoration: none; }
   .quick-links a:hover {
     color: #EFB652; }
 

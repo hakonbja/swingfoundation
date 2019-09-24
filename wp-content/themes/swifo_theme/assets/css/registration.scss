@@ -13,6 +13,30 @@
   }
 }
 
+.open-registrations {
+  margin-top: 2rem;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    > * {
+      flex-basis: 50%;
+    }
+
+    .reg-buttons {
+      display: flex;
+      justify-content: center;
+
+      >:nth-child(1) {
+        margin-right: 2rem;
+      }
+    }
+  }
+  
+}
+
+
 .registration__buttons {
   display: flex;
   width: 100%;
@@ -23,9 +47,6 @@
     margin-right: 4rem;
   }
 
-  .btn a {
-    text-decoration: none;
-  }
 
   .btn-blue a {
     color: $white;

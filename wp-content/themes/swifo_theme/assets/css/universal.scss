@@ -92,10 +92,8 @@ p.italic {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  color: $dark-blue;
 }
-
 
 a.type-a {
   text-decoration: underline;
@@ -250,18 +248,39 @@ a.img-link {
 
 .btn {
   width: 18rem;
-  height: 62px;
-  height: auto;
+  height: 60px;
+  // height: auto;
   display: flex;
   align-items: center;
   text-align: center;
   transition: all 400ms;
+  cursor: pointer;
+
   a {
     text-decoration: none;
     transition: color 400ms;
-    padding: 16px 0;
+    // padding: 16px 0;
+    width: 100%;
+    display: inline-block;
+    font-family: 'Din Next Pro Regular';
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    @include removeBorder(2rem);
   }
+}
 
+
+.btn-small {
+  width: 11rem;
+  height: 2.5rem;
+  display: flex;
+
+  a {
+    font-size: 1.25rem;
+    @include removeBorder(1.25rem);
+    padding: 10px 0;
+  }
 }
 
 .btn-white {
@@ -281,8 +300,6 @@ a.img-link {
       color: $sea-blue;
     }
   }
-
-
 }
 
 .btn-blue a {
@@ -293,9 +310,6 @@ a.img-link {
 .btn-border-blue,
 .btn-border-white {
   box-sizing: border-box;
-  a {
-    padding: 9px 0;
-  }
 }
 
 .btn-border-white {
@@ -310,15 +324,6 @@ a.img-link {
   border: $dark-blue solid 7px;
 }
 
-.btn a {
-  width: 100%;
-  display: inline-block;
-  font-family: 'Din Next Pro Regular';
-  font-weight: bold;
-  font-size: 2rem;
-  text-transform: uppercase;
-  @include removeBorder(2rem);
-}
 
 /* Navbars */
 
@@ -328,6 +333,7 @@ a.img-link {
 
   a {
     color: $white;
+    text-decoration: none;
   }
 
 // @media only screen and (min-width: 769px) {
@@ -657,6 +663,10 @@ footer {
   // height: 250px;
   background-color: $dark-blue;
   position: relative;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .footer__content {

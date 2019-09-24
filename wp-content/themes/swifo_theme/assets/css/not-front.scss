@@ -1,11 +1,6 @@
 
 
-
-.classes-page,
-.registration-page,
-.info-page,
-.information-page,
-.news-page {
+.content:not(.front-page) {
   position: relative;
   section:last-of-type {
     margin-bottom: 6rem;
@@ -39,10 +34,7 @@
     font-size: 1.25rem;
     line-height: 1.2;
   }
-  a {
-    text-decoration: underline;
-    color: $dark-blue;
-  }
+  
 }
 
 /* Information page */
