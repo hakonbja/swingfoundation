@@ -24,10 +24,10 @@
       <div class="col-left">
         <p class="big">A good way to start dancing is to join our Lindy Hop or Charleston classes for beginners.</p>
         <div class="front-page__buttons">
-          <div class="btn btn-white">
+          <div class="btn btn-white btn-big">
             <a href="<?php echo get_site_url(); ?>/registration">Registration</a>
           </div>
-          <div class="btn btn-blue btn-border-white">
+          <div class="btn btn-blue btn-border-white btn-big">
             <a href="<?php echo get_site_url(); ?>/classes">Classes</a>
           </div>
         </div>

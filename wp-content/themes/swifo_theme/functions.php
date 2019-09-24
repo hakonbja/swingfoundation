@@ -74,6 +74,45 @@ function event_get_meta_box( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'event_get_meta_box' );
 
+/* Registration meta box for Events */
+function event_get_reg_meta_box( $meta_boxes ) {
+	$prefix = 'reg_';
+
+	$meta_boxes[] = array(
+		'id' => 'event_reg_meta_boxes',
+		'title' => esc_html__( 'Registration details' ),
+		'post_types' => array( 'events' ),
+		'context' => 'side',
+		'priority' => 'high',
+		'autosave' => 'false',
+		'fields' => array(
+			array(
+				'id' => $prefix . 'title',
+				'type' => 'text',
+				'name' => esc_html__( 'Title' ),
+			),
+			array(
+				'id' => $prefix . 'start_date',
+				'type' => 'date',
+				'name' => esc_html__( 'Registration Opens' ),
+			),
+			array(
+				'id' => $prefix . 'end_date',
+				'type' => 'date',
+				'name' => esc_html__( 'Registration Closes'),
+			),
+			array(
+				'id' => $prefix . 'form_url',
+				'type' => 'url',
+				'name' => esc_html__( 'Form URL'),
+			)
+		),
+	);
+
+	return $meta_boxes;
+}
+add_filter( 'rwmb_meta_boxes', 'event_get_reg_meta_box' );
+
 
 /* Small helper functions */
 function debug_to_console( $data ) {

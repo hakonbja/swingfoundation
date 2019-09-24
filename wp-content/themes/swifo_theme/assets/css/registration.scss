@@ -16,9 +16,14 @@
 .open-registrations {
   margin-top: 2rem;
 
+  h4 {
+    margin-bottom: 1rem;
+  }
+
   li {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 
     > * {
       flex-basis: 50%;
@@ -33,9 +38,18 @@
       }
     }
   }
-  
+
+  li:last-child {
+    margin-bottom: 0;
+  }
 }
 
+/* Ressponsive for Open Registrations */
+@media only screen and (max-width: 900px) {
+  .open-registrations li {
+    flex-direction: column;
+  }
+}
 
 .registration__buttons {
   display: flex;
@@ -98,6 +112,7 @@ table.prices {
 
   th, td {
     padding: 0.25rem 0.5rem;
+    vertical-align: middle;
   }
 }
 

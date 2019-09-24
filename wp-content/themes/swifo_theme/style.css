@@ -602,8 +602,6 @@ footer {
   position: relative; }
   .content:not(.front-page) section:last-of-type {
     margin-bottom: 6rem; }
-  .content:not(.front-page) .container {
-    overflow-x: hidden; }
   .content:not(.front-page) h3 {
     margin-top: 5rem;
     margin-bottom: 1.5rem; }
@@ -1139,9 +1137,12 @@ table.dates tbody > tr > td:last-child {
 
 .open-registrations {
   margin-top: 2rem; }
+  .open-registrations h4 {
+    margin-bottom: 1rem; }
   .open-registrations li {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 1rem; }
     .open-registrations li > * {
       flex-basis: 50%; }
     .open-registrations li .reg-buttons {
@@ -1149,6 +1150,13 @@ table.dates tbody > tr > td:last-child {
       justify-content: center; }
       .open-registrations li .reg-buttons > :nth-child(1) {
         margin-right: 2rem; }
+  .open-registrations li:last-child {
+    margin-bottom: 0; }
+
+/* Ressponsive for Open Registrations */
+@media only screen and (max-width: 900px) {
+  .open-registrations li {
+    flex-direction: column; } }
 
 .registration__buttons {
   display: flex;
@@ -1188,7 +1196,8 @@ table.prices {
   table.prices tr > th:nth-child(2) {
     border-right: 2px solid black; }
   table.prices th, table.prices td {
-    padding: 0.25rem 0.5rem; }
+    padding: 0.25rem 0.5rem;
+    vertical-align: middle; }
 
 .disclaimers {
   margin-top: 0.5rem; }
@@ -1573,7 +1582,7 @@ img.shoeprint {
 @media only screen and (max-width: 900px) {
   .container {
     width: 615px; }
-  .btn {
+  .btn-big {
     width: 16rem; }
   li.class {
     height: 250px;
@@ -1589,10 +1598,10 @@ img.shoeprint {
     width: 547px; }
   .introduction {
     padding: 0 20px; }
-  .btn {
+  .btn-big {
     width: 14rem;
     font-size: 1.75rem !important; }
-    .btn a {
+    .btn-big a {
       font-size: 1.75rem; }
   h3.next-course {
     font-size: 2.75rem; }
@@ -1625,10 +1634,10 @@ img.shoeprint {
     font-size: 1.5rem; }
   .box-blue {
     padding: 0.5rem 0; }
-  .btn {
+  .btn-big {
     width: 12rem;
     font-size: 1.5rem !important; }
-    .btn a {
+    .btn-big a {
       font-size: 1.5rem; }
   h3.next-course {
     font-size: 2.25rem;
@@ -1674,10 +1683,10 @@ img.shoeprint {
     padding: 6%; }
   p.big {
     font-size: 1.4rem; }
-  .btn {
+  .btn-big {
     width: 11rem;
     font-size: 1.35rem !important; }
-    .btn a {
+    .btn-big a {
       font-size: 1.35rem; }
   h3.next-course {
     margin-bottom: 1rem;
@@ -1733,7 +1742,7 @@ img.shoeprint {
     display: flex;
     justify-content: space-between;
     margin: 1rem 0 0 0; }
-    .front-page__buttons .btn:first-child {
+    .front-page__buttons .btn-big:first-child {
       margin-bottom: 0; }
   h3.next-course {
     font-size: 2.5rem; }
@@ -1768,10 +1777,6 @@ img.shoeprint {
   .single-page .container,
   .single-post-custom .container {
     padding: 0 1rem; }
-  .registration__buttons {
-    justify-content: space-around; }
-    .registration__buttons .btn:first-of-type {
-      margin-right: 0; }
   .footer__content {
     padding: 0 1rem;
     grid-template-columns: 25% 50% 25%; }
@@ -1816,7 +1821,7 @@ img.shoeprint {
   .front-page__buttons {
     flex-direction: column;
     align-items: center; }
-    .front-page__buttons .btn:first-child {
+    .front-page__buttons .btn-big:first-child {
       margin-bottom: 1.75rem; }
   .sax {
     bottom: -11px;
@@ -1835,6 +1840,8 @@ img.shoeprint {
       padding: 0.15rem 0.1rem; } }
 
 @media only screen and (max-width: 400px) {
+  .btn-small {
+    width: 8rem; }
   .page-header {
     font-size: 4rem; }
   .classes-all ul {
@@ -1849,12 +1856,7 @@ img.shoeprint {
       font-size: 1.75rem; }
     li.class .class__button {
       font-size: 1.25rem;
-      bottom: 12.5%; }
-  .registration__buttons {
-    flex-direction: column;
-    align-items: center; }
-    .registration__buttons .btn:first-of-type {
-      margin-bottom: 1.75rem; } }
+      bottom: 12.5%; } }
 
 @media only screen and (max-width: 398px) {
   .about__swing-foundation h3.orange-line::after {
