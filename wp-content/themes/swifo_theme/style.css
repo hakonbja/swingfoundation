@@ -1431,7 +1431,8 @@ p.class__time {
   z-index: 2;
   text-align: center; }
   p.class__time a {
-    font-family: 'Din Next Pro Regular', sans-serif; }
+    font-family: 'Din Next Pro Regular', sans-serif;
+    color: white; }
 
 p.class__name {
   z-index: 2;
