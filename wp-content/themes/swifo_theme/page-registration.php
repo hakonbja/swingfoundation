@@ -1,8 +1,8 @@
 
-<?php get_header();
+<?php
+  get_header();
   while ( have_posts() ) : the_post();
-    $linkMain = get_post_meta(get_the_id(), "registration_form_url", true);
-    $linkSecondary = get_post_meta(get_the_id(), "2nd_button", true);
+    $interestedUrl = get_post_meta(get_the_id(), "interested_form_url", true);
   endwhile;
   
   $args = array(
@@ -11,10 +11,19 @@
     'orderby' => 'meta_value',
     'order' => 'ASC',
     'meta_query' => array (
-      'key' => 'reg_end_date',
-      'value' => date('Y-m-d', strtotime('today')),
-      'compare' => '>=',
-      'type' => 'DATE'
+      'relation' => 'AND',
+      array (
+        'key' => 'reg_start_date',
+        'value' => date('Y-m-d', strtotime('today')),
+        'compare' => '<=',
+        'type' => 'DATE'
+      ),
+      array(
+        'key' => 'reg_end_date',
+        'value' => date('Y-m-d', strtotime('today')),
+        'compare' => '>=',
+        'type' => 'DATE'
+      )
     )
   );
 
@@ -38,27 +47,34 @@
 
         <div class="open-registrations">
           <h4>Open registrations</h4>
-          <ul>
-            
-            <?php
+
+          <?php
+          if ( $open_registrations -> have_posts() ) {
+            echo '<ul>';
             while ( $open_registrations -> have_posts() ) : $open_registrations -> the_post();
               $title = get_post_meta(get_the_id(), 'reg_title', true);
               $form_url = get_post_meta(get_the_id(), 'reg_form_url', true);
               $event_url = get_permalink();
               
-              echo
-              '<li>
-                <h5>' . $title . '</h5>
-                <div class="reg-buttons">
-                  <div class="btn btn-blue btn-small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
-                  <div class="btn btn-border-blue btn-small"><a href="' . $event_url . '">More info</a></div>
-                </div>
-              </li>';
+              echo '
+                <li>
+                  <h5>' . $title . '</h5>
+                  <div class="reg-buttons">
+                    <div class="btn btn-blue btn-small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
+                    <div class="btn btn-border-blue btn-small"><a href="' . $event_url . '">More info</a></div>
+                  </div>
+                </li>
+              ';
               
             endwhile;
-            ?>
+            echo '</ul>';
+          } else {
+            echo '
+              <p><em>There are no open registrations at the moment but you can let us know what you\'re interested in by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
+            ';
+          }
+          ?>
 
-          </ul>
         </div>
 
       </div>

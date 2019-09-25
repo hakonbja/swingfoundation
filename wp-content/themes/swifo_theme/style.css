@@ -1150,6 +1150,8 @@ table.dates tbody > tr > td:last-child {
       justify-content: center; }
       .open-registrations li .reg-buttons > :nth-child(1) {
         margin-right: 2rem; }
+      .open-registrations li .reg-buttons > :last-child {
+        margin-right: 0; }
   .open-registrations li:last-child {
     margin-bottom: 0; }
 
