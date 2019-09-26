@@ -7,8 +7,7 @@
   <?php
   $args = array(
     'post_type' => 'post',
-    'meta_key' => 'date',
-    'orderby' => 'meta_value',
+    'orderby' => 'date',
     'order' => 'DESC',
   );
 
