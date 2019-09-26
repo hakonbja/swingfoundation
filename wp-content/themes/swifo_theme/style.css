@@ -247,6 +247,18 @@ a.img-link {
   .content.front-page {
     margin-top: 80px; }
 
+.img-blue-border {
+  border: 8px solid #144D73;
+  border-bottom: none; }
+  .img-blue-border .subtext {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 100;
+    background-color: #144D73;
+    color: #FFFFFF;
+    margin-bottom: 0 !important;
+    padding: 0.25rem 7px; }
+
 .btn {
   width: 18rem;
   height: 60px;
@@ -629,18 +641,8 @@ footer {
   width: min-content; }
 
 .information-page img {
-  border: 8px solid #144D73;
-  border-bottom: none;
   height: 300px;
   width: auto; }
-
-.information-page p.subtext {
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 100;
-  background-color: #144D73;
-  color: #FFFFFF;
-  padding: 0.25rem 7px; }
 
 .information-page p {
   line-height: 1.4; }

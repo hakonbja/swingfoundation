@@ -8,8 +8,8 @@
       <div class="hide-overflow-x">
         <h3 class="orange-line">About us</h3>
       </div>
-      <?php $about_us = new WP_Query( 'pagename=information' ) // online id is 11, local id is 33 //can also use the slug! ?>
-      <div class="img-container">
+      <?php $about_us = new WP_Query( 'pagename=information' ) ?>
+      <div class="img-container img-blue-border">
         <?php while ( $about_us -> have_posts() ) : $about_us -> the_post(); ?>
         <?php the_post_thumbnail(); ?>
         <?php $title = get_post(get_post_thumbnail_id()) -> post_title; ?>

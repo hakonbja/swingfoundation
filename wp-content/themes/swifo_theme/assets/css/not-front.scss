@@ -44,20 +44,10 @@
     width: min-content;
   }
   img {
-    border: 8px solid $dark-blue;
-    border-bottom: none;
     height: 300px;
     width: auto;
   }
-  p.subtext {
-    font-size: 1rem;
-    // font-style: italic;
-    text-align: center;
-    font-weight: 100;
-    background-color: $dark-blue;
-    color: $white;
-    padding: 0.25rem 7px;
-  }
+  
   p {
     line-height: 1.4;
   }

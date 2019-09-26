@@ -14,7 +14,7 @@ $content = wp_filter_nohtml_kses($content);
 ?>
   <div class="teacher">
   <?php if (has_post_thumbnail()) : ?>
-    <div class="img-container">
+    <div class="img-container img-blue-border">
       <?php the_post_thumbnail() ?>
       <?php $title = get_post(get_post_thumbnail_id()) -> post_title; ?>
       <p class="subtext"><?php echo $title ?></p>
