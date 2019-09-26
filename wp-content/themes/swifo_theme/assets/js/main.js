@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   addSubmenusClickEvent();
   addTabsFunction();
   sessionStorageTabSetting();
+  glideClasses();
 });
 
 function sessionStorageTabSetting() {
@@ -171,4 +172,17 @@ function highlightSelectedMenuItems() {
       item.classList.remove('js-current-menu-item');
     }
   }
+}
+
+/* Slider for Classes on front page */
+function glideClasses() {
+  new Glider(document.querySelector('.classes-glider'), {
+    slidesToShow: 2,
+    draggable: true,
+    dots: '#dots',
+    arrows: {
+      prec: '.glider-prev',
+      next: '.glider-next',
+    },
+  });
 }

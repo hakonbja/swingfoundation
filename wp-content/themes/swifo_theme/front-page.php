@@ -56,6 +56,32 @@
       </div>
     </div>
 
+    <div class="glider-contain multiple">
+      
+      <button class="glider-prev"><-</button>
+
+      <div class="classes-glider">
+        <li class="class">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
+            <p class="class__name">Lindy 1</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-1">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
+          </li>
+          <li class="class">
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
+            <p class="class__name">Lindy 2</p>
+            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-2">Level description</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
+          </li>
+      </div>
+
+      <button class="glider-next">-></button>
+
+      <div id="dots" class="glider-dots"></div>
+      
+    </div>
+
+
     <div class="container">
       <div class="classes-all">
         <ul>
@@ -66,7 +92,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
           </li>
           <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/">Tuesdays at 19:50-21:05</a></p>
+            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
             <p class="class__name">Lindy 2</p>
             <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-2">Level description</a>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
@@ -105,39 +131,7 @@
       </div>
     </div>
 
-  <!--
-    <div id="slider" class="slider">
-      <div class="wrapper">
-        <div id="items" class="items">
-          <span class="slide">
-            <li class="class">
-              <p>Lindy Hop Beginners</p>
-              <a href="<?php echo get_site_url(); ?>/classes/#lh-beginners">Level description</a>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-            </li>
-          </span>
-          <span class="slide">
-            <li class="class">
-              <p>Lindy Hop Beginners+</p>
-              <a href="<?php echo get_site_url(); ?>/classes/#lh-beginners-cont">Level description</a>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-            </li>
-          </span>
-          <span class="slide">
-            <li class="class">
-              <p>Lindy Hop Advanced+</p>
-              <a href="<?php echo get_site_url(); ?>/classes/#lh-adv+">Level description</a>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-            </li>
-          </span>
-
-        </div>
-      </div>
-      <a id="prev" class="control prev"><</a>
-      <a id="next" class="control next">></a>
-
-    </div>
-  -->
+  
     <div class="container">
       <div class="bar bar-seablue extend-left-full extend-right-col">
         <?php wp_nav_menu( array( 'theme_location' => 'quicklinks', 'container_class' => 'quick-links') ); ?>

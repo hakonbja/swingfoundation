@@ -8,6 +8,7 @@ function swifo_scripts() {
 
 	// Javascript
   wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', '', filemtime( get_template_directory() . '/assets/js/main.js' ), false);
+  wp_enqueue_script('glider', get_template_directory_uri() . '/assets/js/glider.min.js');
 }
 
 add_action( 'wp_enqueue_scripts', 'swifo_scripts' );

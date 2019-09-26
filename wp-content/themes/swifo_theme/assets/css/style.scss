@@ -33,6 +33,9 @@ $white: #FFFFFF;
 /* Import style reset */
 @import '_reset.scss';
 
+/* Import Glider css */
+@import 'glider.min.css';
+
 /* Import other stylesheets */
 @import 'universal.scss';
 @import 'not-front.scss';

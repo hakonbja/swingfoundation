@@ -15,6 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url(glider.min.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -58,6 +59,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* Import Glider css */
 /* Import other stylesheets */
 /* Universal */
 html {
@@ -1351,39 +1353,6 @@ span.month {
 
 .bar.bar-halfsize {
   height: 2.5rem; }
-
-.classes #slider .slider {
-  width: 300px;
-  height: 300px; }
-
-.classes #slider .wrapper {
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  padding: 2rem 0; }
-
-.classes #slider #items {
-  width: 100%;
-  position: relative;
-  top: 0;
-  left: -300px;
-  transform: translateX(-50%);
-  left: 50%; }
-
-.classes #slider #items.shifting {
-  transition: left .2s ease-out; }
-
-.classes #slider .slide {
-  width: 300px;
-  height: 300px;
-  float: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: all 1s;
-  position: relative;
-  background: #FFCF47;
-  margin: 0 1rem; }
 
 .classes-all {
   display: flex;
