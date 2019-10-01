@@ -1154,8 +1154,6 @@ table.dates tbody > tr > td:last-child {
         margin-right: 2rem; }
       .open-registrations li .reg-buttons > :last-child {
         margin-right: 0; }
-  .open-registrations li:last-child {
-    margin-bottom: 0; }
 
 /* Ressponsive for Open Registrations */
 @media only screen and (max-width: 900px) {

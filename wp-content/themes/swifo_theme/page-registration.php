@@ -67,7 +67,10 @@
               ';
               
             endwhile;
-            echo '</ul>';
+            echo '
+              </ul>
+              <p><em>Are you interested in something else? Let us know by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
+            ';
           } else {
             echo '
               <p><em>There are no open registrations at the moment but you can let us know what you\'re interested in by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
