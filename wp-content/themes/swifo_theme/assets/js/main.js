@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   addSubmenusClickEvent();
   addTabsFunction();
   sessionStorageTabSetting();
+  glideClasses();
 });
 
 function sessionStorageTabSetting() {
@@ -171,4 +172,34 @@ function highlightSelectedMenuItems() {
       item.classList.remove('js-current-menu-item');
     }
   }
+}
+
+/* Slider for Classes on front page */
+function glideClasses() {
+  new Glider(document.querySelector('.classes-glider'), {
+    slidesToShow: 1,
+    itemWidth: 300,
+    scrollLock: true,
+    // scrollLockDelay: 10,
+    draggable: true,
+    // dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next',
+    },
+    responsive: [
+      {
+        // screens greater than >= 420px
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 'auto',
+          slidesToScroll: '3',
+          duration: 1.5,
+          itemWidth: 300,
+          exactWidth: true,
+          scrollLock: false,
+        },
+      },
+    ],
+  });
 }

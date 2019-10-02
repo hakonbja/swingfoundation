@@ -61,19 +61,19 @@
   .btn-big {
     width: 16rem;
   }
-  li.class {
-    height: 250px;
-    width: 250px;
+  // li.class {
+  //   height: 250px;
+  //   width: 250px;
 
-    .class__name {
-      font-size: 1.75rem;
-    }
+  //   .class__name {
+  //     font-size: 1.75rem;
+  //   }
 
-    .class__button {
-      font-size: 1.25rem;
-      bottom: 13.5%;
-    }
-  }
+  //   .class__button {
+  //     font-size: 1.25rem;
+  //     bottom: 13.5%;
+  //   }
+  // }
 }
 
 @media only screen and (max-width: 800px) {
@@ -102,26 +102,26 @@
   }
 
   li.class {
-    height: 225px;
-    width: 225px;
+    // height: 225px;
+    // width: 225px;
 
-    .class__name {
-      font-size: 1.5rem;
-    }
+    // .class__name {
+    //   font-size: 1.5rem;
+    // }
 
     .class__time,
     .class__button {
       opacity: 1;
     }
 
-    .class__time a,
-    .class__button {
-      font-size: 1rem;
-    }
+    // .class__time a,
+    // .class__button {
+    //   font-size: 1rem;
+    // }
 
-    .class__button {
-      border-width: 2px;
-    }
+    // .class__button {
+    //   border-width: 2px;
+    // }
 
     img {
       opacity: 0.15;
@@ -181,13 +181,13 @@
   }
 
 
-  li.class {
-    height: 200px;
-    width: 200px;
-    .class__time {
-      font-size: 0.75rem;
-    }
-  }
+  // li.class {
+  //   height: 200px;
+  //   width: 200px;
+  //   .class__time {
+  //     font-size: 0.75rem;
+  //   }
+  // }
 
   .quick-links ul {
     margin: 0 2rem;
@@ -245,19 +245,19 @@
     right: -23px;
   }
 
-  li.class {
-    height: 165px;
-    width: 165px;
-    .class__time a {
-      font-size: 0.75rem;
-    }
-    .class__name {
-      font-size: 1.25rem;
-    }
-    .class__button {
-      bottom: 10.5%;
-    }
-  }
+  // li.class {
+  //   height: 165px;
+  //   width: 165px;
+  //   .class__time a {
+  //     font-size: 0.75rem;
+  //   }
+  //   .class__name {
+  //     font-size: 1.25rem;
+  //   }
+  //   .class__button {
+  //     bottom: 10.5%;
+  //   }
+  // }
 
   img.bounce {
     right: -23px;
@@ -463,9 +463,9 @@
     right: -23px;
   }
 
-  .class__button {
-    padding: .2rem .5rem;
-  }
+  // .class__button {
+  //   padding: .2rem .5rem;
+  // }
 
 
   .prices__classes__grid {
@@ -496,25 +496,25 @@
     font-size: 4rem;
   }
 
-  .classes-all ul {
-    flex-direction: column;
-    align-items: center;
-  }
+  // .classes-all ul {
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
 
-  li.class {
-    height: 225px;
-    width: 225px;
-    .class__time a {
-      font-size: 1.1rem;
-    }
-    .class__name {
-      font-size: 1.75rem;
-    }
-    .class__button {
-      font-size: 1.25rem;
-      bottom: 12.5%;
-    }
-  }
+  // li.class {
+  //   height: 225px;
+  //   width: 225px;
+  //   .class__time a {
+  //     font-size: 1.1rem;
+  //   }
+  //   .class__name {
+  //     font-size: 1.75rem;
+  //   }
+  //   .class__button {
+  //     font-size: 1.25rem;
+  //     bottom: 12.5%;
+  //   }
+  // }
 
 
 
