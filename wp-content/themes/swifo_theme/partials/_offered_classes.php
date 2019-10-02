@@ -1,7 +1,10 @@
 <?php
 $args = array(
   'post_type' => 'classes',
+  'orderby' => 'title',
   'order' => 'ASC',
+  'meta_key' => 'class_show_on_frontpage',
+  'meta_value' => 'Yes',
 );
 $classes = new WP_Query( $args );
 ?>
@@ -17,20 +20,24 @@ $classes = new WP_Query( $args );
   <div class="classes-glider">
   <?php
     while ( $classes -> have_posts() ) : $classes -> the_post();
-    $weekday = get_post_meta(get_the_id(), 'class_weekday', true);
-    $start_time = get_post_meta(get_the_id(), 'class_start_time', true);
-    $end_time = get_post_meta(get_the_id(), 'class_end_time', true);
-    echo '
-      <div class="slide">
-      <li class="class">
-        <p class="class__time"><a href="' . get_site_url() . '/classes/#">' . $weekday . ' at ' . $start_time . '-' . $end_time . '</a></p>
-        <p class="class__name">' . get_the_title() . '</p>
-        <a class="class__button" href="' . get_site_url() . '/classes/#levels">Level description</a>
-        ' . get_the_post_thumbnail() . '
-      </li>
-      </div>
-    ';
+      $weekday = get_post_meta(get_the_id(), 'class_weekday', true);
+      $start_time = get_post_meta(get_the_id(), 'class_start_time', true);
+      $end_time = get_post_meta(get_the_id(), 'class_end_time', true);
+      $short_title = get_post_meta(get_the_id(), 'class_short_title', true);
+      $title = ($short_title ? $short_title : get_the_title());
+      $anchor = str_replace(array('/', ' '), array('', '-'), strtolower( get_the_title() ));
+      echo '
+        <div class="slide">
+        <li class="class">
+          <p class="class__time"><a href="' . get_site_url() . '/classes/#">' . $weekday . ' at ' . $start_time . '-' . $end_time . '</a></p>
+          <p class="class__name">' . $title . '</p>
+          <a class="class__button" href="' . get_site_url() . '/classes/#' . $anchor . '">Level description</a>
+          ' . get_the_post_thumbnail() . '
+        </li>
+        </div>
+      ';
     endwhile;
+    wp_reset_postdata();
     ?>
     
   </div>

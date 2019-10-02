@@ -114,7 +114,7 @@ function event_get_reg_meta_box( $meta_boxes ) {
 }
 add_filter( 'rwmb_meta_boxes', 'event_get_reg_meta_box' );
 
-/* Meta box for Clases */
+/* Meta box for Classes */
 function class_get_meta_box( $meta_boxes ) {
 	$prefix = 'class_';
 
@@ -127,8 +127,35 @@ function class_get_meta_box( $meta_boxes ) {
 		'autosave' => 'false',
 		'fields' => array(
 			array(
+				'id' => $prefix . 'show_on_frontpage',
+				'name' => esc_html__( 'Show on Frontpage', 'metabox-online-generator' ),
+				'type' => 'radio',
+				'placeholder' => '',
+				'options' => array(
+					'Yes' => esc_html__( 'Yes', 'metabox-online-generator' ),
+					'No' => esc_html__( 'No', 'metabox-online-generator' ),
+				),
+				'inline' => 'true',
+				'std' => 'Yes',
+			),
+			array(
+				'id' => $prefix . 'type',
+				'type' => 'select',
+				'name' => esc_html__( 'Type of Class' ),
+				'options' => array(
+					'Lindy Hop' => esc_html__( 'Lindy Hop' ),
+					'Solo' => esc_html__( 'Solo' ),
+				),
+				'std' => 'Lindy Hop',
+			),
+			array(
+				'id' => $prefix . 'short_title',
+				'type' => 'text',
+				'name' => esc_html__( 'Short Title' ),
+			),
+			array(
 				'id' => $prefix . 'weekday',
-				'type' => 'select_advanced',
+				'type' => 'select',
 				'name' => esc_html__( 'Weekday' ),
 				'options' => array(
 					'Mondays' => esc_html__( 'Mondays' ),
