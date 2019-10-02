@@ -13,7 +13,7 @@
         <li class="tab-2">Block 2</li>
         <li class="tab-3">Block 3</li>
         <li class="tab-4 selected">Block 4</li>
-        <li class="tab-5 disabled">Block 5</li>
+        <li class="tab-5">Block 5</li>
       </ul>
     </div>
     
@@ -29,6 +29,10 @@
 
     <div class="schedule__wrapper content-4 selected">
       <?php get_template_part( 'partials/_schedule__block-4'); ?>
+    </div>
+
+    <div class="schedule__wrapper content-5 ">
+      <?php get_template_part( 'partials/_schedule__block-5'); ?>
     </div>
     
   <div class="schedule__wrapper content-5"></div>
