@@ -15,7 +15,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(glider.min.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,6 +59,141 @@ table {
   border-spacing: 0; }
 
 /* Import Glider css */
+.glider, .glider-contain {
+  margin: 0 auto;
+  position: relative; }
+
+.glider, .glider-track {
+  transform: translateZ(0); }
+
+.glider-dot, .glider-next, .glider-prev {
+  border: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: 0; }
+
+.glider-contain {
+  width: 100%; }
+
+.glider {
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; }
+
+.glider-track {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1; }
+
+.glider.draggable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.glider.draggable .glider-slide img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none; }
+
+.glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+.glider-slide {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  min-width: 150px; }
+
+.glider-slide img {
+  max-width: 100%; }
+
+.glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0; }
+
+.glider-next, .glider-prev {
+  position: absolute;
+  background: 0 0;
+  z-index: 2;
+  font-size: 40px;
+  text-decoration: none;
+  left: -23px;
+  top: 30%;
+  cursor: pointer;
+  color: #666;
+  opacity: 1;
+  line-height: 1;
+  transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67), color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+
+.glider-next:focus, .glider-next:hover, .glider-prev:focus, .glider-prev:hover {
+  color: #ccc; }
+
+.glider-next {
+  right: -23px;
+  left: auto; }
+
+.glider-next.disabled, .glider-prev.disabled {
+  opacity: .25;
+  color: #666;
+  cursor: default; }
+
+.glider-hide {
+  opacity: 0; }
+
+.glider-dots {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0; }
+
+.glider-dot {
+  display: block;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 999px;
+  background: #ccc;
+  width: 12px;
+  height: 12px;
+  margin: 7px; }
+
+.glider-dot:focus, .glider-dot:hover {
+  background: #ddd; }
+
+.glider-dot.active {
+  background: #a89cc8; }
+
+@media (max-width: 36em) {
+  .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none;
+    width: 7px;
+    height: 3px; }
+  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(156, 156, 156, 0.25);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25); } }
+
 /* Import other stylesheets */
 /* Universal */
 html {
@@ -1354,6 +1488,31 @@ span.month {
 .bar.bar-halfsize {
   height: 2.5rem; }
 
+.glider-prev,
+.glider-next {
+  top: 50%;
+  transform: translateY(-50%); }
+  .glider-prev svg,
+  .glider-next svg {
+    height: 40px;
+    width: auto;
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7)); }
+  .glider-prev svg path,
+  .glider-next svg path {
+    fill: #69BDA0; }
+
+.glider-track {
+  height: 300px; }
+
+.glider-prev {
+  left: 10px; }
+  .glider-prev svg {
+    transform: rotate(180deg); }
+
+.glider-next {
+  right: 10px; }
+
 .classes-all {
   display: flex;
   flex-direction: column;
@@ -1372,7 +1531,8 @@ li.class {
   height: 300px;
   width: 300px;
   background-color: #144D73;
-  margin: 1rem;
+  margin: auto;
+  border: 1rem solid white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1555,15 +1715,7 @@ img.shoeprint {
   .container {
     width: 615px; }
   .btn-big {
-    width: 16rem; }
-  li.class {
-    height: 250px;
-    width: 250px; }
-    li.class .class__name {
-      font-size: 1.75rem; }
-    li.class .class__button {
-      font-size: 1.25rem;
-      bottom: 13.5%; } }
+    width: 16rem; } }
 
 @media only screen and (max-width: 800px) {
   .container {
@@ -1581,21 +1733,11 @@ img.shoeprint {
     bottom: -58px;
     right: -32px;
     width: 60%; }
-  li.class {
-    height: 225px;
-    width: 225px; }
-    li.class .class__name {
-      font-size: 1.5rem; }
-    li.class .class__time,
-    li.class .class__button {
-      opacity: 1; }
-    li.class .class__time a,
-    li.class .class__button {
-      font-size: 1rem; }
-    li.class .class__button {
-      border-width: 2px; }
-    li.class img {
-      opacity: 0.15; }
+  li.class .class__time,
+  li.class .class__button {
+    opacity: 1; }
+  li.class img {
+    opacity: 0.15; }
   li.class:hover {
     transform: scale(1); } }
 
@@ -1627,11 +1769,6 @@ img.shoeprint {
     right: -38px;
     width: 300px;
     bottom: -60px; }
-  li.class {
-    height: 200px;
-    width: 200px; }
-    li.class .class__time {
-      font-size: 0.75rem; }
   .quick-links ul {
     margin: 0 2rem; } }
 
@@ -1669,15 +1806,6 @@ img.shoeprint {
     bottom: -27px;
     width: 57%;
     right: -23px; }
-  li.class {
-    height: 165px;
-    width: 165px; }
-    li.class .class__time a {
-      font-size: 0.75rem; }
-    li.class .class__name {
-      font-size: 1.25rem; }
-    li.class .class__button {
-      bottom: 10.5%; }
   img.bounce {
     right: -23px;
     bottom: -61px; } }
@@ -1798,8 +1926,6 @@ img.shoeprint {
   .sax {
     bottom: -11px;
     right: -23px; }
-  .class__button {
-    padding: .2rem .5rem; }
   .prices__classes__grid {
     padding: 0; }
     .prices__classes__grid p {
@@ -1815,20 +1941,7 @@ img.shoeprint {
   .btn-small {
     width: 8rem; }
   .page-header {
-    font-size: 4rem; }
-  .classes-all ul {
-    flex-direction: column;
-    align-items: center; }
-  li.class {
-    height: 225px;
-    width: 225px; }
-    li.class .class__time a {
-      font-size: 1.1rem; }
-    li.class .class__name {
-      font-size: 1.75rem; }
-    li.class .class__button {
-      font-size: 1.25rem;
-      bottom: 12.5%; } }
+    font-size: 4rem; } }
 
 @media only screen and (max-width: 398px) {
   .about__swing-foundation h3.orange-line::after {

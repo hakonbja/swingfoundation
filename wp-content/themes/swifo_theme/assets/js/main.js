@@ -177,12 +177,29 @@ function highlightSelectedMenuItems() {
 /* Slider for Classes on front page */
 function glideClasses() {
   new Glider(document.querySelector('.classes-glider'), {
-    slidesToShow: 2,
+    slidesToShow: 1,
+    itemWidth: 300,
+    scrollLock: true,
+    // scrollLockDelay: 10,
     draggable: true,
-    dots: '#dots',
+    // dots: '.dots',
     arrows: {
-      prec: '.glider-prev',
+      prev: '.glider-prev',
       next: '.glider-next',
     },
+    responsive: [
+      {
+        // screens greater than >= 420px
+        breakpoint: 420,
+        settings: {
+          slidesToShow: 'auto',
+          slidesToScroll: '3',
+          duration: 1.5,
+          itemWidth: 300,
+          exactWidth: true,
+          scrollLock: false,
+        },
+      },
+    ],
   });
 }

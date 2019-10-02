@@ -1,18 +1,18 @@
-
-
 <?php get_header();?>
 
 <div class="content front-page">
 
   <div class="jumbotron container-fluid" id="js-jumbotron">
-    <img class="jumbotron__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-big.svg" alt="Swing Foundation Logo">
+    <img class="jumbotron__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-big.svg"
+      alt="Swing Foundation Logo">
   </div>
 
 
 
   <div class="container">
     <div class="introduction padding-rl-1col">
-      <h4>Swing Foundation is an Amsterdam based Lindy Hop school that promotes the history and culture of Swing dancing through workshops, lectures and weekly classes.</h4>
+      <h4>Swing Foundation is an Amsterdam based Lindy Hop school that promotes the history and culture of Swing dancing
+        through workshops, lectures and weekly classes.</h4>
     </div>
   </div>
 
@@ -37,9 +37,10 @@
           <h3 class="next-course">Next&nbsp;course starts&nbsp;on</h3>
           <?php while ( have_posts() ) : the_post();
             $date = get_post_meta(get_the_id(), "next_course_date", true);?>
-            <h3 class="date"><?php echo $date ?></h3>
+          <h3 class="date"><?php echo $date ?></h3>
           <?php endwhile ?>
-          <img class="sax" src="<?php echo get_template_directory_uri(); ?>/assets/img/sax_with_soundlines.svg" alt="saxophone">
+          <img class="sax" src="<?php echo get_template_directory_uri(); ?>/assets/img/sax_with_soundlines.svg"
+            alt="saxophone">
         </div>
       </div>
     </div>
@@ -56,82 +57,8 @@
       </div>
     </div>
 
-    <div class="glider-contain multiple">
-      
-      <button class="glider-prev"><-</button>
+    <?php get_template_part( 'partials/_offered_classes'); ?>
 
-      <div class="classes-glider">
-        <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
-            <p class="class__name">Lindy 1</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-1">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
-            <p class="class__name">Lindy 2</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-2">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-          </li>
-      </div>
-
-      <button class="glider-next">-></button>
-
-      <div id="dots" class="glider-dots"></div>
-      
-    </div>
-
-
-    <div class="container">
-      <div class="classes-all">
-        <ul>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
-            <p class="class__name">Lindy 1</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-1">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
-            <p class="class__name">Lindy 2</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-2">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
-            <p class="class__name">Lindy 4</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-4">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet1.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 18:30-19:45</a></p>
-            <p class="class__name">Lindy 7</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-7">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
-            <p class="class__name">Lindy 8 (Adv+)</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#lindy-8">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/lindyfeet2.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 19:50-21:05</a></p>
-            <p class="class__name">Solo Beg/Int</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#solo-beg-int">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet1.jpg" alt="legs of dancers">
-          </li>
-          <li class="class">
-            <p class="class__time"><a href="<?php echo get_site_url(); ?>/classes/#">Tuesdays at 21:05-22:20</a></p>
-            <p class="class__name">Solo Int/Adv</p>
-            <a class="class__button" href="<?php echo get_site_url(); ?>/classes/#solo-int-adv">Level description</a>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solofeet2.jpg" alt="legs of dancers">
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  
     <div class="container">
       <div class="bar bar-seablue extend-left-full extend-right-col">
         <?php wp_nav_menu( array( 'theme_location' => 'quicklinks', 'container_class' => 'quick-links') ); ?>
@@ -164,26 +91,31 @@
 
       <!-- Begin Mailchimp Signup Form -->
       <div id="mc_embed_signup">
-      <form action="https://swingfoundation.us19.list-manage.com/subscribe/post?u=10ad7729e889b6568ffe433ab&amp;id=643c6466d5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <form
+          action="https://swingfoundation.us19.list-manage.com/subscribe/post?u=10ad7729e889b6568ffe433ab&amp;id=643c6466d5"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
             <div class="mc-field-group">
-            	<input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email" id="mce-EMAIL" aria-label="Email Address">
+              <input type="email" value="" placeholder="Email Address" name="EMAIL" class="required email"
+                id="mce-EMAIL" aria-label="Email Address">
             </div>
-          	<div id="mce-responses" class="clear">
-          		<div class="response" id="mce-error-response" style="display:none"></div>
-          		<div class="response" id="mce-success-response" style="display:none"></div>
-          	</div>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                <input type="text" name="b_10ad7729e889b6568ffe433ab_643c6466d5" tabindex="-1" value="">
-              </div>
-              <div class="clear">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-blue">
-                <img class="trumpet" src="<?php echo get_template_directory_uri(); ?>/assets/img/trumpet.svg" alt="trumpet">
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_10ad7729e889b6568ffe433ab_643c6466d5" tabindex="-1" value="">
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-blue">
+              <img class="trumpet" src="<?php echo get_template_directory_uri(); ?>/assets/img/trumpet.svg"
+                alt="trumpet">
 
-              </div>
+            </div>
           </div>
-      </form>
+        </form>
       </div>
       <!--End mc_embed_signup-->
 
@@ -197,4 +129,5 @@
 <?php get_footer(); ?>
 
 </body>
+
 </html>

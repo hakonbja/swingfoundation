@@ -167,6 +167,39 @@ span.month {
   height: 2.5rem;
 }
 
+.glider-prev,
+.glider-next {
+  top: 50%;
+  transform: translateY(-50%);
+
+  svg {
+    height: 40px;
+    width: auto;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  }
+
+  svg path {
+    fill: $sea-blue;
+  }
+}
+
+.glider-track {
+  height: 300px;
+}
+
+.glider-prev {
+  left: 10px;
+  
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.glider-next {
+  right: 10px;
+}
+
 .classes-all {
   display: flex;
   flex-direction: column;
@@ -189,7 +222,8 @@ li.class {
   height: 300px;
   width: 300px;
   background-color: $dark-blue;
-  margin: 1rem;
+  margin: auto;
+  border: 1rem solid white;
   display: flex;
   justify-content: center;
   align-items: center;

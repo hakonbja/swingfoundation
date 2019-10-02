@@ -31,10 +31,10 @@ $white: #FFFFFF;
 }
 
 /* Import style reset */
-@import '_reset.scss';
+@import '_reset';
 
 /* Import Glider css */
-@import 'glider.min.css';
+@import 'glider.min';
 
 /* Import other stylesheets */
 @import 'universal.scss';
