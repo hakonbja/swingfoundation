@@ -1510,8 +1510,6 @@ span.month {
 
 .glider-prev {
   left: 10px; }
-  .glider-prev svg {
-    transform: rotate(180deg); }
 
 .glider-next {
   right: 10px; }
