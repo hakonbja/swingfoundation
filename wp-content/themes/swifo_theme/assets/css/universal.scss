@@ -10,7 +10,6 @@ html, body {
   width: 100%;
   margin: 0;
   font-size: 16px;
-  // overflow-x: hidden;
   position: relative;
 }
 
@@ -22,7 +21,6 @@ body {
 
 section {
   width: 100%;
-  // overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,7 +51,7 @@ h3.orange-line::after {
   background-color: $orange;
   position: absolute;
   bottom: 15px;
-  left: 100%; //103%
+  left: 100%;
   right: -960px;
   z-index: -1;
 }
@@ -109,7 +107,6 @@ a.type-a {
 }
 
 .anchor {
-  // padding-top: 176px;
   display: block;
   position: relative;
   top: -80px;
@@ -127,7 +124,6 @@ strong {
 
 
 li {
-  //margin-bottom: 0.5rem;
   position: relative;
 }
 
@@ -215,16 +211,12 @@ a.img-link {
 }
 
 .container-fluid {
-  // padding: 0 1.5rem;
   box-sizing: border-box;
   width: 100%;
 }
 
 .hide-overflow-x {
   overflow-x: hidden;
-  // max-width: 100vw;
-  // padding-bottom: 250px;
-  // margin-bottom: -250px;
 }
 
 .padding-rl-1col {
@@ -353,20 +345,9 @@ a.img-link {
     text-decoration: none;
   }
 
-// @media only screen and (min-width: 769px) {
-//   .sub-menu a:hover {
-//     color: $orange;
-//   }
-// }
-
-
   .current-menu-parent > a {
     color: $sea-blue;
   }
-
-  // .current-menu-item a:hover {
-  //   color: $sea-blue;
-  // }
 }
 
 
@@ -388,7 +369,6 @@ header {
   z-index: 3;
   width: 100%;
   top: 0;
-  //bottom: 16px;
 }
 
 
@@ -398,7 +378,6 @@ header {
 }
 
 .navbar .sub-menu {
-  // display: none;
   box-shadow: 1px 1px 2px $black;
 }
 
@@ -452,7 +431,6 @@ header {
     bottom: 0;
     width: max-content;
     min-width: 100%;
-    // transform: scaleY(0) translateX(50%);
     transform: translateY(-2%) translateX(50%);
     transform-origin: top;
     transition: transform 400ms 200ms ease;
@@ -592,7 +570,7 @@ header {
 }
 
 
-// hamburger menu icon
+/* hamburger menu icon */
 .hamburger-menu {
   position: absolute;
   background-color: $dark-blue;
@@ -613,7 +591,6 @@ header {
   span::after {
     display: block;
     background-color: $sea-blue;
-    // mix-blend-mode: difference;
     height: 3px;
     width: 1.8rem;
     border-radius: 2px;
@@ -667,9 +644,6 @@ header {
   .content.front-page {
     margin-top: 0;
   }
-  // .navbar :not(.current-menu-item) a:hover {
-  //   color: $white;
-  // }
 }
 
 

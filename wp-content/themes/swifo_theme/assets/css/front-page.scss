@@ -1,12 +1,9 @@
 /* Front page */
 
 .jumbotron {
-  // height: 90vh;
-  // max-height: 700px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
   background-color: #144D73;
-  // padding: 5% 10% 13% 10%;
 }
 
 .jumbotron__logo {
@@ -27,8 +24,6 @@
 .front-page > section {
   margin-bottom: 14rem;
 }
-
-
 
 .box-blue {
   background-color: $dark-blue;
@@ -109,8 +104,6 @@
     margin-bottom: 2rem;
   }
 }
-
-
 
 .box-white {
   position: relative;
@@ -297,8 +290,6 @@ li.class img {
   height: 100%;
   width: 100%;
 }
-
-
 
 img.bounce {
   position: absolute;

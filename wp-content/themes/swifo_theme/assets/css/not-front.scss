@@ -211,12 +211,11 @@
   }
 
 
-// Events and stories
+/* Events and stories */
 
 .cards.grid {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-  // grid-template-rows: repeat(2, max-content);
   grid-column-gap: 5%;
   grid-row-gap: 3rem;
 }
@@ -253,7 +252,6 @@
     width: 100%;
     height: auto;
     transition: transform 500ms ease 100ms;
-    // transform: scale(1.05);
   }
 
   .card__meta {
@@ -404,11 +402,6 @@
     max-width: 100%;
   }
 
-  // .excerpt {
-  //   // font-size: 1.5rem;
-  //   margin: 2rem 0;
-  // }
-
   img.fb {
     height: 2rem;
     width: auto;
@@ -430,7 +423,6 @@
       z-index: -1;
       content: "";
       height: 0.15rem;
-      // width: 0;
       bottom: 0.25rem;
       right: 0;
       left: 100%;
@@ -464,7 +456,6 @@
 
   .link-back a:hover {
     &::after {
-      // width: 118%;
       left: -18px;
     }
 
