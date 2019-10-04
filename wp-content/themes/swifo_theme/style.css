@@ -1573,7 +1573,8 @@ p.class__name {
   font-size: 2rem;
   text-align: center;
   color: #FFFFFF;
-  cursor: default; }
+  cursor: -webkit-grab;
+  cursor: grab; }
 
 .class__button {
   position: absolute;
