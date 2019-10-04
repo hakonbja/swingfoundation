@@ -260,9 +260,9 @@ a.img-link {
 }
 
 .btn {
-  width: 18rem;
-  height: 60px;
-  // height: auto;
+  box-sizing: border-box;
+  border-color: transparent;
+  border-style: solid;
   display: flex;
   align-items: center;
   text-align: center;
@@ -272,7 +272,6 @@ a.img-link {
   a {
     text-decoration: none;
     transition: color 400ms;
-    // padding: 16px 0;
     width: 100%;
     display: inline-block;
     font-family: 'Din Next Pro Regular';
@@ -283,11 +282,16 @@ a.img-link {
   }
 }
 
+.btn-big {
+  width: 18rem;
+  height: 60px;
+  border-width: 7px;
+}
 
 .btn-small {
   width: 11rem;
   height: 2.5rem;
-  display: flex;
+  border-width: 5px;
 
   a {
     font-size: 1.25rem;
@@ -299,6 +303,7 @@ a.img-link {
 .btn-white {
   color: $dark-blue;
   background-color: $white;
+  
   &:hover {
     background-color: $sea-blue;
   }
@@ -307,26 +312,21 @@ a.img-link {
 .btn-blue {
   color: $white;
   background-color: $dark-blue;
+
+  a {
+    font-weight: normal;
+    color: $white;
+  }
+  
   &:hover {
-    // background-color: $sea-blue;
     a {
       color: $sea-blue;
     }
   }
 }
 
-.btn-blue a {
-  font-weight: normal;
-  color: $white;
-}
-
-.btn-border-blue,
 .btn-border-white {
-  box-sizing: border-box;
-}
-
-.btn-border-white {
-  border: $white solid 7px;
+  border-color: $white;
 
   &:hover {
     border-color: $sea-blue;
@@ -334,7 +334,11 @@ a.img-link {
 }
 
 .btn-border-blue {
-  border: $dark-blue solid 7px;
+  border-color: $dark-blue;
+
+  &:hover {
+    background-color: $sea-blue;
+  }
 }
 
 

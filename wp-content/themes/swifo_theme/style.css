@@ -396,8 +396,9 @@ a.img-link {
     padding: 0.25rem 7px; }
 
 .btn {
-  width: 18rem;
-  height: 60px;
+  box-sizing: border-box;
+  border-color: transparent;
+  border-style: solid;
   display: flex;
   align-items: center;
   text-align: center;
@@ -419,10 +420,15 @@ a.img-link {
       width: 0;
       margin-bottom: calc(2rem/6 * -1); }
 
+.btn-big {
+  width: 18rem;
+  height: 60px;
+  border-width: 7px; }
+
 .btn-small {
   width: 11rem;
   height: 2.5rem;
-  display: flex; }
+  border-width: 5px; }
   .btn-small a {
     font-size: 1.25rem;
     padding: 10px 0; }
@@ -442,24 +448,21 @@ a.img-link {
 .btn-blue {
   color: #FFFFFF;
   background-color: #144D73; }
+  .btn-blue a {
+    font-weight: normal;
+    color: #FFFFFF; }
   .btn-blue:hover a {
     color: #69BDA0; }
 
-.btn-blue a {
-  font-weight: normal;
-  color: #FFFFFF; }
-
-.btn-border-blue,
 .btn-border-white {
-  box-sizing: border-box; }
-
-.btn-border-white {
-  border: #FFFFFF solid 7px; }
+  border-color: #FFFFFF; }
   .btn-border-white:hover {
     border-color: #69BDA0; }
 
 .btn-border-blue {
-  border: #144D73 solid 7px; }
+  border-color: #144D73; }
+  .btn-border-blue:hover {
+    background-color: #69BDA0; }
 
 /* Navbars */
 .navbar {
