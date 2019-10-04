@@ -60,8 +60,8 @@
                   <li>
                     <h5>' . $title . '</h5>
                     <div class="reg-buttons">
-                      <div class="btn btn-blue btn-small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
-                      <div class="btn btn-border-blue btn-small"><a href="' . $event_url . '">More info</a></div>
+                      <div class="btn btn--blue btn--small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
+                      <div class="btn btn__border--blue btn--small"><a href="' . $event_url . '">More info</a></div>
                     </div>
                   </li>
                 ';

@@ -24,10 +24,10 @@
       <div class="col-left">
         <p class="big">A good way to start dancing is to join our Lindy Hop or Charleston classes for beginners.</p>
         <div class="front-page__buttons">
-          <div class="btn btn-white btn-big">
+          <div class="btn btn--white btn--big">
             <a href="<?php echo get_site_url(); ?>/registration">Registration</a>
           </div>
-          <div class="btn btn-blue btn-border-white btn-big">
+          <div class="btn btn--blue btn__border--white btn--big">
             <a href="<?php echo get_site_url(); ?>/classes">Classes</a>
           </div>
         </div>
@@ -109,7 +109,7 @@
               <input type="text" name="b_10ad7729e889b6568ffe433ab_643c6466d5" tabindex="-1" value="">
             </div>
             <div class="clear">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-blue">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn--blue">
               <img class="trumpet" src="<?php echo get_template_directory_uri(); ?>/assets/img/trumpet.svg"
                 alt="trumpet">
 

@@ -143,6 +143,7 @@ function navbarIsMobile() {
 }
 
 /* Hide header text, not navbar, on scroll */
+// TODO: make this scroll function run on page load
 
 window.onscroll = function() {
   if (!isFrontpage()) {
