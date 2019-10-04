@@ -20,7 +20,10 @@
       <div class="text-container">
         <?php while ( $about_us -> have_posts() ) : $about_us -> the_post(); ?>
         <?php the_content(); ?>
-        <?php endwhile; ?>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+        ?>
       </div>
 
     </div>

@@ -49,34 +49,35 @@
           <h4>Open registrations</h4>
 
           <?php
-          if ( $open_registrations -> have_posts() ) {
-            echo '<ul>';
-            while ( $open_registrations -> have_posts() ) : $open_registrations -> the_post();
-              $title = get_post_meta(get_the_id(), 'reg_title', true);
-              $form_url = get_post_meta(get_the_id(), 'reg_form_url', true);
-              $event_url = get_permalink();
-              
+            if ( $open_registrations -> have_posts() ) {
+              echo '<ul>';
+              while ( $open_registrations -> have_posts() ) : $open_registrations -> the_post();
+                $title = get_post_meta(get_the_id(), 'reg_title', true);
+                $form_url = get_post_meta(get_the_id(), 'reg_form_url', true);
+                $event_url = get_permalink();
+                
+                echo '
+                  <li>
+                    <h5>' . $title . '</h5>
+                    <div class="reg-buttons">
+                      <div class="btn btn-blue btn-small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
+                      <div class="btn btn-border-blue btn-small"><a href="' . $event_url . '">More info</a></div>
+                    </div>
+                  </li>
+                ';
+                
+              endwhile;
               echo '
-                <li>
-                  <h5>' . $title . '</h5>
-                  <div class="reg-buttons">
-                    <div class="btn btn-blue btn-small"><a href="' . $form_url . '" target="_blank" rel="noopener noreferrer">Register</a></div>
-                    <div class="btn btn-border-blue btn-small"><a href="' . $event_url . '">More info</a></div>
-                  </div>
-                </li>
+                </ul>
+                <p><em>Are you interested in something else? Let us know by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
               ';
-              
-            endwhile;
-            echo '
-              </ul>
-              <p><em>Are you interested in something else? Let us know by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
-            ';
-          } else {
-            echo '
-              <p><em>There are no open registrations at the moment but you can let us know what you\'re interested in by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
-            ';
-          }
-          ?>
+            } else {
+              echo '
+                <p><em>There are no open registrations at the moment but you can let us know what you\'re interested in by filling in <a href="' . $interestedUrl . '" target="_blank" rel="noopener noreferrer">this form</a>.</em></p>
+              ';
+            }
+          wp_reset_postdata();
+        ?>
 
         </div>
 

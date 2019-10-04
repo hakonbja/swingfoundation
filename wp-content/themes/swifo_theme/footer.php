@@ -1,7 +1,5 @@
 <footer>
 
-
-  <!-- with css grid -->
   <div class="footer__content container">
     <div class="footer__logo"></div>
     <div class="footer__social">

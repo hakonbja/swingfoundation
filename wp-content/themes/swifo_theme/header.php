@@ -32,36 +32,37 @@
     
     <?php wp_head(); ?>
   </head>
-    <body <?php body_class(); ?>>
+  
+  <body <?php body_class(); ?>>
 
-      <header>
-        <?php if ( !is_front_page() ) { ?>
-          <div class="not-front">
-            <div id="js-header-top" class="header-background">
-
-            </div>
-            <div class="container">
-              <h1 class="minibar mb-seablue page-header"><?php echo get_the_title(); ?></h1>
-            </div>
+    <header>
+      <?php if ( !is_front_page() ) { ?>
+        <div class="not-front">
+          <div id="js-header-top" class="header-background">
 
           </div>
-        <?php } ?>
-        <nav class="navbar">
-
-          <div class="hamburger-menu" id="js-hamburger">
-            <span></span>
+          <div class="container">
+            <h1 class="minibar mb-seablue page-header"><?php echo get_the_title(); ?></h1>
           </div>
 
-          <div class="navbar__desktop__wrapper" id="js-navbar__desktop__wrapper">
-            <a href="<?php echo get_site_url(); ?>" class="img-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-navbar-mobile.svg" alt="Swing Foundation logo" class="navbar__logo__desktop" id="js-navbar__logo__desktop"></a>
-            <?php wp_nav_menu( array( 'theme_location' => 'header-navbar', 'container_class' => 'navbar__desktop container') ); ?>
-          </div>
+        </div>
+      <?php } ?>
+      <nav class="navbar">
 
-          <div class="navbar__mobile__wrapper" id="js-navbar__mobile__wrapper">
-            <a href="<?php echo get_site_url(); ?>" class="img-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-navbar-mobile.svg" alt="Swing Foundation logo" class="navbar__logo__mobile" id="js-navbar__logo__mobile"></a>
-            <?php wp_nav_menu( array( 'theme_location' => 'header-navbar', 'container_class' => 'navbar__mobile', 'container_id' => 'js-navbar__mobile') ); ?>
+        <div class="hamburger-menu" id="js-hamburger">
+          <span></span>
+        </div>
 
-          </div>
+        <div class="navbar__desktop__wrapper" id="js-navbar__desktop__wrapper">
+          <a href="<?php echo get_site_url(); ?>" class="img-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-navbar-mobile.svg" alt="Swing Foundation logo" class="navbar__logo__desktop" id="js-navbar__logo__desktop"></a>
+          <?php wp_nav_menu( array( 'theme_location' => 'header-navbar', 'container_class' => 'navbar__desktop container') ); ?>
+        </div>
 
-        </nav>
-      </header>
+        <div class="navbar__mobile__wrapper" id="js-navbar__mobile__wrapper">
+          <a href="<?php echo get_site_url(); ?>" class="img-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-navbar-mobile.svg" alt="Swing Foundation logo" class="navbar__logo__mobile" id="js-navbar__logo__mobile"></a>
+          <?php wp_nav_menu( array( 'theme_location' => 'header-navbar', 'container_class' => 'navbar__mobile', 'container_id' => 'js-navbar__mobile') ); ?>
+
+        </div>
+
+      </nav>
+    </header>

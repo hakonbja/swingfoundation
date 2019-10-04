@@ -26,5 +26,8 @@ $content = wp_filter_nohtml_kses($content);
       <?php the_content() ?>
     </div>
   </div>
-  <?php endwhile ?>
+  <?php
+    endwhile;
+    wp_reset_postdata();
+  ?>
 </div>
