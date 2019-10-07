@@ -34,7 +34,7 @@
   <tbody>
     <tr>
       <td>19:50-</td>
-      <td rowspan="2">Lindy 5</td>
+      <td rowspan="2">Lindy 4</td>
       <td rowspan="2">Hákon & tba</td>
       <td rowspan="2">Lindy 2</td>
       <td rowspan="2">Sanne & Ben</td>
