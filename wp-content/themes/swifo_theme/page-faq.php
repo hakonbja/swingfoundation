@@ -13,7 +13,7 @@
       ?>
 
         <div class="faq__single">
-          <p class="faq__single__question"><?php the_title() ?></p>
+          <h5 class="faq__single__question"><?php the_title() ?></h5>
           <p class="faq__single__answer"><?php the_content() ?></p>
         </div>
 
