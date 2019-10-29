@@ -12,8 +12,8 @@
         <li class="tab-1 disabled">Block 1</li>
         <li class="tab-2">Block 2</li>
         <li class="tab-3">Block 3</li>
-        <li class="tab-4 selected">Block 4</li>
-        <li class="tab-5">Block 5</li>
+        <li class="tab-4">Block 4</li>
+        <li class="tab-5 selected">Block 5</li>
       </ul>
     </div>
     

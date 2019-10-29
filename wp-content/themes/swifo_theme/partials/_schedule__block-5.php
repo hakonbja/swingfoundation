@@ -1,27 +1,6 @@
 <table class="schedule">
   <thead>
     <tr>
-      <th>Tuesdays</th>
-      <th colspan="2">Room 1 + 2</th>
-      <th colspan="2">Teachers</th>
-      <th>Room 3</th>
-      <th>Teachers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>18:30-</td>
-      <td colspan="2" rowspan="2">Lindy 7</td>
-      <td colspan="2" rowspan="2">Yara & Hákon</td>
-      <td rowspan="2">Solo Beg/Int</td>
-      <td rowspan="2">Sanne</td>
-    </tr>
-    <tr>
-      <td>19:45</td>
-    </tr>
-  </tbody>
-  <thead>
-    <tr>
       <th></th>
       <th>Room 1</th>
       <th>Teachers</th>
@@ -33,9 +12,22 @@
   </thead>
   <tbody>
     <tr>
+      <td>18:30-</td>
+      <td rowspan="2">Lindy 7</td>
+      <td rowspan="2">Yara & Hákon</td>
+      <td rowspan="2">Solo Beg/Int</td>
+      <td rowspan="2">Sanne</td>
+      <td rowspan="2" colspan="2"></td>
+    </tr>
+    <tr>
+      <td>19:45</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
       <td>19:50-</td>
       <td rowspan="2">Lindy 4</td>
-      <td rowspan="2">Hákon & tba</td>
+      <td rowspan="2">Hákon & Vicki</td>
       <td rowspan="2">Lindy 2</td>
       <td rowspan="2">Sanne & Ben</td>
       <td rowspan="2">Solo Int/Adv</td>
