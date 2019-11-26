@@ -27,11 +27,11 @@
       <?php get_template_part( 'partials/_schedule__block-3'); ?>
     </div>
 
-    <div class="schedule__wrapper content-4 selected">
+    <div class="schedule__wrapper content-4">
       <?php get_template_part( 'partials/_schedule__block-4'); ?>
     </div>
 
-    <div class="schedule__wrapper content-5 ">
+    <div class="schedule__wrapper content-5 selected">
       <?php get_template_part( 'partials/_schedule__block-5'); ?>
     </div>
     
