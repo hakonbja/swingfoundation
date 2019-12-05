@@ -83,6 +83,37 @@ li.selected + li.disabled {
   }
 }
 
+.year {
+  position: absolute;
+  top: -29px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 400;
+  font-family: 'Din Next Pro Condensed', sans-serif;
+  font-size: 1.75rem;
+  color: $sea-blue;
+  --line-thickness: 3px;
+
+  // &::before,
+  // &::after {
+  //   // content: "";
+  //   position: absolute;
+  //   background-color: $sea-blue;
+  // }
+
+  // &::before {
+  //   height: 80%;
+  //   width: var(--line-thickness);
+  //   left: -5px;
+  // }
+
+  // &::after {
+  //   height: var(--line-thickness);
+  //   width: 100%;
+  //   left: 0;
+  //   top: -5px;
+  // }
+}
 
 
 /* The schedule(s) */
