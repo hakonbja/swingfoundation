@@ -1328,6 +1328,36 @@ table.dates tbody > tr > td:last-child {
     padding: 0.25rem; } }
 
 /* Levels */
+.level-descriptions h5[onClick] {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-right: 2rem;
+  --thickness: 4px;
+  --size: 18px;
+  --horiOffset: 10px; }
+  .level-descriptions h5[onClick]::before, .level-descriptions h5[onClick]::after {
+    content: '';
+    background-color: #144D73;
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .level-descriptions h5[onClick]::before {
+    height: var(--size);
+    width: var(--thickness);
+    right: var(--horiOffset);
+    -webkit-transition: all 350ms ease-in-out;
+    transition: all 350ms ease-in-out; }
+  .level-descriptions h5[onClick]::after {
+    height: var(--thickness);
+    width: var(--size);
+    right: calc((var(--size) - var(--thickness)) / -2 + var(--horiOffset)); }
+  .level-descriptions h5[onClick].visible::before {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    top: 5px; }
+
 .level-descriptions p {
   margin: 0.5rem 0; }
 
@@ -1349,11 +1379,22 @@ table.dates tbody > tr > td:last-child {
     left: -10px;
     top: 9px; }
 
+.level-descriptions .level-content {
+  display: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 350ms ease-in-out;
+  transition: height 350ms ease-in-out; }
+
+.level-descriptions .level-content.visible {
+  display: block;
+  height: auto; }
+
 .level-descriptions .solo {
   margin: 2rem 0; }
 
 .level-descriptions .level {
-  margin-top: 2rem; }
+  margin-top: 1rem; }
 
 .level-descriptions .level:first-of-type {
   margin-top: 1rem; }

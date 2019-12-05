@@ -275,6 +275,43 @@ table.dates {
 
 .level-descriptions {
 
+  h5[onClick] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 2rem;
+    --thickness: 4px;
+    --size: 18px;
+    --horiOffset: 10px;
+
+    &::before,
+    &::after {
+      content: '';
+      background-color: $dark-blue;
+      position: absolute;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      height: var(--size);
+      width: var(--thickness);
+      right: var(--horiOffset);
+      transition: all 350ms ease-in-out;
+    }
+
+    &::after {
+      height: var(--thickness);
+      width: var(--size);
+      right: calc((var(--size) - var(--thickness)) / -2 + var(--horiOffset));
+    }
+
+    &.visible::before {
+      transform: rotate(90deg);
+      top: 5px;
+    }
+  }
+
   p {
     margin: 0.5rem 0;
   }
@@ -302,13 +339,25 @@ table.dates {
     }
   }
 
+  .level-content {
+    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 350ms ease-in-out;
+    // padding-bottom: 2rem;
+  }
+
+  .level-content.visible {
+    display: block;
+  	height: auto;
+  }
 
   .solo {
     margin: 2rem 0;
   }
 
   .level {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .level:first-of-type {

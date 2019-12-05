@@ -27,10 +27,13 @@
         echo '
           <div class="anchor" id="' . $anchor . '"></div>
           <div class="level">
-            <h5>' . get_the_title() . '</h5>';
+            <h5 onClick="toggleLevel()">' . get_the_title() . '</h5>
+            <div class="level-content">';
             the_content();
             get_template_part( 'partials/_reg-link');
-        echo '</div>';
+        echo
+            '</div>
+          </div>';
       endwhile;
       wp_reset_postdata();
       ?>
@@ -55,10 +58,13 @@
         echo '
           <div class="anchor" id="' . $anchor . '"></div>
           <div class="level">
-            <h5>' . get_the_title() . '</h5>'; 
+            <h5 onClick="toggleLevel()">' . get_the_title() . '</h5>
+            <div class="level-content">'; 
             the_content();
             get_template_part( 'partials/_reg-link');
-        echo '</div>';
+        echo '
+            </div>
+          </div>';
         
       endwhile;
       wp_reset_postdata();

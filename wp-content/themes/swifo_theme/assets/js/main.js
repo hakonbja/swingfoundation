@@ -175,32 +175,85 @@ function highlightSelectedMenuItems() {
   }
 }
 
+
 /* Slider for Classes on front page */
+
 function glideClasses() {
-  new Glider(document.querySelector('.classes-glider'), {
-    slidesToShow: 1,
-    itemWidth: 300,
-    scrollLock: true,
-    // scrollLockDelay: 10,
-    draggable: true,
-    // dots: '.dots',
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next',
-    },
-    responsive: [
-      {
-        // screens greater than >= 420px
-        breakpoint: 420,
-        settings: {
-          slidesToShow: 'auto',
-          slidesToScroll: '3',
-          duration: 1.5,
-          itemWidth: 300,
-          exactWidth: true,
-          scrollLock: false,
-        },
+  if (isFrontpage()) {
+    new Glider(document.querySelector('.classes-glider'), {
+      slidesToShow: 1,
+      itemWidth: 300,
+      scrollLock: true,
+      // scrollLockDelay: 10,
+      draggable: true,
+      // dots: '.dots',
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next',
       },
-    ],
-  });
+      responsive: [
+        {
+          // screens greater than >= 420px
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 'auto',
+            slidesToScroll: '3',
+            duration: 1.5,
+            itemWidth: 300,
+            exactWidth: true,
+            scrollLock: false,
+          },
+        },
+      ],
+    });
+  }
+}
+
+
+/* Toggle Level descriptions on Classes page */
+
+function toggleLevel() {
+  let header = event.target;
+  let elem = event.target.nextElementSibling;
+    
+  if (elem.classList.contains('visible')) {
+    // hide element    
+    hideLevel(elem);
+    header.classList.remove('visible');
+  } else {
+    // show element
+    showLevel(elem);
+    header.classList.add('visible');
+  }
+
+}
+
+const showLevel = (elem) => {
+
+  const getHeight = () => {
+    elem.style.display = 'block';
+    let height = elem.scrollHeight + 'px';
+    elem.style.display = '';
+    return height;
+  }
+
+  let height = getHeight();
+  elem.classList.add('visible');
+  elem.style.height = height;
+
+  window.setTimeout( () => {
+    elem.style.height = '';
+  }, 350)
+}
+
+const hideLevel = (elem) => {
+  elem.style.height = elem.scrollHeight + 'px';
+
+  window.setTimeout( () => {
+    elem.style.height = '0';
+  }, 1);
+  
+  window.setTimeout( () => {
+    elem.classList.remove('visible');
+  }, 350);
 }
