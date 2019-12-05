@@ -32,7 +32,7 @@
       <?php get_template_part( 'partials/_schedule__block-4'); ?>
     </div>
 
-    <div class="schedule__wrapper content-5 selected">
+    <div class="schedule__wrapper content-5">
       <?php get_template_part( 'partials/_schedule__block-5'); ?>
     </div>
 
