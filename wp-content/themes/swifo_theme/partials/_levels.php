@@ -47,6 +47,7 @@
       <?php
       $args = array(
         'post_type' => 'classes',
+        'orderby' => 'menu_order title',
         'order' => 'ASC',
         'meta_key' => 'class_type',
         'meta_value' => 'Solo',

@@ -1,7 +1,7 @@
 <?php
 $args = array(
   'post_type' => 'classes',
-  'orderby' => 'title',
+  'orderby' => 'menu_order title',
   'order' => 'ASC',
   'meta_key' => 'class_show_on_frontpage',
   'meta_value' => 'Yes',

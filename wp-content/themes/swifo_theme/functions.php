@@ -369,7 +369,7 @@ $args = array(
 	'description'         => __( 'Classes offered by Swing Foundation'),
 	'labels'              => $labels,
 	// Features this CPT supports in Post Editor
-	'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields'),
+	'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', 'page-attributes'),
 	/* A hierarchical CPT is like Pages and can have
 	* Parent and child items. A non-hierarchical CPT
 	* is like Posts.
