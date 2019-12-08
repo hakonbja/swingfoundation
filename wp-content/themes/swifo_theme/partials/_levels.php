@@ -9,6 +9,7 @@
   <div class="level-descriptions">
     <div class="lindy-hop dance-type">
       <h4>Lindy Hop</h4>
+      <p class="italic">Not sure which level to choose? Come find us at a social dance or send us an email. The teachers will always adapt the material to the group.</p>
 
       <?php
       $args = array(
@@ -42,7 +43,7 @@
 
     <div class="solo dance-type">
       <h4>Solo Jazz & Charleston</h4>
-      <p class="italic">Heads up, your level as a solo dancer might differ from your level as a partner dancer. Please read the level description carefully and make an educated choice.</p>
+      <p class="italic">Heads up, your level as a solo dancer might differ from your level as a partner dancer. Please read the level description carefully and make an educated choice. The teachers will always adapt the material to the group.</p>
       
       <?php
       $args = array(
