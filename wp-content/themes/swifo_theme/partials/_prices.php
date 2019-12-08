@@ -15,6 +15,7 @@
             <tr>
               <th></th>
               <th>7 classes</th>
+              <th>6 classes</th>
               <th>5 classes</th>
             </tr>
           </thead>
@@ -22,16 +23,19 @@
             <tr>
               <td>Full price:</td>
               <td>€80,-</td>
+              <td>€70,-</td>
               <td>€60,-</td>
             </tr>
             <tr>
               <td>Student price*:</td>
               <td>€72,-</td>
+              <td>€63,-</td>
               <td>€54,-</td>
             </tr>
             <tr>
               <td>2nd course**:</td>
               <td>€60,-</td>
+              <td>€52,50</td>
               <td>€45,-</td>
             </tr>
           </tbody>
