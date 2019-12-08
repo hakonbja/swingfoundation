@@ -364,8 +364,7 @@ img.shoeprint {
 
   #mc-embedded-subscribe {
     display: block;
-    padding: 0;
-    padding-top: 0.5rem;
+    padding: 0.5rem 0.75rem 0.2rem;
     border: none;
     font-family: 'Din Next Pro Regular', sans-serif;
     font-weight: 400;
@@ -375,12 +374,10 @@ img.shoeprint {
     cursor: pointer;
   }
 
-
-
   .trumpet {
     position: absolute;
     bottom: -15px;
-    right: 176px;
+    right: 228px;
     display: block;
     transform: rotate(-20deg) scale(0);
     z-index: 1;
