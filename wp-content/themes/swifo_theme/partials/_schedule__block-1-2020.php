@@ -13,10 +13,10 @@
   <tbody>
     <tr>
       <td>18:30-</td>
-      <td rowspan="2">Lindy 5</td>
-      <td rowspan="2">Yara & Erol</td>
       <td rowspan="2">Lindy 1</td>
       <td rowspan="2">Sanne & Theodoor</td>
+      <td rowspan="2">Lindy 5</td>
+      <td rowspan="2">Yara & Erol</td>
       <td rowspan="2">Solo Beg</td>
       <td rowspan="2">Hákon</td>
     </tr>
@@ -30,7 +30,7 @@
       <td rowspan="2">Lindy 7</td>
       <td rowspan="2">Sanne & Hákon</td>
       <td rowspan="2">Lindy 3</td>
-      <td rowspan="2">Vicky & Ben</td>
+      <td rowspan="2">Vicki & Ben</td>
       <td rowspan="2">Solo Adv</td>
       <td rowspan="2">Yara</td>
     </tr>
@@ -39,10 +39,10 @@
     </tr>
     <tr>
       <td>21:05-</td>
-      <td rowspan="2">Lindy 2</td>
-      <td rowspan="2">Ben & Erol</td>
       <td rowspan="2">Lindy 8</td>
       <td rowspan="2">Yara & Hákon</td>
+      <td rowspan="2">Lindy 2</td>
+      <td rowspan="2">Ben & Erol</td>
       <td rowspan="2">Solo Int</td>
       <td rowspan="2">Sanne</td>
     </tr>
