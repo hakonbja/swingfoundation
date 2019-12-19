@@ -8,7 +8,7 @@
 
   <div class="prices">
     <div class="prices__classes">
-      <p>Our weekly courses consist of either 7 or 5 classes of 1 hour and 15 minutes each. We offer discount to students (high school, MBO, HBO, WO) and those who take two courses in the same block.</p>
+      <p>Our weekly courses consist of 7 classes (but sometimes 5 or 6) of 1 hour and 15 minutes each. We offer discount to students (high school, MBO, HBO, WO) and those who take two courses in the same block.</p>
       <div class="table-wrapper">
         <table class="prices">
           <thead>
