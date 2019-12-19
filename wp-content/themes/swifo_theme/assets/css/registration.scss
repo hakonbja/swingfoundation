@@ -28,18 +28,22 @@
     > * {
       flex-basis: 50%;
     }
+  }
+  
+  .reg-buttons {
+    display: flex;
+    justify-content: center;
 
-    .reg-buttons {
-      display: flex;
-      justify-content: center;
+    >:nth-child(1) {
+      margin-right: 2rem;
 
-      >:nth-child(1) {
-        margin-right: 2rem;
+      @media screen and (max-width: 450px) {
+        margin-right: 1rem;
       }
+    }
 
-      >:last-child {
-        margin-right: 0;
-      }
+    >:last-child {
+      margin-right: 0;
     }
   }
 }

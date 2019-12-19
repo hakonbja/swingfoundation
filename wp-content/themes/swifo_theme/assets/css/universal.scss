@@ -290,6 +290,10 @@ a.img-link {
     @include removeBorder(1.25rem);
     padding: 10px 0;
   }
+
+  @media screen and (max-width: 450px) {
+    width: 9rem;
+  }
 }
 
 .btn--white {

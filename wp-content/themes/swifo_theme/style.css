@@ -457,6 +457,9 @@ a.img-link {
       height: 0;
       width: 0;
       margin-bottom: calc(1.25rem/6 * -1); }
+  @media screen and (max-width: 450px) {
+    .btn--small {
+      width: 9rem; } }
 
 .btn--white {
   color: #144D73;
@@ -1421,15 +1424,18 @@ table.dates tbody > tr > td:last-child {
     margin-bottom: 1rem; }
     .open-registrations li > * {
       flex-basis: 50%; }
-    .open-registrations li .reg-buttons {
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-pack: center;
-              justify-content: center; }
-      .open-registrations li .reg-buttons > :nth-child(1) {
-        margin-right: 2rem; }
-      .open-registrations li .reg-buttons > :last-child {
-        margin-right: 0; }
+  .open-registrations .reg-buttons {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .open-registrations .reg-buttons > :nth-child(1) {
+      margin-right: 2rem; }
+      @media screen and (max-width: 450px) {
+        .open-registrations .reg-buttons > :nth-child(1) {
+          margin-right: 1rem; } }
+    .open-registrations .reg-buttons > :last-child {
+      margin-right: 0; }
 
 /* Ressponsive for Open Registrations */
 @media only screen and (max-width: 900px) {
