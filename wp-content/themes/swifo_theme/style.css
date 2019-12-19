@@ -832,7 +832,8 @@ footer {
   margin-left: 2rem;
   width: -webkit-min-content;
   width: -moz-min-content;
-  width: min-content; }
+  width: min-content;
+  box-sizing: border-box; }
 
 .information-page img {
   height: 300px;
@@ -869,7 +870,8 @@ footer {
   .information-page .img-container {
     float: none;
     width: 100%;
-    margin: 0; }
+    margin: 0;
+    margin-bottom: 1rem; }
   .information-page img {
     height: auto;
     width: 100%;
