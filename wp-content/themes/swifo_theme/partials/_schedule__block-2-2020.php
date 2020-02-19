@@ -6,8 +6,6 @@
         <th></th>
         <th>Room 1</th>
         <th>Teachers</th>
-        <th>Room 2</th>
-        <th>Teachers</th>
       </tr>
     </thead>
     <tbody>
@@ -15,8 +13,6 @@
         <td>18:30-</td>
         <td rowspan="2">Lindy 7</td>
         <td rowspan="2">Sanne & Hákon</td>
-        <td rowspan="2">Lindy 3</td>
-        <td rowspan="2">Yara & Theodoor</td>
       </tr>
       <tr>
         <td>19:45</td>
@@ -27,8 +23,6 @@
         <td>19:50-</td>
         <td rowspan="2">Solo Adv</td>
         <td rowspan="2">Yara</td>
-        <td rowspan="2">Lindy 4/5</td>
-        <td rowspan="2">Sanne & Hákon</td>
       </tr>
       <tr>
         <td>21:05</td>
@@ -37,8 +31,6 @@
         <td>21:05-</td>
         <td rowspan="2">Lindy 8</td>
         <td rowspan="2">Yara & Hákon</td>
-        <td rowspan="2">Solo Int</td>
-        <td rowspan="2">Sanne</td>
       </tr>
       <tr>
         <td>22:20</td>
@@ -71,13 +63,17 @@
         <th></th>
         <th>Bovenzaal</th>
         <th>Teachers</th>
+        <th>Openzaal</th>
+        <th>Teachers</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>18:30-</td>
-        <td rowspan="2">Lindy 1</td>
+        <td rowspan="2">Lindy 2</td>
         <td rowspan="2">Vicki & Erol</td>
+        <td rowspan="2">Lindy 3</td>
+        <td rowspan="2">Yara & Theodoor</td>
       </tr>
       <tr>
         <td>19:45</td>
@@ -88,14 +84,18 @@
         <td>19:50-</td>
         <td rowspan="2">Solo Beg</td>
         <td rowspan="2">Erol</td>
+        <td rowspan="2">Lindy 4/5</td>
+        <td rowspan="2">Sanne & Hákon</td>
       </tr>
       <tr>
         <td>21:05</td>
       </tr>
       <tr>
         <td>21:05-</td>
-        <td rowspan="2">Lindy 2</td>
+        <td rowspan="2">Lindy 1</td>
         <td rowspan="2">Vicki & Erol</td>
+        <td rowspan="2">Solo Int</td>
+        <td rowspan="2">Sanne</td>
       </tr>
       <tr>
         <td>22:20</td>
