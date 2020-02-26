@@ -84,8 +84,8 @@
         <td>19:50-</td>
         <td rowspan="2">Solo Beg</td>
         <td rowspan="2">Erol</td>
-        <td rowspan="2">Lindy 4/5</td>
-        <td rowspan="2">Sanne & Hákon</td>
+        <td rowspan="2">Solo Int</td>
+        <td rowspan="2">Sanne</td>
       </tr>
       <tr>
         <td>21:05</td>
@@ -94,8 +94,8 @@
         <td>21:05-</td>
         <td rowspan="2">Lindy 1</td>
         <td rowspan="2">Vicki & Erol</td>
-        <td rowspan="2">Solo Int</td>
-        <td rowspan="2">Sanne</td>
+        <td rowspan="2">Lindy 4/5</td>
+        <td rowspan="2">Sanne & Hákon</td>
       </tr>
       <tr>
         <td>22:20</td>
