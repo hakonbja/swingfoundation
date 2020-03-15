@@ -1,3 +1,4 @@
+<h6 class="corona-message">Due to Covid-19 all dance classes and socials will be cancelled until further notice. <a href="<?php echo get_post_permalink('475'); ?>/posts/covid-19-update-15-03-2020/">Read more</a></h5>
 <div id="block-2-2020">
   <table class="schedule">
     <thead>

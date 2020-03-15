@@ -1283,6 +1283,9 @@ table.dates tbody > tr > td:last-child {
     margin-right: 1rem; }
 
 /* Schedule Block 2 - 2020 */
+.corona-message {
+  margin-bottom: 1rem; }
+
 #block-2-2020 h5 {
   margin-bottom: 0.5rem;
   color: #144D73; }
